@@ -1,0 +1,344 @@
+Analysis & Synthesis report for traffic_light
+Sun Sep 04 15:44:37 2016
+Quartus II 64-Bit Version 7.1 Build 156 04/30/2007 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |traffic_light|FSM:inst3|state
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: FSM:inst3
+ 13. Parameter Settings for User Entity Instance: frequency:inst
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sun Sep 04 15:44:37 2016    ;
+; Quartus II 64-Bit Version   ; 7.1 Build 156 04/30/2007 SJ Full Version ;
+; Revision Name               ; traffic_light                            ;
+; Top-level Entity Name       ; traffic_light                            ;
+; Family                      ; Cyclone                                  ;
+; Total logic elements        ; 275                                      ;
+; Total pins                  ; 42                                       ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 0                                        ;
+; Total PLLs                  ; 0                                        ;
++-----------------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                            ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                         ; Setting            ; Default Value      ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                         ; EP1C6Q240C8        ;                    ;
+; Top-level entity name                                                          ; traffic_light      ; traffic_light      ;
+; Family name                                                                    ; Cyclone            ; Stratix II         ;
+; Restructure Multiplexers                                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                            ; Off                ; Off                ;
+; Preserve fewer node names                                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                      ; Off                ; Off                ;
+; Verilog Version                                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                                       ; Auto               ; Auto               ;
+; Safe State Machine                                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                              ; Off                ; Off                ;
+; Add Pass-Through Logic to Inferred RAMs                                        ; On                 ; On                 ;
+; NOT Gate Push-Back                                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                 ; Off                ; Off                ;
+; Optimization Technique -- Cyclone                                              ; Balanced           ; Balanced           ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II/Cyclone III ; 70                 ; 70                 ;
+; Auto Carry Chains                                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                          ; Off                ; Off                ;
+; Perform gate-level register retiming                                           ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax                         ; On                 ; On                 ;
+; Auto ROM Replacement                                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                  ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                         ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                       ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                              ; Off                ; Off                ;
+; Auto Resource Sharing                                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                  ; Off                ; Off                ;
+; Ignore translate_off and synthesis_off directives                              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                             ; Off                ; Off                ;
+; Retiming Meta-Stability Register Sequence Length                               ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                           ; On                 ; On                 ;
+; Use smart compilation                                                          ; Off                ; Off                ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                            ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+
+; frequency.v                      ; yes             ; User Verilog HDL File              ; E:/学习/数字系统课程设计/交通灯控制系统/traffic_light/frequency.v       ;
+; FSM.v                            ; yes             ; User Verilog HDL File              ; E:/学习/数字系统课程设计/交通灯控制系统/traffic_light/FSM.v             ;
+; nixie_tube.v                     ; yes             ; User Verilog HDL File              ; E:/学习/数字系统课程设计/交通灯控制系统/traffic_light/nixie_tube.v      ;
+; traffic_light.bdf                ; yes             ; User Block Diagram/Schematic File  ; E:/学习/数字系统课程设计/交通灯控制系统/traffic_light/traffic_light.bdf ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+; Total logic elements                        ; 275               ;
+;     -- Combinational with no register       ; 184               ;
+;     -- Register only                        ; 47                ;
+;     -- Combinational with a register        ; 44                ;
+;                                             ;                   ;
+; Logic element usage by number of LUT inputs ;                   ;
+;     -- 4 input functions                    ; 100               ;
+;     -- 3 input functions                    ; 47                ;
+;     -- 2 input functions                    ; 73                ;
+;     -- 1 input functions                    ; 7                 ;
+;     -- 0 input functions                    ; 1                 ;
+;                                             ;                   ;
+; Logic elements by mode                      ;                   ;
+;     -- normal mode                          ; 230               ;
+;     -- arithmetic mode                      ; 45                ;
+;     -- qfbk mode                            ; 0                 ;
+;     -- register cascade mode                ; 0                 ;
+;     -- synchronous clear/load mode          ; 37                ;
+;     -- asynchronous clear/load mode         ; 0                 ;
+;                                             ;                   ;
+; Total registers                             ; 91                ;
+; Total logic cells in carry chains           ; 48                ;
+; I/O pins                                    ; 42                ;
+; Maximum fan-out node                        ; frequency:inst|F2 ;
+; Maximum fan-out                             ; 60                ;
+; Total fan-out                               ; 908               ;
+; Average fan-out                             ; 2.86              ;
++---------------------------------------------+-------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                               ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name             ; Library Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------+--------------+
+; |traffic_light             ; 275 (1)     ; 91           ; 0           ; 42   ; 0            ; 184 (1)      ; 47 (0)            ; 44 (0)           ; 48 (0)          ; 0 (0)      ; |traffic_light                  ; work         ;
+;    |FSM:inst3|             ; 95 (95)     ; 32           ; 0           ; 0    ; 0            ; 63 (63)      ; 16 (16)           ; 16 (16)          ; 16 (16)         ; 0 (0)      ; |traffic_light|FSM:inst3        ; work         ;
+;    |frequency:inst|        ; 75 (75)     ; 33           ; 0           ; 0    ; 0            ; 42 (42)      ; 25 (25)           ; 8 (8)            ; 32 (32)         ; 0 (0)      ; |traffic_light|frequency:inst   ; work         ;
+;    |nixie_tube:inst5|      ; 104 (104)   ; 26           ; 0           ; 0    ; 0            ; 78 (78)      ; 6 (6)             ; 20 (20)          ; 0 (0)           ; 0 (0)      ; |traffic_light|nixie_tube:inst5 ; work         ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------+
+; State Machine - |traffic_light|FSM:inst3|state       ;
++----------+----------+----------+----------+----------+
+; Name     ; state.s4 ; state.s3 ; state.s2 ; state.s1 ;
++----------+----------+----------+----------+----------+
+; state.s1 ; 0        ; 0        ; 0        ; 0        ;
+; state.s3 ; 0        ; 1        ; 0        ; 1        ;
+; state.s2 ; 0        ; 0        ; 1        ; 1        ;
+; state.s4 ; 1        ; 0        ; 0        ; 1        ;
++----------+----------+----------+----------+----------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; inst5/MR[7]                           ; Stuck at VCC due to stuck port data_in ;
+; inst5/CL[7]                           ; Stuck at VCC due to stuck port data_in ;
+; inst5/CR[7]                           ; Stuck at VCC due to stuck port data_in ;
+; inst5/ML[7]                           ; Stuck at VCC due to stuck port data_in ;
+; inst5/CL[0]                           ; Merged with inst5/CL[3]                ;
+; inst5/ML[3]                           ; Merged with inst5/ML[0]                ;
+; Total Number of Removed Registers = 6 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 91    ;
+; Number of registers using Synchronous Clear  ; 8     ;
+; Number of registers using Synchronous Load   ; 30    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; FSM:inst3|G[9]                         ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |traffic_light|nixie_tube:inst5|CR[0] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |traffic_light|nixie_tube:inst5|MR[0] ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |traffic_light|FSM:inst3|MRR          ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |traffic_light|FSM:inst3|T2[1]        ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |traffic_light|FSM:inst3|T1[1]        ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |traffic_light|FSM:inst3|T1[3]        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FSM:inst3 ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; s1             ; 0001  ; Unsigned Binary               ;
+; s2             ; 0010  ; Unsigned Binary               ;
+; s3             ; 0100  ; Unsigned Binary               ;
+; s4             ; 1000  ; Unsigned Binary               ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: frequency:inst ;
++----------------+---------+----------------------------------+
+; Parameter Name ; Value   ; Type                             ;
++----------------+---------+----------------------------------+
+; K              ; 1000000 ; Untyped                          ;
++----------------+---------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 7.1 Build 156 04/30/2007 SJ Full Version
+    Info: Processing started: Sun Sep 04 15:44:22 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off traffic_light -c traffic_light
+Info: Found 1 design units, including 1 entities, in source file frequency.v
+    Info: Found entity 1: frequency
+Info: Found 1 design units, including 1 entities, in source file FSM.v
+    Info: Found entity 1: FSM
+Info: Found 1 design units, including 1 entities, in source file nixie_tube.v
+    Info: Found entity 1: nixie_tube
+Info: Found 1 design units, including 1 entities, in source file traffic_light.bdf
+    Info: Found entity 1: traffic_light
+Info: Elaborating entity "traffic_light" for the top level hierarchy
+Warning: Found inconsistent dimensions
+Warning: Found inconsistent dimensions
+Info: Elaborating entity "FSM" for hierarchy "FSM:inst3"
+Warning (10230): Verilog HDL assignment warning at FSM.v(49): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at FSM.v(55): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at FSM.v(56): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at FSM.v(70): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at FSM.v(71): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at FSM.v(83): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at FSM.v(90): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at FSM.v(91): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at FSM.v(103): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at FSM.v(104): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at FSM.v(117): truncated value with size 32 to match size of target (11)
+Info: Elaborating entity "frequency" for hierarchy "frequency:inst"
+Info: Elaborating entity "nixie_tube" for hierarchy "nixie_tube:inst5"
+Info: Power-up level of register "nixie_tube:inst5|MR[7]" is not specified -- using power-up level of High to minimize register
+Warning: Reduced register "nixie_tube:inst5|MR[7]" with stuck data_in port to stuck value VCC
+Info: Power-up level of register "nixie_tube:inst5|CL[7]" is not specified -- using power-up level of High to minimize register
+Warning: Reduced register "nixie_tube:inst5|CL[7]" with stuck data_in port to stuck value VCC
+Info: Power-up level of register "nixie_tube:inst5|CR[7]" is not specified -- using power-up level of High to minimize register
+Warning: Reduced register "nixie_tube:inst5|CR[7]" with stuck data_in port to stuck value VCC
+Info: Power-up level of register "nixie_tube:inst5|ML[7]" is not specified -- using power-up level of High to minimize register
+Warning: Reduced register "nixie_tube:inst5|ML[7]" with stuck data_in port to stuck value VCC
+Info: Duplicate registers merged to single register
+    Info: Duplicate register "nixie_tube:inst5|CL[0]" merged to single register "nixie_tube:inst5|CL[3]"
+    Info: Duplicate register "nixie_tube:inst5|ML[3]" merged to single register "nixie_tube:inst5|ML[0]"
+Info: State machine "|traffic_light|FSM:inst3|state" contains 4 states
+Info: Selected Auto state machine encoding method for state machine "|traffic_light|FSM:inst3|state"
+Info: Encoding result for state machine "|traffic_light|FSM:inst3|state"
+    Info: Completed encoding using 4 state bits
+        Info: Encoded state bit "FSM:inst3|state.s4"
+        Info: Encoded state bit "FSM:inst3|state.s3"
+        Info: Encoded state bit "FSM:inst3|state.s2"
+        Info: Encoded state bit "FSM:inst3|state.s1"
+    Info: State "|traffic_light|FSM:inst3|state.s1" uses code string "0000"
+    Info: State "|traffic_light|FSM:inst3|state.s3" uses code string "0101"
+    Info: State "|traffic_light|FSM:inst3|state.s2" uses code string "0011"
+    Info: State "|traffic_light|FSM:inst3|state.s4" uses code string "1001"
+Warning: Output pins are stuck at VCC or GND
+    Warning: Pin "CL[7]" stuck at VCC
+    Warning: Pin "CR7" stuck at VCC
+    Warning: Pin "ML[7]" stuck at VCC
+    Warning: Pin "MR7" stuck at VCC
+Info: Implemented 317 device resources after synthesis - the final resource count might be different
+    Info: Implemented 3 input pins
+    Info: Implemented 39 output pins
+    Info: Implemented 275 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Allocated 235 megabytes of memory during processing
+    Info: Processing ended: Sun Sep 04 15:44:37 2016
+    Info: Elapsed time: 00:00:15
+
+

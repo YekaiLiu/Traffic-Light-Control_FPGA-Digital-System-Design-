@@ -1,0 +1,173 @@
+Version 7.1 Build 156 04/30/2007 SJ Full Version
+36
+2054
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+FSM
+# storage
+db|traffic_light.(1).cnf
+db|traffic_light.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+FSM.v
+e3cd2f3cbbcc4ab111f7ab69928f954d
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# user_parameter {
+s1
+0001
+PARAMETER_UNSIGNED_BIN
+USR
+s2
+0010
+PARAMETER_UNSIGNED_BIN
+USR
+s3
+0100
+PARAMETER_UNSIGNED_BIN
+USR
+s4
+1000
+PARAMETER_UNSIGNED_BIN
+USR
+}
+# hierarchies {
+FSM:inst1
+}
+# lmf
+c:|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+nixie_tube
+# storage
+db|traffic_light.(3).cnf
+db|traffic_light.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+nixie_tube.v
+3a1bd06f279b4a3d41adef6fb0e3220
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+nixie_tube:inst5
+}
+# lmf
+c:|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+frequency
+# storage
+db|traffic_light.(2).cnf
+db|traffic_light.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+frequency.v
+56db24c81a387ddde87f1fbf85cafbe5
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# user_parameter {
+K
+5
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+frequency:inst3
+}
+# lmf
+c:|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+traffic_light
+# storage
+db|traffic_light.(0).cnf
+db|traffic_light.(0).cnf
+# case_insensitive
+# source_file
+traffic_light.bdf
+cda75d9de1ccdce4aab2a4a6baf5b
+25
+# hierarchies {
+|
+}
+# lmf
+c:|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# complete
+

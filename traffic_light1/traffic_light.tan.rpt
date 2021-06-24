@@ -1,0 +1,622 @@
+Classic Timing Analyzer report for traffic_light
+Sun Sep 04 15:49:47 2016
+Quartus II 64-Bit Version 7.1 Build 156 04/30/2007 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'clk_2MHz'
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                          ;
++------------------------------+-------+---------------+----------------------------------+------------------------+------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                   ; To                     ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+------------------------+------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 0.029 ns                         ; C                      ; FSM:inst3|MG           ; --         ; clk_2MHz ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 13.244 ns                        ; nixie_tube:inst5|CR[4] ; CR4                    ; clk_2MHz   ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 3.940 ns                         ; C                      ; nixie_tube:inst5|CL[6] ; --         ; clk_2MHz ; 0            ;
+; Clock Setup: 'clk_2MHz'      ; N/A   ; None          ; 150.83 MHz ( period = 6.630 ns ) ; FSM:inst3|T2[2]        ; FSM:inst3|T1[2]        ; clk_2MHz   ; clk_2MHz ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                        ;                        ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+------------------------+------------------------+------------+----------+--------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                ; Setting            ; From ; To ; Entity Name ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                           ; EP1C6Q240C8        ;      ;    ;             ;
+; Timing Models                                         ; Final              ;      ;    ;             ;
+; Default hold multicycle                               ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements               ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;             ;
+; Number of paths to report                             ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk_2MHz        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk_2MHz'                                                                                                                                                                                                                                               ;
++-----------------------------------------+-----------------------------------------------------+-----------------------------+-----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                        ; To                          ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-----------------------------+-----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 150.83 MHz ( period = 6.630 ns )                    ; FSM:inst3|T2[2]             ; FSM:inst3|T1[2]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 6.369 ns                ;
+; N/A                                     ; 150.85 MHz ( period = 6.629 ns )                    ; FSM:inst3|T2[2]             ; FSM:inst3|T1[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 6.368 ns                ;
+; N/A                                     ; 153.63 MHz ( period = 6.509 ns )                    ; FSM:inst3|T2[4]             ; FSM:inst3|T1[2]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 6.248 ns                ;
+; N/A                                     ; 153.66 MHz ( period = 6.508 ns )                    ; FSM:inst3|T2[4]             ; FSM:inst3|T1[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 6.247 ns                ;
+; N/A                                     ; 154.70 MHz ( period = 6.464 ns )                    ; FSM:inst3|T2[3]             ; FSM:inst3|T1[2]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 6.203 ns                ;
+; N/A                                     ; 154.73 MHz ( period = 6.463 ns )                    ; FSM:inst3|T2[3]             ; FSM:inst3|T1[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 6.202 ns                ;
+; N/A                                     ; 157.26 MHz ( period = 6.359 ns )                    ; FSM:inst3|T2[2]             ; FSM:inst3|T1[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 6.098 ns                ;
+; N/A                                     ; 157.31 MHz ( period = 6.357 ns )                    ; FSM:inst3|T2[1]             ; FSM:inst3|T1[2]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 6.096 ns                ;
+; N/A                                     ; 157.33 MHz ( period = 6.356 ns )                    ; FSM:inst3|T2[1]             ; FSM:inst3|T1[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 6.095 ns                ;
+; N/A                                     ; 157.93 MHz ( period = 6.332 ns )                    ; FSM:inst3|T2[2]             ; FSM:inst3|T1[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 6.071 ns                ;
+; N/A                                     ; 160.08 MHz ( period = 6.247 ns )                    ; FSM:inst3|T1[1]             ; FSM:inst3|T1[2]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.986 ns                ;
+; N/A                                     ; 160.10 MHz ( period = 6.246 ns )                    ; FSM:inst3|T1[1]             ; FSM:inst3|T1[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.26 MHz ( period = 6.240 ns )                    ; FSM:inst3|T2[2]             ; FSM:inst3|MG                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.979 ns                ;
+; N/A                                     ; 160.31 MHz ( period = 6.238 ns )                    ; FSM:inst3|T2[4]             ; FSM:inst3|T1[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.977 ns                ;
+; N/A                                     ; 161.00 MHz ( period = 6.211 ns )                    ; FSM:inst3|T2[4]             ; FSM:inst3|T1[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.950 ns                ;
+; N/A                                     ; 161.47 MHz ( period = 6.193 ns )                    ; FSM:inst3|T2[3]             ; FSM:inst3|T1[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.932 ns                ;
+; N/A                                     ; 162.18 MHz ( period = 6.166 ns )                    ; FSM:inst3|T2[3]             ; FSM:inst3|T1[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.905 ns                ;
+; N/A                                     ; 162.50 MHz ( period = 6.154 ns )                    ; FSM:inst3|T2[2]             ; FSM:inst3|T2[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.893 ns                ;
+; N/A                                     ; 163.37 MHz ( period = 6.121 ns )                    ; FSM:inst3|T2[4]             ; FSM:inst3|MG                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.860 ns                ;
+; N/A                                     ; 164.31 MHz ( period = 6.086 ns )                    ; FSM:inst3|T2[1]             ; FSM:inst3|T1[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.825 ns                ;
+; N/A                                     ; 164.58 MHz ( period = 6.076 ns )                    ; FSM:inst3|T2[3]             ; FSM:inst3|MG                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.815 ns                ;
+; N/A                                     ; 165.04 MHz ( period = 6.059 ns )                    ; FSM:inst3|T2[1]             ; FSM:inst3|T1[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.798 ns                ;
+; N/A                                     ; 165.76 MHz ( period = 6.033 ns )                    ; FSM:inst3|T2[4]             ; FSM:inst3|T2[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.772 ns                ;
+; N/A                                     ; 166.92 MHz ( period = 5.991 ns )                    ; FSM:inst3|T2[2]             ; FSM:inst3|T1[0]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.730 ns                ;
+; N/A                                     ; 167.00 MHz ( period = 5.988 ns )                    ; FSM:inst3|T2[3]             ; FSM:inst3|T2[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.727 ns                ;
+; N/A                                     ; 167.03 MHz ( period = 5.987 ns )                    ; FSM:inst3|T1[1]             ; FSM:inst3|T2[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.726 ns                ;
+; N/A                                     ; 167.25 MHz ( period = 5.979 ns )                    ; FSM:inst3|T2[2]             ; FSM:inst3|T2[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.718 ns                ;
+; N/A                                     ; 167.59 MHz ( period = 5.967 ns )                    ; FSM:inst3|T2[1]             ; FSM:inst3|MG                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.706 ns                ;
+; N/A                                     ; 168.72 MHz ( period = 5.927 ns )                    ; FSM:inst3|T2[1]             ; nixie_tube:inst5|CL[2]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.666 ns                ;
+; N/A                                     ; 168.92 MHz ( period = 5.920 ns )                    ; FSM:inst3|T1[0]             ; FSM:inst3|T1[2]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.659 ns                ;
+; N/A                                     ; 168.95 MHz ( period = 5.919 ns )                    ; FSM:inst3|T1[0]             ; FSM:inst3|T1[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.658 ns                ;
+; N/A                                     ; 170.04 MHz ( period = 5.881 ns )                    ; FSM:inst3|T2[1]             ; FSM:inst3|T2[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.620 ns                ;
+; N/A                                     ; 170.36 MHz ( period = 5.870 ns )                    ; FSM:inst3|T2[4]             ; FSM:inst3|T1[0]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.609 ns                ;
+; N/A                                     ; 170.71 MHz ( period = 5.858 ns )                    ; FSM:inst3|T2[4]             ; FSM:inst3|T2[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.597 ns                ;
+; N/A                                     ; 170.91 MHz ( period = 5.851 ns )                    ; FSM:inst3|state.s4          ; FSM:inst3|T1[2]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.590 ns                ;
+; N/A                                     ; 170.94 MHz ( period = 5.850 ns )                    ; FSM:inst3|state.s4          ; FSM:inst3|T1[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.589 ns                ;
+; N/A                                     ; 171.67 MHz ( period = 5.825 ns )                    ; FSM:inst3|T2[3]             ; FSM:inst3|T1[0]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.564 ns                ;
+; N/A                                     ; 172.03 MHz ( period = 5.813 ns )                    ; FSM:inst3|T2[3]             ; FSM:inst3|T2[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.552 ns                ;
+; N/A                                     ; 172.89 MHz ( period = 5.784 ns )                    ; FSM:inst3|T1[1]             ; FSM:inst3|MG                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.523 ns                ;
+; N/A                                     ; 173.10 MHz ( period = 5.777 ns )                    ; FSM:inst3|T2[2]             ; FSM:inst3|T2[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.516 ns                ;
+; N/A                                     ; 173.73 MHz ( period = 5.756 ns )                    ; FSM:inst3|T1[2]             ; FSM:inst3|T1[2]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.495 ns                ;
+; N/A                                     ; 173.76 MHz ( period = 5.755 ns )                    ; FSM:inst3|T1[2]             ; FSM:inst3|T1[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.494 ns                ;
+; N/A                                     ; 173.94 MHz ( period = 5.749 ns )                    ; FSM:inst3|T1[4]             ; FSM:inst3|T1[2]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.488 ns                ;
+; N/A                                     ; 173.97 MHz ( period = 5.748 ns )                    ; FSM:inst3|T1[4]             ; FSM:inst3|T1[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.487 ns                ;
+; N/A                                     ; 174.89 MHz ( period = 5.718 ns )                    ; FSM:inst3|T2[1]             ; FSM:inst3|T1[0]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.457 ns                ;
+; N/A                                     ; 175.25 MHz ( period = 5.706 ns )                    ; FSM:inst3|T2[1]             ; FSM:inst3|T2[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.445 ns                ;
+; N/A                                     ; 175.44 MHz ( period = 5.700 ns )                    ; FSM:inst3|T1[1]             ; FSM:inst3|T1[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.439 ns                ;
+; N/A                                     ; 175.44 MHz ( period = 5.700 ns )                    ; FSM:inst3|T1[1]             ; FSM:inst3|T2[0]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.439 ns                ;
+; N/A                                     ; 176.24 MHz ( period = 5.674 ns )                    ; FSM:inst3|T1[3]             ; FSM:inst3|T1[2]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.413 ns                ;
+; N/A                                     ; 176.27 MHz ( period = 5.673 ns )                    ; FSM:inst3|T1[3]             ; FSM:inst3|T1[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.412 ns                ;
+; N/A                                     ; 176.68 MHz ( period = 5.660 ns )                    ; FSM:inst3|T1[0]             ; FSM:inst3|T2[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.399 ns                ;
+; N/A                                     ; 176.80 MHz ( period = 5.656 ns )                    ; FSM:inst3|T2[4]             ; FSM:inst3|T2[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.395 ns                ;
+; N/A                                     ; 177.75 MHz ( period = 5.626 ns )                    ; FSM:inst3|T2[4]             ; FSM:inst3|CRR               ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.365 ns                ;
+; N/A                                     ; 178.22 MHz ( period = 5.611 ns )                    ; FSM:inst3|T2[3]             ; FSM:inst3|T2[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.350 ns                ;
+; N/A                                     ; 179.18 MHz ( period = 5.581 ns )                    ; FSM:inst3|T2[3]             ; FSM:inst3|CRR               ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.320 ns                ;
+; N/A                                     ; 179.21 MHz ( period = 5.580 ns )                    ; FSM:inst3|state.s4          ; FSM:inst3|T1[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.319 ns                ;
+; N/A                                     ; 179.60 MHz ( period = 5.568 ns )                    ; frequency:inst|division[6]  ; frequency:inst|division[27] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.307 ns                ;
+; N/A                                     ; 180.08 MHz ( period = 5.553 ns )                    ; FSM:inst3|state.s4          ; FSM:inst3|T1[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.292 ns                ;
+; N/A                                     ; 181.09 MHz ( period = 5.522 ns )                    ; FSM:inst3|T2[2]             ; FSM:inst3|CY                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.261 ns                ;
+; N/A                                     ; 181.65 MHz ( period = 5.505 ns )                    ; FSM:inst3|T1[1]             ; FSM:inst3|T2[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.244 ns                ;
+; N/A                                     ; 181.69 MHz ( period = 5.504 ns )                    ; FSM:inst3|T2[1]             ; FSM:inst3|T2[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.243 ns                ;
+; N/A                                     ; 181.95 MHz ( period = 5.496 ns )                    ; FSM:inst3|T1[2]             ; FSM:inst3|T2[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.235 ns                ;
+; N/A                                     ; 182.05 MHz ( period = 5.493 ns )                    ; frequency:inst|division[7]  ; frequency:inst|division[27] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.232 ns                ;
+; N/A                                     ; 182.18 MHz ( period = 5.489 ns )                    ; FSM:inst3|T1[4]             ; FSM:inst3|T2[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.228 ns                ;
+; N/A                                     ; 182.42 MHz ( period = 5.482 ns )                    ; FSM:inst3|T1[1]             ; FSM:inst3|T1[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.221 ns                ;
+; N/A                                     ; 183.25 MHz ( period = 5.457 ns )                    ; FSM:inst3|T1[0]             ; FSM:inst3|MG                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.196 ns                ;
+; N/A                                     ; 183.65 MHz ( period = 5.445 ns )                    ; FSM:inst3|T2[3]             ; nixie_tube:inst5|CR[4]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.184 ns                ;
+; N/A                                     ; 183.72 MHz ( period = 5.443 ns )                    ; frequency:inst|division[2]  ; frequency:inst|division[17] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.182 ns                ;
+; N/A                                     ; 183.76 MHz ( period = 5.442 ns )                    ; frequency:inst|division[2]  ; frequency:inst|F2           ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.181 ns                ;
+; N/A                                     ; 183.82 MHz ( period = 5.440 ns )                    ; frequency:inst|division[2]  ; frequency:inst|division[16] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.179 ns                ;
+; N/A                                     ; 183.82 MHz ( period = 5.440 ns )                    ; frequency:inst|division[2]  ; frequency:inst|division[18] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.179 ns                ;
+; N/A                                     ; 183.92 MHz ( period = 5.437 ns )                    ; frequency:inst|division[2]  ; frequency:inst|division[19] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.176 ns                ;
+; N/A                                     ; 184.03 MHz ( period = 5.434 ns )                    ; frequency:inst|division[2]  ; frequency:inst|division[6]  ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.173 ns                ;
+; N/A                                     ; 184.03 MHz ( period = 5.434 ns )                    ; frequency:inst|division[4]  ; frequency:inst|division[27] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.144 ns                ;
+; N/A                                     ; 184.40 MHz ( period = 5.423 ns )                    ; FSM:inst3|G[4]              ; FSM:inst3|MG                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.132 ns                ;
+; N/A                                     ; 184.54 MHz ( period = 5.419 ns )                    ; FSM:inst3|G[9]              ; FSM:inst3|MG                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.158 ns                ;
+; N/A                                     ; 184.71 MHz ( period = 5.414 ns )                    ; FSM:inst3|T1[3]             ; FSM:inst3|T2[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.153 ns                ;
+; N/A                                     ; 185.56 MHz ( period = 5.389 ns )                    ; FSM:inst3|T2[3]             ; nixie_tube:inst5|CR[0]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.128 ns                ;
+; N/A                                     ; 186.05 MHz ( period = 5.375 ns )                    ; FSM:inst3|state.s4          ; FSM:inst3|T2[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.114 ns                ;
+; N/A                                     ; 186.05 MHz ( period = 5.375 ns )                    ; FSM:inst3|T1[3]             ; nixie_tube:inst5|MR[0]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.144 ns                ;
+; N/A                                     ; 186.12 MHz ( period = 5.373 ns )                    ; FSM:inst3|T1[0]             ; FSM:inst3|T1[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.112 ns                ;
+; N/A                                     ; 186.12 MHz ( period = 5.373 ns )                    ; FSM:inst3|T1[0]             ; FSM:inst3|T2[0]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.112 ns                ;
+; N/A                                     ; 186.36 MHz ( period = 5.366 ns )                    ; FSM:inst3|T1[3]             ; nixie_tube:inst5|ML[6]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.135 ns                ;
+; N/A                                     ; 186.43 MHz ( period = 5.364 ns )                    ; FSM:inst3|T1[3]             ; nixie_tube:inst5|ML[0]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.133 ns                ;
+; N/A                                     ; 186.50 MHz ( period = 5.362 ns )                    ; FSM:inst3|T1[1]             ; FSM:inst3|T1[0]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.101 ns                ;
+; N/A                                     ; 186.50 MHz ( period = 5.362 ns )                    ; FSM:inst3|T2[0]             ; nixie_tube:inst5|CL[3]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.101 ns                ;
+; N/A                                     ; 187.06 MHz ( period = 5.346 ns )                    ; FSM:inst3|G[3]              ; FSM:inst3|G[6]              ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.085 ns                ;
+; N/A                                     ; 187.09 MHz ( period = 5.345 ns )                    ; FSM:inst3|G[4]              ; FSM:inst3|T1[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.054 ns                ;
+; N/A                                     ; 187.23 MHz ( period = 5.341 ns )                    ; FSM:inst3|G[9]              ; FSM:inst3|T1[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.080 ns                ;
+; N/A                                     ; 187.51 MHz ( period = 5.333 ns )                    ; FSM:inst3|T2[0]             ; FSM:inst3|T1[2]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.072 ns                ;
+; N/A                                     ; 187.55 MHz ( period = 5.332 ns )                    ; FSM:inst3|T1[1]             ; FSM:inst3|T2[2]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.071 ns                ;
+; N/A                                     ; 187.55 MHz ( period = 5.332 ns )                    ; FSM:inst3|T2[0]             ; FSM:inst3|T1[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.071 ns                ;
+; N/A                                     ; 188.25 MHz ( period = 5.312 ns )                    ; FSM:inst3|T1[3]             ; nixie_tube:inst5|MR[6]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.081 ns                ;
+; N/A                                     ; 188.93 MHz ( period = 5.293 ns )                    ; FSM:inst3|T1[2]             ; FSM:inst3|MG                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.032 ns                ;
+; N/A                                     ; 189.18 MHz ( period = 5.286 ns )                    ; FSM:inst3|T1[4]             ; FSM:inst3|MG                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.025 ns                ;
+; N/A                                     ; 189.54 MHz ( period = 5.276 ns )                    ; frequency:inst|division[1]  ; frequency:inst|division[17] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.015 ns                ;
+; N/A                                     ; 189.57 MHz ( period = 5.275 ns )                    ; frequency:inst|division[1]  ; frequency:inst|F2           ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.014 ns                ;
+; N/A                                     ; 189.65 MHz ( period = 5.273 ns )                    ; frequency:inst|division[1]  ; frequency:inst|division[16] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.012 ns                ;
+; N/A                                     ; 189.65 MHz ( period = 5.273 ns )                    ; frequency:inst|division[1]  ; frequency:inst|division[18] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.012 ns                ;
+; N/A                                     ; 189.75 MHz ( period = 5.270 ns )                    ; frequency:inst|division[1]  ; frequency:inst|division[19] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.009 ns                ;
+; N/A                                     ; 189.79 MHz ( period = 5.269 ns )                    ; frequency:inst|division[6]  ; frequency:inst|division[17] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.008 ns                ;
+; N/A                                     ; 189.83 MHz ( period = 5.268 ns )                    ; frequency:inst|division[6]  ; frequency:inst|F2           ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.007 ns                ;
+; N/A                                     ; 189.83 MHz ( period = 5.268 ns )                    ; FSM:inst3|T2[2]             ; FSM:inst3|CRR               ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.007 ns                ;
+; N/A                                     ; 189.86 MHz ( period = 5.267 ns )                    ; frequency:inst|division[1]  ; frequency:inst|division[6]  ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.006 ns                ;
+; N/A                                     ; 189.90 MHz ( period = 5.266 ns )                    ; frequency:inst|division[6]  ; frequency:inst|division[16] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.005 ns                ;
+; N/A                                     ; 189.90 MHz ( period = 5.266 ns )                    ; frequency:inst|division[6]  ; frequency:inst|division[18] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.005 ns                ;
+; N/A                                     ; 190.01 MHz ( period = 5.263 ns )                    ; frequency:inst|division[6]  ; frequency:inst|division[19] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 5.002 ns                ;
+; N/A                                     ; 190.11 MHz ( period = 5.260 ns )                    ; frequency:inst|division[6]  ; frequency:inst|division[6]  ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.999 ns                ;
+; N/A                                     ; 190.22 MHz ( period = 5.257 ns )                    ; FSM:inst3|G[4]              ; FSM:inst3|T1[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.966 ns                ;
+; N/A                                     ; 190.29 MHz ( period = 5.255 ns )                    ; FSM:inst3|G[4]              ; FSM:inst3|T1[0]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.964 ns                ;
+; N/A                                     ; 190.37 MHz ( period = 5.253 ns )                    ; FSM:inst3|G[9]              ; FSM:inst3|T1[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.992 ns                ;
+; N/A                                     ; 190.44 MHz ( period = 5.251 ns )                    ; FSM:inst3|G[9]              ; FSM:inst3|T1[0]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.990 ns                ;
+; N/A                                     ; 190.51 MHz ( period = 5.249 ns )                    ; FSM:inst3|T2[1]             ; FSM:inst3|CY                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.988 ns                ;
+; N/A                                     ; 190.95 MHz ( period = 5.237 ns )                    ; FSM:inst3|T2[1]             ; nixie_tube:inst5|CR[5]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.976 ns                ;
+; N/A                                     ; 191.06 MHz ( period = 5.234 ns )                    ; FSM:inst3|T2[2]             ; FSM:inst3|MRR               ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.973 ns                ;
+; N/A                                     ; 191.68 MHz ( period = 5.217 ns )                    ; FSM:inst3|T2[2]             ; FSM:inst3|T2[0]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.956 ns                ;
+; N/A                                     ; 191.68 MHz ( period = 5.217 ns )                    ; frequency:inst|division[5]  ; frequency:inst|division[27] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.956 ns                ;
+; N/A                                     ; 191.86 MHz ( period = 5.212 ns )                    ; FSM:inst3|state.s4          ; FSM:inst3|T1[0]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.951 ns                ;
+; N/A                                     ; 191.90 MHz ( period = 5.211 ns )                    ; FSM:inst3|T1[3]             ; FSM:inst3|MG                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.950 ns                ;
+; N/A                                     ; 191.98 MHz ( period = 5.209 ns )                    ; FSM:inst3|T2[4]             ; FSM:inst3|CY                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.948 ns                ;
+; N/A                                     ; 191.98 MHz ( period = 5.209 ns )                    ; FSM:inst3|T1[2]             ; FSM:inst3|T1[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.948 ns                ;
+; N/A                                     ; 191.98 MHz ( period = 5.209 ns )                    ; FSM:inst3|T1[2]             ; FSM:inst3|T2[0]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.948 ns                ;
+; N/A                                     ; 192.23 MHz ( period = 5.202 ns )                    ; FSM:inst3|T1[4]             ; FSM:inst3|T1[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.941 ns                ;
+; N/A                                     ; 192.23 MHz ( period = 5.202 ns )                    ; FSM:inst3|T1[4]             ; FSM:inst3|T2[0]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.941 ns                ;
+; N/A                                     ; 192.31 MHz ( period = 5.200 ns )                    ; FSM:inst3|state.s4          ; FSM:inst3|T2[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.939 ns                ;
+; N/A                                     ; 193.12 MHz ( period = 5.178 ns )                    ; FSM:inst3|T1[0]             ; FSM:inst3|T2[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.917 ns                ;
+; N/A                                     ; 193.57 MHz ( period = 5.166 ns )                    ; FSM:inst3|G[4]              ; FSM:inst3|state.s2          ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.875 ns                ;
+; N/A                                     ; 193.65 MHz ( period = 5.164 ns )                    ; FSM:inst3|T2[3]             ; FSM:inst3|CY                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.903 ns                ;
+; N/A                                     ; 193.72 MHz ( period = 5.162 ns )                    ; FSM:inst3|G[9]              ; FSM:inst3|state.s2          ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.901 ns                ;
+; N/A                                     ; 193.99 MHz ( period = 5.155 ns )                    ; FSM:inst3|T1[0]             ; FSM:inst3|T1[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.894 ns                ;
+; N/A                                     ; 194.59 MHz ( period = 5.139 ns )                    ; FSM:inst3|G[4]              ; FSM:inst3|MY                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.848 ns                ;
+; N/A                                     ; 194.74 MHz ( period = 5.135 ns )                    ; FSM:inst3|G[9]              ; FSM:inst3|MY                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.874 ns                ;
+; N/A                                     ; 194.78 MHz ( period = 5.134 ns )                    ; frequency:inst|division[7]  ; frequency:inst|division[17] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.873 ns                ;
+; N/A                                     ; 194.82 MHz ( period = 5.133 ns )                    ; frequency:inst|division[7]  ; frequency:inst|F2           ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.872 ns                ;
+; N/A                                     ; 194.82 MHz ( period = 5.133 ns )                    ; FSM:inst3|T1[1]             ; FSM:inst3|CY                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.872 ns                ;
+; N/A                                     ; 194.86 MHz ( period = 5.132 ns )                    ; FSM:inst3|T1[1]             ; FSM:inst3|state.s2          ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.871 ns                ;
+; N/A                                     ; 194.89 MHz ( period = 5.131 ns )                    ; frequency:inst|division[7]  ; frequency:inst|division[16] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.870 ns                ;
+; N/A                                     ; 194.89 MHz ( period = 5.131 ns )                    ; frequency:inst|division[7]  ; frequency:inst|division[18] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.870 ns                ;
+; N/A                                     ; 195.01 MHz ( period = 5.128 ns )                    ; frequency:inst|division[7]  ; frequency:inst|division[19] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.867 ns                ;
+; N/A                                     ; 195.01 MHz ( period = 5.128 ns )                    ; FSM:inst3|T2[2]             ; FSM:inst3|MY                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.867 ns                ;
+; N/A                                     ; 195.05 MHz ( period = 5.127 ns )                    ; FSM:inst3|T1[3]             ; FSM:inst3|T1[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.866 ns                ;
+; N/A                                     ; 195.05 MHz ( period = 5.127 ns )                    ; FSM:inst3|T1[3]             ; FSM:inst3|T2[0]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.866 ns                ;
+; N/A                                     ; 195.12 MHz ( period = 5.125 ns )                    ; FSM:inst3|T1[3]             ; nixie_tube:inst5|ML[5]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.894 ns                ;
+; N/A                                     ; 195.12 MHz ( period = 5.125 ns )                    ; frequency:inst|division[7]  ; frequency:inst|division[6]  ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.864 ns                ;
+; N/A                                     ; 195.20 MHz ( period = 5.123 ns )                    ; FSM:inst3|T1[3]             ; nixie_tube:inst5|ML[4]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.892 ns                ;
+; N/A                                     ; 195.62 MHz ( period = 5.112 ns )                    ; FSM:inst3|T2[0]             ; nixie_tube:inst5|CL[6]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.851 ns                ;
+; N/A                                     ; 195.66 MHz ( period = 5.111 ns )                    ; frequency:inst|division[4]  ; frequency:inst|division[6]  ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.821 ns                ;
+; N/A                                     ; 195.89 MHz ( period = 5.105 ns )                    ; FSM:inst3|T1[1]             ; FSM:inst3|MY                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.844 ns                ;
+; N/A                                     ; 196.12 MHz ( period = 5.099 ns )                    ; FSM:inst3|G[7]              ; FSM:inst3|MG                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.838 ns                ;
+; N/A                                     ; 196.19 MHz ( period = 5.097 ns )                    ; FSM:inst3|T1[1]             ; nixie_tube:inst5|MR[0]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.866 ns                ;
+; N/A                                     ; 196.54 MHz ( period = 5.088 ns )                    ; FSM:inst3|T1[1]             ; nixie_tube:inst5|ML[6]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.857 ns                ;
+; N/A                                     ; 196.62 MHz ( period = 5.086 ns )                    ; FSM:inst3|T1[1]             ; nixie_tube:inst5|ML[0]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.855 ns                ;
+; N/A                                     ; 196.62 MHz ( period = 5.086 ns )                    ; FSM:inst3|T1[3]             ; nixie_tube:inst5|MR[3]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.855 ns                ;
+; N/A                                     ; 196.70 MHz ( period = 5.084 ns )                    ; frequency:inst|division[30] ; frequency:inst|division[9]  ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.846 ns                ;
+; N/A                                     ; 196.77 MHz ( period = 5.082 ns )                    ; frequency:inst|division[30] ; frequency:inst|division[14] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.844 ns                ;
+; N/A                                     ; 197.32 MHz ( period = 5.068 ns )                    ; FSM:inst3|G[4]              ; FSM:inst3|T1[2]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.777 ns                ;
+; N/A                                     ; 197.36 MHz ( period = 5.067 ns )                    ; FSM:inst3|G[4]              ; FSM:inst3|T1[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.776 ns                ;
+; N/A                                     ; 197.47 MHz ( period = 5.064 ns )                    ; FSM:inst3|G[9]              ; FSM:inst3|T1[2]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.803 ns                ;
+; N/A                                     ; 197.51 MHz ( period = 5.063 ns )                    ; FSM:inst3|T1[1]             ; FSM:inst3|T2[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.802 ns                ;
+; N/A                                     ; 197.51 MHz ( period = 5.063 ns )                    ; FSM:inst3|G[9]              ; FSM:inst3|T1[1]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.802 ns                ;
+; N/A                                     ; 197.55 MHz ( period = 5.062 ns )                    ; FSM:inst3|T2[0]             ; FSM:inst3|T1[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.801 ns                ;
+; N/A                                     ; 197.55 MHz ( period = 5.062 ns )                    ; FSM:inst3|T2[3]             ; nixie_tube:inst5|CL[2]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.801 ns                ;
+; N/A                                     ; 197.71 MHz ( period = 5.058 ns )                    ; FSM:inst3|T2[2]             ; FSM:inst3|CG                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.797 ns                ;
+; N/A                                     ; 198.06 MHz ( period = 5.049 ns )                    ; FSM:inst3|T1[1]             ; nixie_tube:inst5|MR[3]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.818 ns                ;
+; N/A                                     ; 198.61 MHz ( period = 5.035 ns )                    ; FSM:inst3|T1[0]             ; FSM:inst3|T1[0]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.774 ns                ;
+; N/A                                     ; 198.61 MHz ( period = 5.035 ns )                    ; FSM:inst3|T2[0]             ; FSM:inst3|T1[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.774 ns                ;
+; N/A                                     ; 198.65 MHz ( period = 5.034 ns )                    ; frequency:inst|division[6]  ; frequency:inst|division[25] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.773 ns                ;
+; N/A                                     ; 198.69 MHz ( period = 5.033 ns )                    ; frequency:inst|division[4]  ; frequency:inst|division[18] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.743 ns                ;
+; N/A                                     ; 198.73 MHz ( period = 5.032 ns )                    ; frequency:inst|division[4]  ; frequency:inst|division[17] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.742 ns                ;
+; N/A                                     ; 198.97 MHz ( period = 5.026 ns )                    ; frequency:inst|division[4]  ; frequency:inst|division[19] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.736 ns                ;
+; N/A                                     ; 199.16 MHz ( period = 5.021 ns )                    ; FSM:inst3|G[7]              ; FSM:inst3|T1[4]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.760 ns                ;
+; N/A                                     ; 199.16 MHz ( period = 5.021 ns )                    ; frequency:inst|division[4]  ; frequency:inst|division[16] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.731 ns                ;
+; N/A                                     ; 199.24 MHz ( period = 5.019 ns )                    ; FSM:inst3|T2[2]             ; nixie_tube:inst5|CR[4]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.758 ns                ;
+; N/A                                     ; 199.44 MHz ( period = 5.014 ns )                    ; FSM:inst3|T1[2]             ; FSM:inst3|T2[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.753 ns                ;
+; N/A                                     ; 199.52 MHz ( period = 5.012 ns )                    ; FSM:inst3|T1[2]             ; nixie_tube:inst5|ML[6]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.781 ns                ;
+; N/A                                     ; 199.52 MHz ( period = 5.012 ns )                    ; FSM:inst3|T1[2]             ; nixie_tube:inst5|MR[0]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.781 ns                ;
+; N/A                                     ; 199.60 MHz ( period = 5.010 ns )                    ; FSM:inst3|T1[2]             ; nixie_tube:inst5|ML[0]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.779 ns                ;
+; N/A                                     ; 199.72 MHz ( period = 5.007 ns )                    ; FSM:inst3|T1[4]             ; FSM:inst3|T2[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 199.80 MHz ( period = 5.005 ns )                    ; FSM:inst3|T1[0]             ; FSM:inst3|T2[2]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.744 ns                ;
+; N/A                                     ; 200.08 MHz ( period = 4.998 ns )                    ; FSM:inst3|state.s4          ; FSM:inst3|T2[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.737 ns                ;
+; N/A                                     ; 200.20 MHz ( period = 4.995 ns )                    ; FSM:inst3|T2[1]             ; FSM:inst3|CRR               ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.734 ns                ;
+; N/A                                     ; 200.36 MHz ( period = 4.991 ns )                    ; FSM:inst3|T1[2]             ; FSM:inst3|T1[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.730 ns                ;
+; N/A                                     ; 200.64 MHz ( period = 4.984 ns )                    ; frequency:inst|division[4]  ; frequency:inst|F2           ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.694 ns                ;
+; N/A                                     ; 200.64 MHz ( period = 4.984 ns )                    ; FSM:inst3|T1[4]             ; FSM:inst3|T1[3]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.723 ns                ;
+; N/A                                     ; 201.49 MHz ( period = 4.963 ns )                    ; FSM:inst3|T2[2]             ; nixie_tube:inst5|CR[0]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.702 ns                ;
+; N/A                                     ; 201.57 MHz ( period = 4.961 ns )                    ; FSM:inst3|T2[1]             ; FSM:inst3|MRR               ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.700 ns                ;
+; N/A                                     ; 201.57 MHz ( period = 4.961 ns )                    ; frequency:inst|division[0]  ; frequency:inst|division[17] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.700 ns                ;
+; N/A                                     ; 201.61 MHz ( period = 4.960 ns )                    ; frequency:inst|division[0]  ; frequency:inst|F2           ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.699 ns                ;
+; N/A                                     ; 201.65 MHz ( period = 4.959 ns )                    ; frequency:inst|division[7]  ; frequency:inst|division[25] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.698 ns                ;
+; N/A                                     ; 201.69 MHz ( period = 4.958 ns )                    ; frequency:inst|division[0]  ; frequency:inst|division[16] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.697 ns                ;
+; N/A                                     ; 201.69 MHz ( period = 4.958 ns )                    ; frequency:inst|division[0]  ; frequency:inst|division[18] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.697 ns                ;
+; N/A                                     ; 201.82 MHz ( period = 4.955 ns )                    ; frequency:inst|division[0]  ; frequency:inst|division[19] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.694 ns                ;
+; N/A                                     ; 201.94 MHz ( period = 4.952 ns )                    ; frequency:inst|division[0]  ; frequency:inst|division[6]  ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.691 ns                ;
+; N/A                                     ; 201.98 MHz ( period = 4.951 ns )                    ; FSM:inst3|T2[2]             ; FSM:inst3|state.s1          ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.690 ns                ;
+; N/A                                     ; 201.98 MHz ( period = 4.951 ns )                    ; FSM:inst3|T2[3]             ; nixie_tube:inst5|CR[3]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.690 ns                ;
+; N/A                                     ; 202.22 MHz ( period = 4.945 ns )                    ; FSM:inst3|T2[0]             ; FSM:inst3|MG                ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.684 ns                ;
+; N/A                                     ; 202.22 MHz ( period = 4.945 ns )                    ; FSM:inst3|T2[0]             ; nixie_tube:inst5|CL[1]      ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.684 ns                ;
+; N/A                                     ; 202.27 MHz ( period = 4.944 ns )                    ; FSM:inst3|T2[1]             ; FSM:inst3|T2[0]             ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.683 ns                ;
+; N/A                                     ; 202.27 MHz ( period = 4.944 ns )                    ; frequency:inst|division[14] ; frequency:inst|division[17] ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.683 ns                ;
+; N/A                                     ; 202.31 MHz ( period = 4.943 ns )                    ; frequency:inst|division[14] ; frequency:inst|F2           ; clk_2MHz   ; clk_2MHz ; None                        ; None                      ; 4.682 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                             ;                             ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-----------------------------+-----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------+
+; tsu                                                                          ;
++-------+--------------+------------+------+------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To                     ; To Clock ;
++-------+--------------+------------+------+------------------------+----------+
+; N/A   ; None         ; 0.029 ns   ; C    ; FSM:inst3|MG           ; clk_2MHz ;
+; N/A   ; None         ; -0.049 ns  ; C    ; FSM:inst3|T1[4]        ; clk_2MHz ;
+; N/A   ; None         ; -0.137 ns  ; C    ; FSM:inst3|T1[3]        ; clk_2MHz ;
+; N/A   ; None         ; -0.139 ns  ; C    ; FSM:inst3|T1[0]        ; clk_2MHz ;
+; N/A   ; None         ; -0.153 ns  ; C    ; nixie_tube:inst5|MR[0] ; clk_2MHz ;
+; N/A   ; None         ; -0.163 ns  ; C    ; nixie_tube:inst5|MR[3] ; clk_2MHz ;
+; N/A   ; None         ; -0.228 ns  ; C    ; FSM:inst3|state.s2     ; clk_2MHz ;
+; N/A   ; None         ; -0.255 ns  ; C    ; FSM:inst3|MY           ; clk_2MHz ;
+; N/A   ; None         ; -0.301 ns  ; C    ; FSM:inst3|T2[4]        ; clk_2MHz ;
+; N/A   ; None         ; -0.326 ns  ; C    ; FSM:inst3|T1[2]        ; clk_2MHz ;
+; N/A   ; None         ; -0.327 ns  ; C    ; FSM:inst3|T1[1]        ; clk_2MHz ;
+; N/A   ; None         ; -0.457 ns  ; C    ; nixie_tube:inst5|CR[4] ; clk_2MHz ;
+; N/A   ; None         ; -0.513 ns  ; C    ; nixie_tube:inst5|CR[0] ; clk_2MHz ;
+; N/A   ; None         ; -0.537 ns  ; C    ; FSM:inst3|state.s1     ; clk_2MHz ;
+; N/A   ; None         ; -0.547 ns  ; C    ; nixie_tube:inst5|MR[6] ; clk_2MHz ;
+; N/A   ; None         ; -0.598 ns  ; C    ; FSM:inst3|T2[3]        ; clk_2MHz ;
+; N/A   ; None         ; -0.677 ns  ; C    ; nixie_tube:inst5|MR[5] ; clk_2MHz ;
+; N/A   ; None         ; -0.700 ns  ; C    ; nixie_tube:inst5|CL[3] ; clk_2MHz ;
+; N/A   ; None         ; -0.950 ns  ; C    ; nixie_tube:inst5|CL[6] ; clk_2MHz ;
+; N/A   ; None         ; -0.951 ns  ; C    ; nixie_tube:inst5|CR[3] ; clk_2MHz ;
+; N/A   ; None         ; -0.985 ns  ; C    ; FSM:inst3|CY           ; clk_2MHz ;
+; N/A   ; None         ; -1.040 ns  ; C    ; FSM:inst3|T2[1]        ; clk_2MHz ;
+; N/A   ; None         ; -1.048 ns  ; C    ; nixie_tube:inst5|CL[2] ; clk_2MHz ;
+; N/A   ; None         ; -1.198 ns  ; C    ; nixie_tube:inst5|MR[4] ; clk_2MHz ;
+; N/A   ; None         ; -1.273 ns  ; C    ; FSM:inst3|MRR          ; clk_2MHz ;
+; N/A   ; None         ; -1.373 ns  ; C    ; nixie_tube:inst5|ML[0] ; clk_2MHz ;
+; N/A   ; None         ; -1.376 ns  ; C    ; nixie_tube:inst5|ML[6] ; clk_2MHz ;
+; N/A   ; None         ; -1.394 ns  ; C    ; nixie_tube:inst5|CR[1] ; clk_2MHz ;
+; N/A   ; None         ; -1.417 ns  ; C    ; FSM:inst3|CRR          ; clk_2MHz ;
+; N/A   ; None         ; -1.449 ns  ; C    ; FSM:inst3|CG           ; clk_2MHz ;
+; N/A   ; None         ; -1.461 ns  ; C    ; nixie_tube:inst5|MR[1] ; clk_2MHz ;
+; N/A   ; None         ; -1.521 ns  ; RET  ; FSM:inst3|CY           ; clk_2MHz ;
+; N/A   ; None         ; -1.644 ns  ; C    ; nixie_tube:inst5|CR[5] ; clk_2MHz ;
+; N/A   ; None         ; -1.645 ns  ; C    ; nixie_tube:inst5|CR[2] ; clk_2MHz ;
+; N/A   ; None         ; -1.651 ns  ; RET  ; FSM:inst3|T1[2]        ; clk_2MHz ;
+; N/A   ; None         ; -1.747 ns  ; C    ; FSM:inst3|T2[0]        ; clk_2MHz ;
+; N/A   ; None         ; -1.809 ns  ; RET  ; FSM:inst3|MRR          ; clk_2MHz ;
+; N/A   ; None         ; -1.810 ns  ; C    ; nixie_tube:inst5|CL[4] ; clk_2MHz ;
+; N/A   ; None         ; -1.877 ns  ; C    ; nixie_tube:inst5|ML[2] ; clk_2MHz ;
+; N/A   ; None         ; -2.000 ns  ; RET  ; nixie_tube:inst5|MR[4] ; clk_2MHz ;
+; N/A   ; None         ; -2.000 ns  ; RET  ; nixie_tube:inst5|MR[3] ; clk_2MHz ;
+; N/A   ; None         ; -2.000 ns  ; RET  ; nixie_tube:inst5|MR[0] ; clk_2MHz ;
+; N/A   ; None         ; -2.062 ns  ; RET  ; nixie_tube:inst5|CR[6] ; clk_2MHz ;
+; N/A   ; None         ; -2.136 ns  ; RET  ; FSM:inst3|state.s3     ; clk_2MHz ;
+; N/A   ; None         ; -2.136 ns  ; RET  ; FSM:inst3|state.s2     ; clk_2MHz ;
+; N/A   ; None         ; -2.136 ns  ; RET  ; FSM:inst3|state.s4     ; clk_2MHz ;
+; N/A   ; None         ; -2.136 ns  ; RET  ; FSM:inst3|T2[0]        ; clk_2MHz ;
+; N/A   ; None         ; -2.136 ns  ; RET  ; FSM:inst3|CG           ; clk_2MHz ;
+; N/A   ; None         ; -2.244 ns  ; C    ; nixie_tube:inst5|ML[4] ; clk_2MHz ;
+; N/A   ; None         ; -2.291 ns  ; RET  ; nixie_tube:inst5|MR[6] ; clk_2MHz ;
+; N/A   ; None         ; -2.291 ns  ; RET  ; nixie_tube:inst5|MR[5] ; clk_2MHz ;
+; N/A   ; None         ; -2.291 ns  ; RET  ; nixie_tube:inst5|MR[2] ; clk_2MHz ;
+; N/A   ; None         ; -2.294 ns  ; RET  ; FSM:inst3|T1[3]        ; clk_2MHz ;
+; N/A   ; None         ; -2.295 ns  ; RET  ; FSM:inst3|T1[1]        ; clk_2MHz ;
+; N/A   ; None         ; -2.297 ns  ; RET  ; FSM:inst3|T1[4]        ; clk_2MHz ;
+; N/A   ; None         ; -2.298 ns  ; RET  ; FSM:inst3|T1[0]        ; clk_2MHz ;
+; N/A   ; None         ; -2.329 ns  ; RET  ; nixie_tube:inst5|MR[1] ; clk_2MHz ;
+; N/A   ; None         ; -2.333 ns  ; RET  ; nixie_tube:inst5|ML[2] ; clk_2MHz ;
+; N/A   ; None         ; -2.379 ns  ; C    ; FSM:inst3|T2[2]        ; clk_2MHz ;
+; N/A   ; None         ; -2.440 ns  ; C    ; FSM:inst3|state.s3     ; clk_2MHz ;
+; N/A   ; None         ; -2.477 ns  ; RET  ; nixie_tube:inst5|ML[6] ; clk_2MHz ;
+; N/A   ; None         ; -2.477 ns  ; RET  ; nixie_tube:inst5|ML[5] ; clk_2MHz ;
+; N/A   ; None         ; -2.477 ns  ; RET  ; nixie_tube:inst5|ML[4] ; clk_2MHz ;
+; N/A   ; None         ; -2.477 ns  ; RET  ; nixie_tube:inst5|ML[0] ; clk_2MHz ;
+; N/A   ; None         ; -2.543 ns  ; C    ; nixie_tube:inst5|MR[2] ; clk_2MHz ;
+; N/A   ; None         ; -2.662 ns  ; RET  ; FSM:inst3|T2[4]        ; clk_2MHz ;
+; N/A   ; None         ; -2.671 ns  ; C    ; nixie_tube:inst5|CR[6] ; clk_2MHz ;
+; N/A   ; None         ; -2.773 ns  ; RET  ; FSM:inst3|T2[2]        ; clk_2MHz ;
+; N/A   ; None         ; -2.809 ns  ; RET  ; FSM:inst3|MG           ; clk_2MHz ;
+; N/A   ; None         ; -2.809 ns  ; RET  ; FSM:inst3|CRR          ; clk_2MHz ;
+; N/A   ; None         ; -2.868 ns  ; RET  ; FSM:inst3|MY           ; clk_2MHz ;
+; N/A   ; None         ; -3.153 ns  ; C    ; FSM:inst3|F            ; clk_2MHz ;
+; N/A   ; None         ; -3.215 ns  ; RET  ; nixie_tube:inst5|CL[6] ; clk_2MHz ;
+; N/A   ; None         ; -3.215 ns  ; RET  ; nixie_tube:inst5|CL[5] ; clk_2MHz ;
+; N/A   ; None         ; -3.215 ns  ; RET  ; nixie_tube:inst5|CL[4] ; clk_2MHz ;
+; N/A   ; None         ; -3.215 ns  ; RET  ; nixie_tube:inst5|CL[3] ; clk_2MHz ;
+; N/A   ; None         ; -3.223 ns  ; RET  ; nixie_tube:inst5|CR[4] ; clk_2MHz ;
+; N/A   ; None         ; -3.223 ns  ; RET  ; nixie_tube:inst5|CR[3] ; clk_2MHz ;
+; N/A   ; None         ; -3.223 ns  ; RET  ; nixie_tube:inst5|CR[0] ; clk_2MHz ;
+; N/A   ; None         ; -3.412 ns  ; C    ; nixie_tube:inst5|CL[1] ; clk_2MHz ;
+; N/A   ; None         ; -3.415 ns  ; C    ; nixie_tube:inst5|ML[1] ; clk_2MHz ;
+; N/A   ; None         ; -3.423 ns  ; RET  ; FSM:inst3|T2[3]        ; clk_2MHz ;
+; N/A   ; None         ; -3.427 ns  ; RET  ; FSM:inst3|T2[1]        ; clk_2MHz ;
+; N/A   ; None         ; -3.584 ns  ; RET  ; nixie_tube:inst5|CL[2] ; clk_2MHz ;
+; N/A   ; None         ; -3.584 ns  ; RET  ; nixie_tube:inst5|CL[1] ; clk_2MHz ;
+; N/A   ; None         ; -3.584 ns  ; RET  ; nixie_tube:inst5|CR[5] ; clk_2MHz ;
+; N/A   ; None         ; -3.584 ns  ; RET  ; nixie_tube:inst5|CR[2] ; clk_2MHz ;
+; N/A   ; None         ; -3.584 ns  ; RET  ; nixie_tube:inst5|CR[1] ; clk_2MHz ;
+; N/A   ; None         ; -3.584 ns  ; RET  ; nixie_tube:inst5|ML[1] ; clk_2MHz ;
+; N/A   ; None         ; -3.647 ns  ; C    ; FSM:inst3|state.s4     ; clk_2MHz ;
+; N/A   ; None         ; -3.711 ns  ; RET  ; FSM:inst3|state.s1     ; clk_2MHz ;
++-------+--------------+------------+------+------------------------+----------+
+
+
++---------------------------------------------------------------------------------+
+; tco                                                                             ;
++-------+--------------+------------+------------------------+-------+------------+
+; Slack ; Required tco ; Actual tco ; From                   ; To    ; From Clock ;
++-------+--------------+------------+------------------------+-------+------------+
+; N/A   ; None         ; 13.244 ns  ; nixie_tube:inst5|CR[4] ; CR4   ; clk_2MHz   ;
+; N/A   ; None         ; 13.230 ns  ; FSM:inst3|CG           ; CG    ; clk_2MHz   ;
+; N/A   ; None         ; 13.207 ns  ; nixie_tube:inst5|ML[1] ; ML[1] ; clk_2MHz   ;
+; N/A   ; None         ; 12.959 ns  ; nixie_tube:inst5|ML[0] ; ML[3] ; clk_2MHz   ;
+; N/A   ; None         ; 12.906 ns  ; nixie_tube:inst5|CR[6] ; CR6   ; clk_2MHz   ;
+; N/A   ; None         ; 12.815 ns  ; nixie_tube:inst5|ML[2] ; ML[2] ; clk_2MHz   ;
+; N/A   ; None         ; 12.548 ns  ; nixie_tube:inst5|ML[4] ; ML[4] ; clk_2MHz   ;
+; N/A   ; None         ; 12.431 ns  ; nixie_tube:inst5|MR[1] ; MR1   ; clk_2MHz   ;
+; N/A   ; None         ; 12.358 ns  ; nixie_tube:inst5|ML[0] ; ML[0] ; clk_2MHz   ;
+; N/A   ; None         ; 12.351 ns  ; FSM:inst3|MG           ; MG    ; clk_2MHz   ;
+; N/A   ; None         ; 12.316 ns  ; nixie_tube:inst5|MR[0] ; MR0   ; clk_2MHz   ;
+; N/A   ; None         ; 12.298 ns  ; nixie_tube:inst5|CR[0] ; CR0   ; clk_2MHz   ;
+; N/A   ; None         ; 12.289 ns  ; nixie_tube:inst5|CL[4] ; CL[4] ; clk_2MHz   ;
+; N/A   ; None         ; 12.206 ns  ; nixie_tube:inst5|ML[5] ; ML[5] ; clk_2MHz   ;
+; N/A   ; None         ; 12.042 ns  ; nixie_tube:inst5|MR[3] ; MR3   ; clk_2MHz   ;
+; N/A   ; None         ; 12.038 ns  ; nixie_tube:inst5|MR[2] ; MR2   ; clk_2MHz   ;
+; N/A   ; None         ; 11.995 ns  ; nixie_tube:inst5|MR[5] ; MR5   ; clk_2MHz   ;
+; N/A   ; None         ; 11.986 ns  ; nixie_tube:inst5|MR[6] ; MR6   ; clk_2MHz   ;
+; N/A   ; None         ; 11.968 ns  ; nixie_tube:inst5|CR[3] ; CR3   ; clk_2MHz   ;
+; N/A   ; None         ; 11.950 ns  ; FSM:inst3|MY           ; MY    ; clk_2MHz   ;
+; N/A   ; None         ; 11.939 ns  ; nixie_tube:inst5|MR[4] ; MR4   ; clk_2MHz   ;
+; N/A   ; None         ; 11.919 ns  ; nixie_tube:inst5|CL[6] ; CL[6] ; clk_2MHz   ;
+; N/A   ; None         ; 11.915 ns  ; nixie_tube:inst5|CR[5] ; CR5   ; clk_2MHz   ;
+; N/A   ; None         ; 11.914 ns  ; nixie_tube:inst5|CR[2] ; CR2   ; clk_2MHz   ;
+; N/A   ; None         ; 11.910 ns  ; nixie_tube:inst5|CL[2] ; CL[2] ; clk_2MHz   ;
+; N/A   ; None         ; 11.902 ns  ; FSM:inst3|MRR          ; MR    ; clk_2MHz   ;
+; N/A   ; None         ; 11.879 ns  ; nixie_tube:inst5|ML[6] ; ML[6] ; clk_2MHz   ;
+; N/A   ; None         ; 11.840 ns  ; nixie_tube:inst5|CL[1] ; CL[1] ; clk_2MHz   ;
+; N/A   ; None         ; 11.775 ns  ; nixie_tube:inst5|CL[3] ; CL[0] ; clk_2MHz   ;
+; N/A   ; None         ; 11.775 ns  ; nixie_tube:inst5|CL[3] ; CL[3] ; clk_2MHz   ;
+; N/A   ; None         ; 11.578 ns  ; FSM:inst3|CRR          ; CR    ; clk_2MHz   ;
+; N/A   ; None         ; 11.574 ns  ; nixie_tube:inst5|CL[5] ; CL[5] ; clk_2MHz   ;
+; N/A   ; None         ; 11.527 ns  ; FSM:inst3|CY           ; CY    ; clk_2MHz   ;
+; N/A   ; None         ; 11.492 ns  ; nixie_tube:inst5|CR[1] ; CR1   ; clk_2MHz   ;
+; N/A   ; None         ; 7.512 ns   ; frequency:inst|F2      ; CLK   ; clk_2MHz   ;
++-------+--------------+------------+------------------------+-------+------------+
+
+
++------------------------------------------------------------------------------------+
+; th                                                                                 ;
++---------------+-------------+-----------+------+------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To                     ; To Clock ;
++---------------+-------------+-----------+------+------------------------+----------+
+; N/A           ; None        ; 3.940 ns  ; C    ; nixie_tube:inst5|CL[6] ; clk_2MHz ;
+; N/A           ; None        ; 3.763 ns  ; RET  ; FSM:inst3|state.s1     ; clk_2MHz ;
+; N/A           ; None        ; 3.702 ns  ; C    ; FSM:inst3|T2[0]        ; clk_2MHz ;
+; N/A           ; None        ; 3.699 ns  ; C    ; FSM:inst3|state.s4     ; clk_2MHz ;
+; N/A           ; None        ; 3.692 ns  ; C    ; nixie_tube:inst5|CL[3] ; clk_2MHz ;
+; N/A           ; None        ; 3.636 ns  ; RET  ; nixie_tube:inst5|CL[2] ; clk_2MHz ;
+; N/A           ; None        ; 3.636 ns  ; RET  ; nixie_tube:inst5|CL[1] ; clk_2MHz ;
+; N/A           ; None        ; 3.636 ns  ; RET  ; nixie_tube:inst5|CR[5] ; clk_2MHz ;
+; N/A           ; None        ; 3.636 ns  ; RET  ; nixie_tube:inst5|CR[2] ; clk_2MHz ;
+; N/A           ; None        ; 3.636 ns  ; RET  ; nixie_tube:inst5|CR[1] ; clk_2MHz ;
+; N/A           ; None        ; 3.636 ns  ; RET  ; nixie_tube:inst5|ML[1] ; clk_2MHz ;
+; N/A           ; None        ; 3.479 ns  ; RET  ; FSM:inst3|T2[1]        ; clk_2MHz ;
+; N/A           ; None        ; 3.475 ns  ; RET  ; FSM:inst3|T2[3]        ; clk_2MHz ;
+; N/A           ; None        ; 3.467 ns  ; C    ; nixie_tube:inst5|ML[1] ; clk_2MHz ;
+; N/A           ; None        ; 3.464 ns  ; C    ; nixie_tube:inst5|CL[1] ; clk_2MHz ;
+; N/A           ; None        ; 3.338 ns  ; C    ; nixie_tube:inst5|MR[2] ; clk_2MHz ;
+; N/A           ; None        ; 3.275 ns  ; RET  ; nixie_tube:inst5|CR[4] ; clk_2MHz ;
+; N/A           ; None        ; 3.275 ns  ; RET  ; nixie_tube:inst5|CR[3] ; clk_2MHz ;
+; N/A           ; None        ; 3.275 ns  ; RET  ; nixie_tube:inst5|CR[0] ; clk_2MHz ;
+; N/A           ; None        ; 3.267 ns  ; RET  ; nixie_tube:inst5|CL[6] ; clk_2MHz ;
+; N/A           ; None        ; 3.267 ns  ; RET  ; nixie_tube:inst5|CL[5] ; clk_2MHz ;
+; N/A           ; None        ; 3.267 ns  ; RET  ; nixie_tube:inst5|CL[4] ; clk_2MHz ;
+; N/A           ; None        ; 3.267 ns  ; RET  ; nixie_tube:inst5|CL[3] ; clk_2MHz ;
+; N/A           ; None        ; 3.205 ns  ; C    ; FSM:inst3|F            ; clk_2MHz ;
+; N/A           ; None        ; 3.142 ns  ; C    ; nixie_tube:inst5|ML[6] ; clk_2MHz ;
+; N/A           ; None        ; 3.137 ns  ; C    ; nixie_tube:inst5|ML[0] ; clk_2MHz ;
+; N/A           ; None        ; 2.920 ns  ; RET  ; FSM:inst3|MY           ; clk_2MHz ;
+; N/A           ; None        ; 2.861 ns  ; RET  ; FSM:inst3|MG           ; clk_2MHz ;
+; N/A           ; None        ; 2.861 ns  ; RET  ; FSM:inst3|CRR          ; clk_2MHz ;
+; N/A           ; None        ; 2.825 ns  ; RET  ; FSM:inst3|T2[2]        ; clk_2MHz ;
+; N/A           ; None        ; 2.723 ns  ; C    ; nixie_tube:inst5|CR[6] ; clk_2MHz ;
+; N/A           ; None        ; 2.714 ns  ; RET  ; FSM:inst3|T2[4]        ; clk_2MHz ;
+; N/A           ; None        ; 2.592 ns  ; C    ; nixie_tube:inst5|MR[5] ; clk_2MHz ;
+; N/A           ; None        ; 2.529 ns  ; RET  ; nixie_tube:inst5|ML[6] ; clk_2MHz ;
+; N/A           ; None        ; 2.529 ns  ; RET  ; nixie_tube:inst5|ML[5] ; clk_2MHz ;
+; N/A           ; None        ; 2.529 ns  ; RET  ; nixie_tube:inst5|ML[4] ; clk_2MHz ;
+; N/A           ; None        ; 2.529 ns  ; RET  ; nixie_tube:inst5|ML[0] ; clk_2MHz ;
+; N/A           ; None        ; 2.492 ns  ; C    ; FSM:inst3|state.s3     ; clk_2MHz ;
+; N/A           ; None        ; 2.488 ns  ; RET  ; FSM:inst3|MRR          ; clk_2MHz ;
+; N/A           ; None        ; 2.441 ns  ; C    ; FSM:inst3|T2[4]        ; clk_2MHz ;
+; N/A           ; None        ; 2.431 ns  ; C    ; FSM:inst3|T2[2]        ; clk_2MHz ;
+; N/A           ; None        ; 2.385 ns  ; RET  ; nixie_tube:inst5|ML[2] ; clk_2MHz ;
+; N/A           ; None        ; 2.381 ns  ; RET  ; nixie_tube:inst5|MR[1] ; clk_2MHz ;
+; N/A           ; None        ; 2.352 ns  ; RET  ; FSM:inst3|T1[2]        ; clk_2MHz ;
+; N/A           ; None        ; 2.350 ns  ; RET  ; FSM:inst3|T1[0]        ; clk_2MHz ;
+; N/A           ; None        ; 2.349 ns  ; RET  ; FSM:inst3|T1[4]        ; clk_2MHz ;
+; N/A           ; None        ; 2.347 ns  ; RET  ; FSM:inst3|T1[1]        ; clk_2MHz ;
+; N/A           ; None        ; 2.346 ns  ; RET  ; FSM:inst3|T1[3]        ; clk_2MHz ;
+; N/A           ; None        ; 2.343 ns  ; RET  ; nixie_tube:inst5|MR[6] ; clk_2MHz ;
+; N/A           ; None        ; 2.343 ns  ; RET  ; nixie_tube:inst5|MR[5] ; clk_2MHz ;
+; N/A           ; None        ; 2.343 ns  ; RET  ; nixie_tube:inst5|MR[2] ; clk_2MHz ;
+; N/A           ; None        ; 2.296 ns  ; C    ; nixie_tube:inst5|ML[4] ; clk_2MHz ;
+; N/A           ; None        ; 2.265 ns  ; C    ; FSM:inst3|T2[3]        ; clk_2MHz ;
+; N/A           ; None        ; 2.188 ns  ; RET  ; FSM:inst3|state.s3     ; clk_2MHz ;
+; N/A           ; None        ; 2.188 ns  ; RET  ; FSM:inst3|state.s2     ; clk_2MHz ;
+; N/A           ; None        ; 2.188 ns  ; RET  ; FSM:inst3|state.s4     ; clk_2MHz ;
+; N/A           ; None        ; 2.188 ns  ; RET  ; FSM:inst3|CY           ; clk_2MHz ;
+; N/A           ; None        ; 2.188 ns  ; RET  ; FSM:inst3|T2[0]        ; clk_2MHz ;
+; N/A           ; None        ; 2.188 ns  ; RET  ; FSM:inst3|CG           ; clk_2MHz ;
+; N/A           ; None        ; 2.187 ns  ; C    ; nixie_tube:inst5|CR[3] ; clk_2MHz ;
+; N/A           ; None        ; 2.122 ns  ; C    ; nixie_tube:inst5|MR[0] ; clk_2MHz ;
+; N/A           ; None        ; 2.114 ns  ; RET  ; nixie_tube:inst5|CR[6] ; clk_2MHz ;
+; N/A           ; None        ; 2.102 ns  ; C    ; FSM:inst3|T1[0]        ; clk_2MHz ;
+; N/A           ; None        ; 2.063 ns  ; C    ; FSM:inst3|T2[1]        ; clk_2MHz ;
+; N/A           ; None        ; 2.052 ns  ; RET  ; nixie_tube:inst5|MR[4] ; clk_2MHz ;
+; N/A           ; None        ; 2.052 ns  ; RET  ; nixie_tube:inst5|MR[3] ; clk_2MHz ;
+; N/A           ; None        ; 2.052 ns  ; RET  ; nixie_tube:inst5|MR[0] ; clk_2MHz ;
+; N/A           ; None        ; 1.991 ns  ; C    ; nixie_tube:inst5|CR[0] ; clk_2MHz ;
+; N/A           ; None        ; 1.956 ns  ; C    ; nixie_tube:inst5|CR[2] ; clk_2MHz ;
+; N/A           ; None        ; 1.950 ns  ; C    ; FSM:inst3|T1[2]        ; clk_2MHz ;
+; N/A           ; None        ; 1.929 ns  ; C    ; nixie_tube:inst5|ML[2] ; clk_2MHz ;
+; N/A           ; None        ; 1.862 ns  ; C    ; nixie_tube:inst5|CL[4] ; clk_2MHz ;
+; N/A           ; None        ; 1.789 ns  ; C    ; nixie_tube:inst5|CR[5] ; clk_2MHz ;
+; N/A           ; None        ; 1.600 ns  ; C    ; FSM:inst3|T1[4]        ; clk_2MHz ;
+; N/A           ; None        ; 1.582 ns  ; C    ; FSM:inst3|T1[3]        ; clk_2MHz ;
+; N/A           ; None        ; 1.513 ns  ; C    ; nixie_tube:inst5|MR[1] ; clk_2MHz ;
+; N/A           ; None        ; 1.501 ns  ; C    ; FSM:inst3|CG           ; clk_2MHz ;
+; N/A           ; None        ; 1.469 ns  ; C    ; FSM:inst3|CRR          ; clk_2MHz ;
+; N/A           ; None        ; 1.446 ns  ; C    ; nixie_tube:inst5|CR[1] ; clk_2MHz ;
+; N/A           ; None        ; 1.431 ns  ; C    ; FSM:inst3|MY           ; clk_2MHz ;
+; N/A           ; None        ; 1.325 ns  ; C    ; FSM:inst3|MRR          ; clk_2MHz ;
+; N/A           ; None        ; 1.250 ns  ; C    ; nixie_tube:inst5|MR[4] ; clk_2MHz ;
+; N/A           ; None        ; 1.216 ns  ; C    ; FSM:inst3|T1[1]        ; clk_2MHz ;
+; N/A           ; None        ; 1.100 ns  ; C    ; nixie_tube:inst5|CL[2] ; clk_2MHz ;
+; N/A           ; None        ; 1.037 ns  ; C    ; FSM:inst3|CY           ; clk_2MHz ;
+; N/A           ; None        ; 0.825 ns  ; C    ; nixie_tube:inst5|MR[3] ; clk_2MHz ;
+; N/A           ; None        ; 0.599 ns  ; C    ; nixie_tube:inst5|MR[6] ; clk_2MHz ;
+; N/A           ; None        ; 0.589 ns  ; C    ; FSM:inst3|state.s1     ; clk_2MHz ;
+; N/A           ; None        ; 0.509 ns  ; C    ; nixie_tube:inst5|CR[4] ; clk_2MHz ;
+; N/A           ; None        ; 0.280 ns  ; C    ; FSM:inst3|state.s2     ; clk_2MHz ;
+; N/A           ; None        ; 0.125 ns  ; C    ; FSM:inst3|MG           ; clk_2MHz ;
++---------------+-------------+-----------+------+------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Classic Timing Analyzer
+    Info: Version 7.1 Build 156 04/30/2007 SJ Full Version
+    Info: Processing started: Sun Sep 04 15:49:40 2016
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off traffic_light -c traffic_light --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk_2MHz" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "frequency:inst|F2" as buffer
+Info: Clock "clk_2MHz" has Internal fmax of 150.83 MHz between source register "FSM:inst3|T2[2]" and destination register "FSM:inst3|T1[2]" (period= 6.63 ns)
+    Info: + Longest register to register delay is 6.369 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X23_Y8_N5; Fanout = 22; REG Node = 'FSM:inst3|T2[2]'
+        Info: 2: + IC(0.564 ns) + CELL(0.442 ns) = 1.006 ns; Loc. = LC_X23_Y8_N3; Fanout = 5; COMB Node = 'FSM:inst3|Equal1~107'
+        Info: 3: + IC(1.315 ns) + CELL(0.292 ns) = 2.613 ns; Loc. = LC_X22_Y7_N1; Fanout = 9; COMB Node = 'FSM:inst3|T1[3]~1475'
+        Info: 4: + IC(1.273 ns) + CELL(0.114 ns) = 4.000 ns; Loc. = LC_X22_Y8_N8; Fanout = 1; COMB Node = 'FSM:inst3|T1[1]~1479'
+        Info: 5: + IC(1.233 ns) + CELL(0.114 ns) = 5.347 ns; Loc. = LC_X21_Y9_N3; Fanout = 2; COMB Node = 'FSM:inst3|T1[1]~1481'
+        Info: 6: + IC(0.713 ns) + CELL(0.309 ns) = 6.369 ns; Loc. = LC_X20_Y9_N4; Fanout = 22; REG Node = 'FSM:inst3|T1[2]'
+        Info: Total cell delay = 1.271 ns ( 19.96 % )
+        Info: Total interconnect delay = 5.098 ns ( 80.04 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk_2MHz" to destination register is 7.368 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_29; Fanout = 33; CLK Node = 'clk_2MHz'
+            Info: 2: + IC(0.745 ns) + CELL(0.935 ns) = 3.149 ns; Loc. = LC_X8_Y10_N2; Fanout = 60; REG Node = 'frequency:inst|F2'
+            Info: 3: + IC(3.508 ns) + CELL(0.711 ns) = 7.368 ns; Loc. = LC_X20_Y9_N4; Fanout = 22; REG Node = 'FSM:inst3|T1[2]'
+            Info: Total cell delay = 3.115 ns ( 42.28 % )
+            Info: Total interconnect delay = 4.253 ns ( 57.72 % )
+        Info: - Longest clock path from clock "clk_2MHz" to source register is 7.368 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_29; Fanout = 33; CLK Node = 'clk_2MHz'
+            Info: 2: + IC(0.745 ns) + CELL(0.935 ns) = 3.149 ns; Loc. = LC_X8_Y10_N2; Fanout = 60; REG Node = 'frequency:inst|F2'
+            Info: 3: + IC(3.508 ns) + CELL(0.711 ns) = 7.368 ns; Loc. = LC_X23_Y8_N5; Fanout = 22; REG Node = 'FSM:inst3|T2[2]'
+            Info: Total cell delay = 3.115 ns ( 42.28 % )
+            Info: Total interconnect delay = 4.253 ns ( 57.72 % )
+    Info: + Micro clock to output delay of source is 0.224 ns
+    Info: + Micro setup delay of destination is 0.037 ns
+Info: tsu for register "FSM:inst3|MG" (data pin = "C", clock pin = "clk_2MHz") is 0.029 ns
+    Info: + Longest pin to register delay is 7.360 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_152; Fanout = 41; PIN Node = 'C'
+        Info: 2: + IC(1.756 ns) + CELL(0.114 ns) = 3.339 ns; Loc. = LC_X22_Y9_N9; Fanout = 1; COMB Node = 'FSM:inst3|always0~177'
+        Info: 3: + IC(1.165 ns) + CELL(0.442 ns) = 4.946 ns; Loc. = LC_X21_Y9_N1; Fanout = 5; COMB Node = 'FSM:inst3|always0~178'
+        Info: 4: + IC(1.239 ns) + CELL(0.442 ns) = 6.627 ns; Loc. = LC_X21_Y8_N5; Fanout = 1; COMB Node = 'FSM:inst3|Selector10~233'
+        Info: 5: + IC(0.424 ns) + CELL(0.309 ns) = 7.360 ns; Loc. = LC_X21_Y8_N0; Fanout = 2; REG Node = 'FSM:inst3|MG'
+        Info: Total cell delay = 2.776 ns ( 37.72 % )
+        Info: Total interconnect delay = 4.584 ns ( 62.28 % )
+    Info: + Micro setup delay of destination is 0.037 ns
+    Info: - Shortest clock path from clock "clk_2MHz" to destination register is 7.368 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_29; Fanout = 33; CLK Node = 'clk_2MHz'
+        Info: 2: + IC(0.745 ns) + CELL(0.935 ns) = 3.149 ns; Loc. = LC_X8_Y10_N2; Fanout = 60; REG Node = 'frequency:inst|F2'
+        Info: 3: + IC(3.508 ns) + CELL(0.711 ns) = 7.368 ns; Loc. = LC_X21_Y8_N0; Fanout = 2; REG Node = 'FSM:inst3|MG'
+        Info: Total cell delay = 3.115 ns ( 42.28 % )
+        Info: Total interconnect delay = 4.253 ns ( 57.72 % )
+Info: tco from clock "clk_2MHz" to destination pin "CR4" through register "nixie_tube:inst5|CR[4]" is 13.244 ns
+    Info: + Longest clock path from clock "clk_2MHz" to source register is 7.368 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_29; Fanout = 33; CLK Node = 'clk_2MHz'
+        Info: 2: + IC(0.745 ns) + CELL(0.935 ns) = 3.149 ns; Loc. = LC_X8_Y10_N2; Fanout = 60; REG Node = 'frequency:inst|F2'
+        Info: 3: + IC(3.508 ns) + CELL(0.711 ns) = 7.368 ns; Loc. = LC_X26_Y8_N0; Fanout = 1; REG Node = 'nixie_tube:inst5|CR[4]'
+        Info: Total cell delay = 3.115 ns ( 42.28 % )
+        Info: Total interconnect delay = 4.253 ns ( 57.72 % )
+    Info: + Micro clock to output delay of source is 0.224 ns
+    Info: + Longest register to pin delay is 5.652 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X26_Y8_N0; Fanout = 1; REG Node = 'nixie_tube:inst5|CR[4]'
+        Info: 2: + IC(3.528 ns) + CELL(2.124 ns) = 5.652 ns; Loc. = PIN_39; Fanout = 0; PIN Node = 'CR4'
+        Info: Total cell delay = 2.124 ns ( 37.58 % )
+        Info: Total interconnect delay = 3.528 ns ( 62.42 % )
+Info: th for register "nixie_tube:inst5|CL[6]" (data pin = "C", clock pin = "clk_2MHz") is 3.940 ns
+    Info: + Longest clock path from clock "clk_2MHz" to destination register is 7.368 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_29; Fanout = 33; CLK Node = 'clk_2MHz'
+        Info: 2: + IC(0.745 ns) + CELL(0.935 ns) = 3.149 ns; Loc. = LC_X8_Y10_N2; Fanout = 60; REG Node = 'frequency:inst|F2'
+        Info: 3: + IC(3.508 ns) + CELL(0.711 ns) = 7.368 ns; Loc. = LC_X25_Y8_N9; Fanout = 1; REG Node = 'nixie_tube:inst5|CL[6]'
+        Info: Total cell delay = 3.115 ns ( 42.28 % )
+        Info: Total interconnect delay = 4.253 ns ( 57.72 % )
+    Info: + Micro hold delay of destination is 0.015 ns
+    Info: - Shortest pin to register delay is 3.443 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_152; Fanout = 41; PIN Node = 'C'
+        Info: 2: + IC(1.369 ns) + CELL(0.114 ns) = 2.952 ns; Loc. = LC_X25_Y8_N8; Fanout = 1; COMB Node = 'nixie_tube:inst5|Selector5~966'
+        Info: 3: + IC(0.182 ns) + CELL(0.309 ns) = 3.443 ns; Loc. = LC_X25_Y8_N9; Fanout = 1; REG Node = 'nixie_tube:inst5|CL[6]'
+        Info: Total cell delay = 1.892 ns ( 54.95 % )
+        Info: Total interconnect delay = 1.551 ns ( 45.05 % )
+Info: Quartus II 64-Bit Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Allocated 197 megabytes of memory during processing
+    Info: Processing ended: Sun Sep 04 15:49:54 2016
+    Info: Elapsed time: 00:00:14
+
+

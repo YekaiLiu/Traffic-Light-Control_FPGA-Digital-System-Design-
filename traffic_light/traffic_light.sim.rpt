@@ -1,0 +1,1683 @@
+Simulator report for traffic_light
+Sun Sep 04 17:57:45 2016
+Quartus II 64-Bit Version 7.1 Build 156 04/30/2007 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 301 nodes    ;
+; Simulation Coverage         ;      69.47 % ;
+; Total Number of Transitions ; 76078        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C6Q240C8  ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                              ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+; Option                                                                                     ; Setting            ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+; Simulation mode                                                                            ; Timing             ; Timing        ;
+; Start time                                                                                 ; 0 ns               ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF               ;               ;
+; Vector input source                                                                        ; traffic_light2.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                 ; On            ;
+; Check outputs                                                                              ; Off                ; Off           ;
+; Report simulation coverage                                                                 ; On                 ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                 ; On            ;
+; Display missing 1-value coverage report                                                    ; On                 ; On            ;
+; Display missing 0-value coverage report                                                    ; On                 ; On            ;
+; Detect setup and hold time violations                                                      ; Off                ; Off           ;
+; Detect glitches                                                                            ; Off                ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                ; Off           ;
+; Generate Signal Activity File                                                              ; Off                ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                 ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE         ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On                 ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto               ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      69.47 % ;
+; Total nodes checked                                 ; 301          ;
+; Total output ports checked                          ; 393          ;
+; Total output ports with complete 1/0-value coverage ; 273          ;
+; Total output ports with no 1/0-value coverage       ; 120          ;
+; Total output ports with no 1-value coverage         ; 120          ;
+; Total output ports with no 0-value coverage         ; 120          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                      ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; Node Name                                     ; Output Port Name                              ; Output Port Type ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; |traffic_light|FSM:inst1|MR                   ; |traffic_light|FSM:inst1|MR                   ; regout           ;
+; |traffic_light|FSM:inst1|CY                   ; |traffic_light|FSM:inst1|CY                   ; regout           ;
+; |traffic_light|nixie_tube:inst5|CL[6]         ; |traffic_light|nixie_tube:inst5|CL[6]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|CL[5]         ; |traffic_light|nixie_tube:inst5|CL[5]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|CL[4]         ; |traffic_light|nixie_tube:inst5|CL[4]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|CL[3]         ; |traffic_light|nixie_tube:inst5|CL[3]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|CL[2]         ; |traffic_light|nixie_tube:inst5|CL[2]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|CR[6]         ; |traffic_light|nixie_tube:inst5|CR[6]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|CR[5]         ; |traffic_light|nixie_tube:inst5|CR[5]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|CR[4]         ; |traffic_light|nixie_tube:inst5|CR[4]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|CR[3]         ; |traffic_light|nixie_tube:inst5|CR[3]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|CR[2]         ; |traffic_light|nixie_tube:inst5|CR[2]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|CR[1]         ; |traffic_light|nixie_tube:inst5|CR[1]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|CR[0]         ; |traffic_light|nixie_tube:inst5|CR[0]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|ML[6]         ; |traffic_light|nixie_tube:inst5|ML[6]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|ML[5]         ; |traffic_light|nixie_tube:inst5|ML[5]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|ML[4]         ; |traffic_light|nixie_tube:inst5|ML[4]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|ML[0]         ; |traffic_light|nixie_tube:inst5|ML[0]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|ML[2]         ; |traffic_light|nixie_tube:inst5|ML[2]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|MR[6]         ; |traffic_light|nixie_tube:inst5|MR[6]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|MR[5]         ; |traffic_light|nixie_tube:inst5|MR[5]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|MR[4]         ; |traffic_light|nixie_tube:inst5|MR[4]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|MR[3]         ; |traffic_light|nixie_tube:inst5|MR[3]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|MR[2]         ; |traffic_light|nixie_tube:inst5|MR[2]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|MR[1]         ; |traffic_light|nixie_tube:inst5|MR[1]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|MR[0]         ; |traffic_light|nixie_tube:inst5|MR[0]         ; regout           ;
+; |traffic_light|FSM:inst1|state.s4             ; |traffic_light|FSM:inst1|state.s4             ; regout           ;
+; |traffic_light|FSM:inst1|T2[2]                ; |traffic_light|FSM:inst1|T2[2]                ; regout           ;
+; |traffic_light|FSM:inst1|state.s2             ; |traffic_light|FSM:inst1|state.s2             ; regout           ;
+; |traffic_light|FSM:inst1|state.s3             ; |traffic_light|FSM:inst1|state.s3             ; regout           ;
+; |traffic_light|FSM:inst1|Add2~173             ; |traffic_light|FSM:inst1|Add2~173             ; combout          ;
+; |traffic_light|FSM:inst1|Add2~173             ; |traffic_light|FSM:inst1|Add2~174             ; cout             ;
+; |traffic_light|FSM:inst1|Add2~175             ; |traffic_light|FSM:inst1|Add2~175             ; combout          ;
+; |traffic_light|FSM:inst1|Add0~92              ; |traffic_light|FSM:inst1|Add0~92              ; combout          ;
+; |traffic_light|FSM:inst1|Add0~92              ; |traffic_light|FSM:inst1|Add0~93              ; cout0            ;
+; |traffic_light|FSM:inst1|Add0~92              ; |traffic_light|FSM:inst1|Add0~93COUT1         ; cout1            ;
+; |traffic_light|FSM:inst1|Add0~94              ; |traffic_light|FSM:inst1|Add0~94              ; combout          ;
+; |traffic_light|FSM:inst1|Add0~94              ; |traffic_light|FSM:inst1|Add0~95              ; cout0            ;
+; |traffic_light|FSM:inst1|Add0~94              ; |traffic_light|FSM:inst1|Add0~95COUT1         ; cout1            ;
+; |traffic_light|FSM:inst1|Add0~96              ; |traffic_light|FSM:inst1|Add0~96              ; combout          ;
+; |traffic_light|FSM:inst1|Add0~96              ; |traffic_light|FSM:inst1|Add0~97              ; cout0            ;
+; |traffic_light|FSM:inst1|Add0~96              ; |traffic_light|FSM:inst1|Add0~97COUT1         ; cout1            ;
+; |traffic_light|FSM:inst1|Add0~98              ; |traffic_light|FSM:inst1|Add0~98              ; combout          ;
+; |traffic_light|FSM:inst1|Add0~100             ; |traffic_light|FSM:inst1|Add0~100             ; combout          ;
+; |traffic_light|FSM:inst1|Add0~100             ; |traffic_light|FSM:inst1|Add0~101             ; cout0            ;
+; |traffic_light|FSM:inst1|Add0~100             ; |traffic_light|FSM:inst1|Add0~101COUT1        ; cout1            ;
+; |traffic_light|FSM:inst1|Add2~177             ; |traffic_light|FSM:inst1|Add2~177             ; combout          ;
+; |traffic_light|FSM:inst1|Add2~177             ; |traffic_light|FSM:inst1|Add2~178             ; cout             ;
+; |traffic_light|FSM:inst1|Add2~179             ; |traffic_light|FSM:inst1|Add2~179             ; combout          ;
+; |traffic_light|FSM:inst1|Add2~179             ; |traffic_light|FSM:inst1|Add2~180             ; cout0            ;
+; |traffic_light|FSM:inst1|Add2~181             ; |traffic_light|FSM:inst1|Add2~181             ; combout          ;
+; |traffic_light|FSM:inst1|Add2~181             ; |traffic_light|FSM:inst1|Add2~182             ; cout0            ;
+; |traffic_light|FSM:inst1|Add2~183             ; |traffic_light|FSM:inst1|Add2~183             ; combout          ;
+; |traffic_light|FSM:inst1|Add2~183             ; |traffic_light|FSM:inst1|Add2~184             ; cout0            ;
+; |traffic_light|FSM:inst1|Add2~185             ; |traffic_light|FSM:inst1|Add2~185             ; combout          ;
+; |traffic_light|FSM:inst1|Add2~185             ; |traffic_light|FSM:inst1|Add2~186             ; cout0            ;
+; |traffic_light|FSM:inst1|Add2~187             ; |traffic_light|FSM:inst1|Add2~187             ; combout          ;
+; |traffic_light|FSM:inst1|Add2~187             ; |traffic_light|FSM:inst1|Add2~188             ; cout0            ;
+; |traffic_light|FSM:inst1|Add2~187             ; |traffic_light|FSM:inst1|Add2~188COUT1        ; cout1            ;
+; |traffic_light|FSM:inst1|Add2~189             ; |traffic_light|FSM:inst1|Add2~189             ; combout          ;
+; |traffic_light|FSM:inst1|Add2~189             ; |traffic_light|FSM:inst1|Add2~190             ; cout0            ;
+; |traffic_light|FSM:inst1|Add2~189             ; |traffic_light|FSM:inst1|Add2~190COUT1        ; cout1            ;
+; |traffic_light|FSM:inst1|Add2~191             ; |traffic_light|FSM:inst1|Add2~191             ; combout          ;
+; |traffic_light|FSM:inst1|Add2~191             ; |traffic_light|FSM:inst1|Add2~192             ; cout0            ;
+; |traffic_light|FSM:inst1|Add2~191             ; |traffic_light|FSM:inst1|Add2~192COUT1        ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~477       ; |traffic_light|frequency:inst3|Add0~477       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~477       ; |traffic_light|frequency:inst3|Add0~478COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~479       ; |traffic_light|frequency:inst3|Add0~479       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~479       ; |traffic_light|frequency:inst3|Add0~480       ; cout             ;
+; |traffic_light|frequency:inst3|Add0~481       ; |traffic_light|frequency:inst3|Add0~481       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~481       ; |traffic_light|frequency:inst3|Add0~482COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~483       ; |traffic_light|frequency:inst3|Add0~483       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~483       ; |traffic_light|frequency:inst3|Add0~484COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~485       ; |traffic_light|frequency:inst3|Add0~485       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~485       ; |traffic_light|frequency:inst3|Add0~486COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~487       ; |traffic_light|frequency:inst3|Add0~487       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~487       ; |traffic_light|frequency:inst3|Add0~488       ; cout             ;
+; |traffic_light|frequency:inst3|Add0~489       ; |traffic_light|frequency:inst3|Add0~489       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~489       ; |traffic_light|frequency:inst3|Add0~490       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~491       ; |traffic_light|frequency:inst3|Add0~491       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~491       ; |traffic_light|frequency:inst3|Add0~492       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~493       ; |traffic_light|frequency:inst3|Add0~493       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~493       ; |traffic_light|frequency:inst3|Add0~494       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~495       ; |traffic_light|frequency:inst3|Add0~495       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~495       ; |traffic_light|frequency:inst3|Add0~496       ; cout0            ;
+; |traffic_light|FSM:inst1|Add2~194             ; |traffic_light|FSM:inst1|Add2~194             ; cout0            ;
+; |traffic_light|FSM:inst1|Add2~194             ; |traffic_light|FSM:inst1|Add2~194COUT1        ; cout1            ;
+; |traffic_light|frequency:inst3|F2             ; |traffic_light|frequency:inst3|F2             ; regout           ;
+; |traffic_light|FSM:inst1|T2[1]                ; |traffic_light|FSM:inst1|T2[1]                ; regout           ;
+; |traffic_light|FSM:inst1|Equal1~103           ; |traffic_light|FSM:inst1|Equal1~103           ; combout          ;
+; |traffic_light|FSM:inst1|T2[4]                ; |traffic_light|FSM:inst1|T2[4]                ; regout           ;
+; |traffic_light|FSM:inst1|T2[3]                ; |traffic_light|FSM:inst1|T2[3]                ; regout           ;
+; |traffic_light|FSM:inst1|Equal1~104           ; |traffic_light|FSM:inst1|Equal1~104           ; combout          ;
+; |traffic_light|FSM:inst1|T1[0]~1401           ; |traffic_light|FSM:inst1|T1[0]~1401           ; combout          ;
+; |traffic_light|FSM:inst1|G[9]                 ; |traffic_light|FSM:inst1|G[9]                 ; regout           ;
+; |traffic_light|FSM:inst1|G[10]                ; |traffic_light|FSM:inst1|always0~157          ; combout          ;
+; |traffic_light|FSM:inst1|G[10]                ; |traffic_light|FSM:inst1|G[10]                ; regout           ;
+; |traffic_light|FSM:inst1|T1[2]                ; |traffic_light|FSM:inst1|T1[2]                ; regout           ;
+; |traffic_light|FSM:inst1|T1[1]                ; |traffic_light|FSM:inst1|T1[1]                ; regout           ;
+; |traffic_light|FSM:inst1|Equal0~98            ; |traffic_light|FSM:inst1|Equal0~98            ; combout          ;
+; |traffic_light|FSM:inst1|T1[0]                ; |traffic_light|FSM:inst1|T1[0]                ; regout           ;
+; |traffic_light|FSM:inst1|T1[4]                ; |traffic_light|FSM:inst1|T1[4]                ; regout           ;
+; |traffic_light|FSM:inst1|T1[3]                ; |traffic_light|FSM:inst1|T1[3]                ; regout           ;
+; |traffic_light|FSM:inst1|Equal0~99            ; |traffic_light|FSM:inst1|Equal0~99            ; combout          ;
+; |traffic_light|FSM:inst1|G[7]                 ; |traffic_light|FSM:inst1|G[7]                 ; regout           ;
+; |traffic_light|FSM:inst1|G[6]                 ; |traffic_light|FSM:inst1|G[6]                 ; regout           ;
+; |traffic_light|FSM:inst1|G[5]                 ; |traffic_light|FSM:inst1|G[5]                 ; regout           ;
+; |traffic_light|FSM:inst1|G[8]                 ; |traffic_light|FSM:inst1|LessThan0~148        ; combout          ;
+; |traffic_light|FSM:inst1|G[8]                 ; |traffic_light|FSM:inst1|G[8]                 ; regout           ;
+; |traffic_light|FSM:inst1|G[0]                 ; |traffic_light|FSM:inst1|G[0]                 ; regout           ;
+; |traffic_light|FSM:inst1|G[2]                 ; |traffic_light|FSM:inst1|G[2]                 ; regout           ;
+; |traffic_light|FSM:inst1|G[1]                 ; |traffic_light|FSM:inst1|LessThan0~149        ; combout          ;
+; |traffic_light|FSM:inst1|G[1]                 ; |traffic_light|FSM:inst1|G[1]                 ; regout           ;
+; |traffic_light|FSM:inst1|G[3]                 ; |traffic_light|FSM:inst1|G[3]                 ; regout           ;
+; |traffic_light|FSM:inst1|G[4]                 ; |traffic_light|FSM:inst1|LessThan0~150        ; combout          ;
+; |traffic_light|FSM:inst1|G[4]                 ; |traffic_light|FSM:inst1|G[4]                 ; regout           ;
+; |traffic_light|FSM:inst1|F                    ; |traffic_light|FSM:inst1|always0~158          ; combout          ;
+; |traffic_light|FSM:inst1|Selector7~260        ; |traffic_light|FSM:inst1|Selector7~260        ; combout          ;
+; |traffic_light|FSM:inst1|MG~52                ; |traffic_light|FSM:inst1|MG~52                ; combout          ;
+; |traffic_light|FSM:inst1|MR~294               ; |traffic_light|FSM:inst1|MR~294               ; combout          ;
+; |traffic_light|FSM:inst1|MG                   ; |traffic_light|FSM:inst1|MG                   ; regout           ;
+; |traffic_light|FSM:inst1|Selector16~290       ; |traffic_light|FSM:inst1|Selector16~290       ; combout          ;
+; |traffic_light|FSM:inst1|Equal1~105           ; |traffic_light|FSM:inst1|Equal1~105           ; combout          ;
+; |traffic_light|FSM:inst1|MR~295               ; |traffic_light|FSM:inst1|MR~295               ; combout          ;
+; |traffic_light|FSM:inst1|MY                   ; |traffic_light|FSM:inst1|MY                   ; regout           ;
+; |traffic_light|FSM:inst1|MR~296               ; |traffic_light|FSM:inst1|MR~296               ; combout          ;
+; |traffic_light|FSM:inst1|MR~297               ; |traffic_light|FSM:inst1|MR~297               ; combout          ;
+; |traffic_light|FSM:inst1|CG                   ; |traffic_light|FSM:inst1|CG                   ; regout           ;
+; |traffic_light|FSM:inst1|CR                   ; |traffic_light|FSM:inst1|CR                   ; regout           ;
+; |traffic_light|frequency:inst3|division[2]    ; |traffic_light|frequency:inst3|division[2]    ; regout           ;
+; |traffic_light|frequency:inst3|division[0]    ; |traffic_light|frequency:inst3|division[0]    ; regout           ;
+; |traffic_light|frequency:inst3|division[3]    ; |traffic_light|frequency:inst3|division[3]    ; regout           ;
+; |traffic_light|frequency:inst3|division[1]    ; |traffic_light|frequency:inst3|Equal0~352     ; combout          ;
+; |traffic_light|frequency:inst3|division[1]    ; |traffic_light|frequency:inst3|division[1]    ; regout           ;
+; |traffic_light|frequency:inst3|division[5]    ; |traffic_light|frequency:inst3|division[5]    ; regout           ;
+; |traffic_light|frequency:inst3|division[6]    ; |traffic_light|frequency:inst3|division[6]    ; regout           ;
+; |traffic_light|frequency:inst3|division[7]    ; |traffic_light|frequency:inst3|division[7]    ; regout           ;
+; |traffic_light|frequency:inst3|division[4]    ; |traffic_light|frequency:inst3|Equal0~353     ; combout          ;
+; |traffic_light|frequency:inst3|division[4]    ; |traffic_light|frequency:inst3|division[4]    ; regout           ;
+; |traffic_light|frequency:inst3|division[9]    ; |traffic_light|frequency:inst3|division[9]    ; regout           ;
+; |traffic_light|frequency:inst3|division[8]    ; |traffic_light|frequency:inst3|Equal0~354     ; combout          ;
+; |traffic_light|frequency:inst3|division[8]    ; |traffic_light|frequency:inst3|division[8]    ; regout           ;
+; |traffic_light|frequency:inst3|Equal0~356     ; |traffic_light|frequency:inst3|Equal0~356     ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector5~964 ; |traffic_light|nixie_tube:inst5|Selector5~964 ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector5~965 ; |traffic_light|nixie_tube:inst5|Selector5~965 ; combout          ;
+; |traffic_light|nixie_tube:inst5|WideOr10~97   ; |traffic_light|nixie_tube:inst5|WideOr10~97   ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector5~966 ; |traffic_light|nixie_tube:inst5|Selector5~966 ; combout          ;
+; |traffic_light|nixie_tube:inst5|WideOr10~98   ; |traffic_light|nixie_tube:inst5|WideOr10~98   ; combout          ;
+; |traffic_light|nixie_tube:inst5|WideOr10~99   ; |traffic_light|nixie_tube:inst5|WideOr10~99   ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector5~967 ; |traffic_light|nixie_tube:inst5|Selector5~967 ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector5~968 ; |traffic_light|nixie_tube:inst5|Selector5~968 ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector5~969 ; |traffic_light|nixie_tube:inst5|Selector5~969 ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector8~212 ; |traffic_light|nixie_tube:inst5|Selector8~212 ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector8~213 ; |traffic_light|nixie_tube:inst5|Selector8~213 ; combout          ;
+; |traffic_light|nixie_tube:inst5|WideOr15~48   ; |traffic_light|nixie_tube:inst5|WideOr15~48   ; combout          ;
+; |traffic_light|nixie_tube:inst5|WideOr15~49   ; |traffic_light|nixie_tube:inst5|WideOr15~49   ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux13~790     ; |traffic_light|nixie_tube:inst5|Mux13~790     ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux13~791     ; |traffic_light|nixie_tube:inst5|Mux13~791     ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector5~970 ; |traffic_light|nixie_tube:inst5|Selector5~970 ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux13~792     ; |traffic_light|nixie_tube:inst5|Mux13~792     ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux8~549      ; |traffic_light|nixie_tube:inst5|Mux8~549      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux8~550      ; |traffic_light|nixie_tube:inst5|Mux8~550      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector5~971 ; |traffic_light|nixie_tube:inst5|Selector5~971 ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux8~551      ; |traffic_light|nixie_tube:inst5|Mux8~551      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux13~793     ; |traffic_light|nixie_tube:inst5|Mux13~793     ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux13~794     ; |traffic_light|nixie_tube:inst5|Mux13~794     ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux13~795     ; |traffic_light|nixie_tube:inst5|Mux13~795     ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector5~972 ; |traffic_light|nixie_tube:inst5|Selector5~972 ; combout          ;
+; |traffic_light|nixie_tube:inst5|CR[0]~101     ; |traffic_light|nixie_tube:inst5|CR[0]~101     ; combout          ;
+; |traffic_light|nixie_tube:inst5|CR[0]~102     ; |traffic_light|nixie_tube:inst5|CR[0]~102     ; combout          ;
+; |traffic_light|nixie_tube:inst5|CR~103        ; |traffic_light|nixie_tube:inst5|CR~103        ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector5~973 ; |traffic_light|nixie_tube:inst5|Selector5~973 ; combout          ;
+; |traffic_light|nixie_tube:inst5|CR~104        ; |traffic_light|nixie_tube:inst5|CR~104        ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux13~796     ; |traffic_light|nixie_tube:inst5|Mux13~796     ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux13~797     ; |traffic_light|nixie_tube:inst5|Mux13~797     ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux13~798     ; |traffic_light|nixie_tube:inst5|Mux13~798     ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector5~975 ; |traffic_light|nixie_tube:inst5|Selector5~975 ; combout          ;
+; |traffic_light|nixie_tube:inst5|CR~105        ; |traffic_light|nixie_tube:inst5|CR~105        ; combout          ;
+; |traffic_light|nixie_tube:inst5|CR~106        ; |traffic_light|nixie_tube:inst5|CR~106        ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector0~964 ; |traffic_light|nixie_tube:inst5|Selector0~964 ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector0~965 ; |traffic_light|nixie_tube:inst5|Selector0~965 ; combout          ;
+; |traffic_light|nixie_tube:inst5|WideOr2~97    ; |traffic_light|nixie_tube:inst5|WideOr2~97    ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector0~966 ; |traffic_light|nixie_tube:inst5|Selector0~966 ; combout          ;
+; |traffic_light|nixie_tube:inst5|WideOr2~98    ; |traffic_light|nixie_tube:inst5|WideOr2~98    ; combout          ;
+; |traffic_light|nixie_tube:inst5|WideOr2~99    ; |traffic_light|nixie_tube:inst5|WideOr2~99    ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector0~967 ; |traffic_light|nixie_tube:inst5|Selector0~967 ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector0~968 ; |traffic_light|nixie_tube:inst5|Selector0~968 ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector0~969 ; |traffic_light|nixie_tube:inst5|Selector0~969 ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector3~212 ; |traffic_light|nixie_tube:inst5|Selector3~212 ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector3~213 ; |traffic_light|nixie_tube:inst5|Selector3~213 ; combout          ;
+; |traffic_light|nixie_tube:inst5|WideOr7~48    ; |traffic_light|nixie_tube:inst5|WideOr7~48    ; combout          ;
+; |traffic_light|nixie_tube:inst5|WideOr7~49    ; |traffic_light|nixie_tube:inst5|WideOr7~49    ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux6~790      ; |traffic_light|nixie_tube:inst5|Mux6~790      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector0~970 ; |traffic_light|nixie_tube:inst5|Selector0~970 ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux6~791      ; |traffic_light|nixie_tube:inst5|Mux6~791      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux6~792      ; |traffic_light|nixie_tube:inst5|Mux6~792      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux6~793      ; |traffic_light|nixie_tube:inst5|Mux6~793      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux1~551      ; |traffic_light|nixie_tube:inst5|Mux1~551      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux1~552      ; |traffic_light|nixie_tube:inst5|Mux1~552      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux1~553      ; |traffic_light|nixie_tube:inst5|Mux1~553      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux6~794      ; |traffic_light|nixie_tube:inst5|Mux6~794      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux6~795      ; |traffic_light|nixie_tube:inst5|Mux6~795      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux6~796      ; |traffic_light|nixie_tube:inst5|Mux6~796      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector0~971 ; |traffic_light|nixie_tube:inst5|Selector0~971 ; combout          ;
+; |traffic_light|nixie_tube:inst5|MR[3]~83      ; |traffic_light|nixie_tube:inst5|MR[3]~83      ; combout          ;
+; |traffic_light|nixie_tube:inst5|MR[3]~84      ; |traffic_light|nixie_tube:inst5|MR[3]~84      ; combout          ;
+; |traffic_light|nixie_tube:inst5|MR~85         ; |traffic_light|nixie_tube:inst5|MR~85         ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector0~972 ; |traffic_light|nixie_tube:inst5|Selector0~972 ; combout          ;
+; |traffic_light|nixie_tube:inst5|MR~86         ; |traffic_light|nixie_tube:inst5|MR~86         ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux6~797      ; |traffic_light|nixie_tube:inst5|Mux6~797      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux6~798      ; |traffic_light|nixie_tube:inst5|Mux6~798      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux6~799      ; |traffic_light|nixie_tube:inst5|Mux6~799      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector0~974 ; |traffic_light|nixie_tube:inst5|Selector0~974 ; combout          ;
+; |traffic_light|nixie_tube:inst5|MR~87         ; |traffic_light|nixie_tube:inst5|MR~87         ; combout          ;
+; |traffic_light|nixie_tube:inst5|MR~88         ; |traffic_light|nixie_tube:inst5|MR~88         ; combout          ;
+; |traffic_light|FSM:inst1|Add1~177             ; |traffic_light|FSM:inst1|Add1~177             ; combout          ;
+; |traffic_light|FSM:inst1|Selector7~262        ; |traffic_light|FSM:inst1|Selector7~262        ; combout          ;
+; |traffic_light|FSM:inst1|T2[1]~868            ; |traffic_light|FSM:inst1|T2[1]~868            ; combout          ;
+; |traffic_light|FSM:inst1|T2[1]~869            ; |traffic_light|FSM:inst1|T2[1]~869            ; combout          ;
+; |traffic_light|FSM:inst1|Add1~178             ; |traffic_light|FSM:inst1|Add1~178             ; combout          ;
+; |traffic_light|FSM:inst1|T2[1]~871            ; |traffic_light|FSM:inst1|T2[1]~871            ; combout          ;
+; |traffic_light|FSM:inst1|T2~872               ; |traffic_light|FSM:inst1|T2~872               ; combout          ;
+; |traffic_light|FSM:inst1|T2~873               ; |traffic_light|FSM:inst1|T2~873               ; combout          ;
+; |traffic_light|FSM:inst1|Add1~179             ; |traffic_light|FSM:inst1|Add1~179             ; combout          ;
+; |traffic_light|FSM:inst1|Selector9~307        ; |traffic_light|FSM:inst1|Selector9~307        ; combout          ;
+; |traffic_light|FSM:inst1|T2[0]                ; |traffic_light|FSM:inst1|T2[0]                ; regout           ;
+; |traffic_light|FSM:inst1|T1~1403              ; |traffic_light|FSM:inst1|T1~1403              ; combout          ;
+; |traffic_light|FSM:inst1|T1[1]~1404           ; |traffic_light|FSM:inst1|T1[1]~1404           ; combout          ;
+; |traffic_light|FSM:inst1|T1[1]~1405           ; |traffic_light|FSM:inst1|T1[1]~1405           ; combout          ;
+; |traffic_light|FSM:inst1|T1[1]~1406           ; |traffic_light|FSM:inst1|T1[1]~1406           ; combout          ;
+; |traffic_light|FSM:inst1|T1[0]~1409           ; |traffic_light|FSM:inst1|T1[0]~1409           ; combout          ;
+; |traffic_light|FSM:inst1|T1[0]~1410           ; |traffic_light|FSM:inst1|T1[0]~1410           ; combout          ;
+; |traffic_light|FSM:inst1|T1~1411              ; |traffic_light|FSM:inst1|T1~1411              ; combout          ;
+; |traffic_light|FSM:inst1|T1~1412              ; |traffic_light|FSM:inst1|T1~1412              ; combout          ;
+; |traffic_light|FSM:inst1|T1~1414              ; |traffic_light|FSM:inst1|T1~1414              ; combout          ;
+; |traffic_light|FSM:inst1|T1~1416              ; |traffic_light|FSM:inst1|T1~1416              ; combout          ;
+; |traffic_light|FSM:inst1|Selector16~291       ; |traffic_light|FSM:inst1|Selector16~291       ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux8~553      ; |traffic_light|nixie_tube:inst5|Mux8~553      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux1~555      ; |traffic_light|nixie_tube:inst5|Mux1~555      ; combout          ;
+; |traffic_light|MG                             ; |traffic_light|MG                             ; padio            ;
+; |traffic_light|MY                             ; |traffic_light|MY                             ; padio            ;
+; |traffic_light|MR                             ; |traffic_light|MR                             ; padio            ;
+; |traffic_light|CG                             ; |traffic_light|CG                             ; padio            ;
+; |traffic_light|CY                             ; |traffic_light|CY                             ; padio            ;
+; |traffic_light|CR                             ; |traffic_light|CR                             ; padio            ;
+; |traffic_light|CLK                            ; |traffic_light|CLK                            ; padio            ;
+; |traffic_light|CL[6]                          ; |traffic_light|CL[6]                          ; padio            ;
+; |traffic_light|CL[5]                          ; |traffic_light|CL[5]                          ; padio            ;
+; |traffic_light|CL[4]                          ; |traffic_light|CL[4]                          ; padio            ;
+; |traffic_light|CL[3]                          ; |traffic_light|CL[3]                          ; padio            ;
+; |traffic_light|CL[2]                          ; |traffic_light|CL[2]                          ; padio            ;
+; |traffic_light|CL[0]                          ; |traffic_light|CL[0]                          ; padio            ;
+; |traffic_light|CR6                            ; |traffic_light|CR6                            ; padio            ;
+; |traffic_light|CR5                            ; |traffic_light|CR5                            ; padio            ;
+; |traffic_light|CR4                            ; |traffic_light|CR4                            ; padio            ;
+; |traffic_light|CR3                            ; |traffic_light|CR3                            ; padio            ;
+; |traffic_light|CR2                            ; |traffic_light|CR2                            ; padio            ;
+; |traffic_light|CR1                            ; |traffic_light|CR1                            ; padio            ;
+; |traffic_light|CR0                            ; |traffic_light|CR0                            ; padio            ;
+; |traffic_light|ML[6]                          ; |traffic_light|ML[6]                          ; padio            ;
+; |traffic_light|ML[5]                          ; |traffic_light|ML[5]                          ; padio            ;
+; |traffic_light|ML[4]                          ; |traffic_light|ML[4]                          ; padio            ;
+; |traffic_light|ML[3]                          ; |traffic_light|ML[3]                          ; padio            ;
+; |traffic_light|ML[2]                          ; |traffic_light|ML[2]                          ; padio            ;
+; |traffic_light|ML[0]                          ; |traffic_light|ML[0]                          ; padio            ;
+; |traffic_light|MR6                            ; |traffic_light|MR6                            ; padio            ;
+; |traffic_light|MR5                            ; |traffic_light|MR5                            ; padio            ;
+; |traffic_light|MR4                            ; |traffic_light|MR4                            ; padio            ;
+; |traffic_light|MR3                            ; |traffic_light|MR3                            ; padio            ;
+; |traffic_light|MR2                            ; |traffic_light|MR2                            ; padio            ;
+; |traffic_light|MR1                            ; |traffic_light|MR1                            ; padio            ;
+; |traffic_light|MR0                            ; |traffic_light|MR0                            ; padio            ;
+; |traffic_light|clk_2MHz                       ; |traffic_light|clk_2MHz~corein                ; combout          ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                         ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; Node Name                                     ; Output Port Name                              ; Output Port Type ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; |traffic_light|nixie_tube:inst5|CL[1]         ; |traffic_light|nixie_tube:inst5|CL[1]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|ML[1]         ; |traffic_light|nixie_tube:inst5|ML[1]         ; regout           ;
+; |traffic_light|FSM:inst1|Add2~179             ; |traffic_light|FSM:inst1|Add2~180COUT1        ; cout1            ;
+; |traffic_light|FSM:inst1|Add2~181             ; |traffic_light|FSM:inst1|Add2~182COUT1        ; cout1            ;
+; |traffic_light|FSM:inst1|Add2~183             ; |traffic_light|FSM:inst1|Add2~184COUT1        ; cout1            ;
+; |traffic_light|FSM:inst1|Add2~185             ; |traffic_light|FSM:inst1|Add2~186COUT1        ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~477       ; |traffic_light|frequency:inst3|Add0~478       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~481       ; |traffic_light|frequency:inst3|Add0~482       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~483       ; |traffic_light|frequency:inst3|Add0~484       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~485       ; |traffic_light|frequency:inst3|Add0~486       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~489       ; |traffic_light|frequency:inst3|Add0~490COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~491       ; |traffic_light|frequency:inst3|Add0~492COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~493       ; |traffic_light|frequency:inst3|Add0~494COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~495       ; |traffic_light|frequency:inst3|Add0~496COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~497       ; |traffic_light|frequency:inst3|Add0~497       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~497       ; |traffic_light|frequency:inst3|Add0~498       ; cout             ;
+; |traffic_light|frequency:inst3|Add0~499       ; |traffic_light|frequency:inst3|Add0~499       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~499       ; |traffic_light|frequency:inst3|Add0~500       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~499       ; |traffic_light|frequency:inst3|Add0~500COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~501       ; |traffic_light|frequency:inst3|Add0~501       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~501       ; |traffic_light|frequency:inst3|Add0~502       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~501       ; |traffic_light|frequency:inst3|Add0~502COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~503       ; |traffic_light|frequency:inst3|Add0~503       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~503       ; |traffic_light|frequency:inst3|Add0~504       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~503       ; |traffic_light|frequency:inst3|Add0~504COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~505       ; |traffic_light|frequency:inst3|Add0~505       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~505       ; |traffic_light|frequency:inst3|Add0~506       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~505       ; |traffic_light|frequency:inst3|Add0~506COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~507       ; |traffic_light|frequency:inst3|Add0~507       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~507       ; |traffic_light|frequency:inst3|Add0~508       ; cout             ;
+; |traffic_light|frequency:inst3|Add0~509       ; |traffic_light|frequency:inst3|Add0~509       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~509       ; |traffic_light|frequency:inst3|Add0~510       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~509       ; |traffic_light|frequency:inst3|Add0~510COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~511       ; |traffic_light|frequency:inst3|Add0~511       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~511       ; |traffic_light|frequency:inst3|Add0~512       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~511       ; |traffic_light|frequency:inst3|Add0~512COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~513       ; |traffic_light|frequency:inst3|Add0~513       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~513       ; |traffic_light|frequency:inst3|Add0~514       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~513       ; |traffic_light|frequency:inst3|Add0~514COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~515       ; |traffic_light|frequency:inst3|Add0~515       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~515       ; |traffic_light|frequency:inst3|Add0~516       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~515       ; |traffic_light|frequency:inst3|Add0~516COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~517       ; |traffic_light|frequency:inst3|Add0~517       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~517       ; |traffic_light|frequency:inst3|Add0~518       ; cout             ;
+; |traffic_light|frequency:inst3|Add0~519       ; |traffic_light|frequency:inst3|Add0~519       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~519       ; |traffic_light|frequency:inst3|Add0~520       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~519       ; |traffic_light|frequency:inst3|Add0~520COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~521       ; |traffic_light|frequency:inst3|Add0~521       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~521       ; |traffic_light|frequency:inst3|Add0~522       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~521       ; |traffic_light|frequency:inst3|Add0~522COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~523       ; |traffic_light|frequency:inst3|Add0~523       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~523       ; |traffic_light|frequency:inst3|Add0~524       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~523       ; |traffic_light|frequency:inst3|Add0~524COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~525       ; |traffic_light|frequency:inst3|Add0~525       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~525       ; |traffic_light|frequency:inst3|Add0~526       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~525       ; |traffic_light|frequency:inst3|Add0~526COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~527       ; |traffic_light|frequency:inst3|Add0~527       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~527       ; |traffic_light|frequency:inst3|Add0~528       ; cout             ;
+; |traffic_light|frequency:inst3|Add0~529       ; |traffic_light|frequency:inst3|Add0~529       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~529       ; |traffic_light|frequency:inst3|Add0~530       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~529       ; |traffic_light|frequency:inst3|Add0~530COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~531       ; |traffic_light|frequency:inst3|Add0~531       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~531       ; |traffic_light|frequency:inst3|Add0~532       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~531       ; |traffic_light|frequency:inst3|Add0~532COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~533       ; |traffic_light|frequency:inst3|Add0~533       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~533       ; |traffic_light|frequency:inst3|Add0~534       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~533       ; |traffic_light|frequency:inst3|Add0~534COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~535       ; |traffic_light|frequency:inst3|Add0~535       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~535       ; |traffic_light|frequency:inst3|Add0~536       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~535       ; |traffic_light|frequency:inst3|Add0~536COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~537       ; |traffic_light|frequency:inst3|Add0~537       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~537       ; |traffic_light|frequency:inst3|Add0~538       ; cout             ;
+; |traffic_light|frequency:inst3|Add0~539       ; |traffic_light|frequency:inst3|Add0~539       ; combout          ;
+; |traffic_light|FSM:inst1|state.s1             ; |traffic_light|FSM:inst1|state.s1             ; regout           ;
+; |traffic_light|FSM:inst1|Selector15~307       ; |traffic_light|FSM:inst1|Selector15~307       ; combout          ;
+; |traffic_light|FSM:inst1|T1[1]~1402           ; |traffic_light|FSM:inst1|T1[1]~1402           ; combout          ;
+; |traffic_light|FSM:inst1|Selector15~308       ; |traffic_light|FSM:inst1|Selector15~308       ; combout          ;
+; |traffic_light|frequency:inst3|division[10]   ; |traffic_light|frequency:inst3|division[10]   ; regout           ;
+; |traffic_light|frequency:inst3|division[11]   ; |traffic_light|frequency:inst3|division[11]   ; regout           ;
+; |traffic_light|frequency:inst3|division[13]   ; |traffic_light|frequency:inst3|division[13]   ; regout           ;
+; |traffic_light|frequency:inst3|division[14]   ; |traffic_light|frequency:inst3|division[14]   ; regout           ;
+; |traffic_light|frequency:inst3|division[15]   ; |traffic_light|frequency:inst3|division[15]   ; regout           ;
+; |traffic_light|frequency:inst3|division[12]   ; |traffic_light|frequency:inst3|Equal0~355     ; combout          ;
+; |traffic_light|frequency:inst3|division[12]   ; |traffic_light|frequency:inst3|division[12]   ; regout           ;
+; |traffic_light|frequency:inst3|division[17]   ; |traffic_light|frequency:inst3|division[17]   ; regout           ;
+; |traffic_light|frequency:inst3|division[18]   ; |traffic_light|frequency:inst3|division[18]   ; regout           ;
+; |traffic_light|frequency:inst3|division[19]   ; |traffic_light|frequency:inst3|division[19]   ; regout           ;
+; |traffic_light|frequency:inst3|division[16]   ; |traffic_light|frequency:inst3|Equal0~357     ; combout          ;
+; |traffic_light|frequency:inst3|division[16]   ; |traffic_light|frequency:inst3|division[16]   ; regout           ;
+; |traffic_light|frequency:inst3|division[21]   ; |traffic_light|frequency:inst3|division[21]   ; regout           ;
+; |traffic_light|frequency:inst3|division[22]   ; |traffic_light|frequency:inst3|division[22]   ; regout           ;
+; |traffic_light|frequency:inst3|division[23]   ; |traffic_light|frequency:inst3|division[23]   ; regout           ;
+; |traffic_light|frequency:inst3|division[20]   ; |traffic_light|frequency:inst3|Equal0~358     ; combout          ;
+; |traffic_light|frequency:inst3|division[20]   ; |traffic_light|frequency:inst3|division[20]   ; regout           ;
+; |traffic_light|frequency:inst3|division[25]   ; |traffic_light|frequency:inst3|division[25]   ; regout           ;
+; |traffic_light|frequency:inst3|division[26]   ; |traffic_light|frequency:inst3|division[26]   ; regout           ;
+; |traffic_light|frequency:inst3|division[27]   ; |traffic_light|frequency:inst3|division[27]   ; regout           ;
+; |traffic_light|frequency:inst3|division[24]   ; |traffic_light|frequency:inst3|Equal0~359     ; combout          ;
+; |traffic_light|frequency:inst3|division[24]   ; |traffic_light|frequency:inst3|division[24]   ; regout           ;
+; |traffic_light|frequency:inst3|division[29]   ; |traffic_light|frequency:inst3|division[29]   ; regout           ;
+; |traffic_light|frequency:inst3|division[30]   ; |traffic_light|frequency:inst3|division[30]   ; regout           ;
+; |traffic_light|frequency:inst3|division[31]   ; |traffic_light|frequency:inst3|division[31]   ; regout           ;
+; |traffic_light|frequency:inst3|division[28]   ; |traffic_light|frequency:inst3|Equal0~360     ; combout          ;
+; |traffic_light|frequency:inst3|division[28]   ; |traffic_light|frequency:inst3|division[28]   ; regout           ;
+; |traffic_light|frequency:inst3|Equal0~361     ; |traffic_light|frequency:inst3|Equal0~361     ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux8~552      ; |traffic_light|nixie_tube:inst5|Mux8~552      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector5~974 ; |traffic_light|nixie_tube:inst5|Selector5~974 ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux1~554      ; |traffic_light|nixie_tube:inst5|Mux1~554      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector0~973 ; |traffic_light|nixie_tube:inst5|Selector0~973 ; combout          ;
+; |traffic_light|FSM:inst1|Selector7~261        ; |traffic_light|FSM:inst1|Selector7~261        ; combout          ;
+; |traffic_light|FSM:inst1|Selector9~308        ; |traffic_light|FSM:inst1|Selector9~308        ; combout          ;
+; |traffic_light|~GND                           ; |traffic_light|~GND                           ; combout          ;
+; |traffic_light|CL[7]                          ; |traffic_light|CL[7]                          ; padio            ;
+; |traffic_light|CL[1]                          ; |traffic_light|CL[1]                          ; padio            ;
+; |traffic_light|CR7                            ; |traffic_light|CR7                            ; padio            ;
+; |traffic_light|ML[7]                          ; |traffic_light|ML[7]                          ; padio            ;
+; |traffic_light|ML[1]                          ; |traffic_light|ML[1]                          ; padio            ;
+; |traffic_light|MR7                            ; |traffic_light|MR7                            ; padio            ;
+; |traffic_light|C                              ; |traffic_light|C~corein                       ; combout          ;
+; |traffic_light|RET                            ; |traffic_light|RET~corein                     ; combout          ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                         ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; Node Name                                     ; Output Port Name                              ; Output Port Type ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; |traffic_light|nixie_tube:inst5|CL[1]         ; |traffic_light|nixie_tube:inst5|CL[1]         ; regout           ;
+; |traffic_light|nixie_tube:inst5|ML[1]         ; |traffic_light|nixie_tube:inst5|ML[1]         ; regout           ;
+; |traffic_light|FSM:inst1|Add2~179             ; |traffic_light|FSM:inst1|Add2~180COUT1        ; cout1            ;
+; |traffic_light|FSM:inst1|Add2~181             ; |traffic_light|FSM:inst1|Add2~182COUT1        ; cout1            ;
+; |traffic_light|FSM:inst1|Add2~183             ; |traffic_light|FSM:inst1|Add2~184COUT1        ; cout1            ;
+; |traffic_light|FSM:inst1|Add2~185             ; |traffic_light|FSM:inst1|Add2~186COUT1        ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~477       ; |traffic_light|frequency:inst3|Add0~478       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~481       ; |traffic_light|frequency:inst3|Add0~482       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~483       ; |traffic_light|frequency:inst3|Add0~484       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~485       ; |traffic_light|frequency:inst3|Add0~486       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~489       ; |traffic_light|frequency:inst3|Add0~490COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~491       ; |traffic_light|frequency:inst3|Add0~492COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~493       ; |traffic_light|frequency:inst3|Add0~494COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~495       ; |traffic_light|frequency:inst3|Add0~496COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~497       ; |traffic_light|frequency:inst3|Add0~497       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~497       ; |traffic_light|frequency:inst3|Add0~498       ; cout             ;
+; |traffic_light|frequency:inst3|Add0~499       ; |traffic_light|frequency:inst3|Add0~499       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~499       ; |traffic_light|frequency:inst3|Add0~500       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~499       ; |traffic_light|frequency:inst3|Add0~500COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~501       ; |traffic_light|frequency:inst3|Add0~501       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~501       ; |traffic_light|frequency:inst3|Add0~502       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~501       ; |traffic_light|frequency:inst3|Add0~502COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~503       ; |traffic_light|frequency:inst3|Add0~503       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~503       ; |traffic_light|frequency:inst3|Add0~504       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~503       ; |traffic_light|frequency:inst3|Add0~504COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~505       ; |traffic_light|frequency:inst3|Add0~505       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~505       ; |traffic_light|frequency:inst3|Add0~506       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~505       ; |traffic_light|frequency:inst3|Add0~506COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~507       ; |traffic_light|frequency:inst3|Add0~507       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~507       ; |traffic_light|frequency:inst3|Add0~508       ; cout             ;
+; |traffic_light|frequency:inst3|Add0~509       ; |traffic_light|frequency:inst3|Add0~509       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~509       ; |traffic_light|frequency:inst3|Add0~510       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~509       ; |traffic_light|frequency:inst3|Add0~510COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~511       ; |traffic_light|frequency:inst3|Add0~511       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~511       ; |traffic_light|frequency:inst3|Add0~512       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~511       ; |traffic_light|frequency:inst3|Add0~512COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~513       ; |traffic_light|frequency:inst3|Add0~513       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~513       ; |traffic_light|frequency:inst3|Add0~514       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~513       ; |traffic_light|frequency:inst3|Add0~514COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~515       ; |traffic_light|frequency:inst3|Add0~515       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~515       ; |traffic_light|frequency:inst3|Add0~516       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~515       ; |traffic_light|frequency:inst3|Add0~516COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~517       ; |traffic_light|frequency:inst3|Add0~517       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~517       ; |traffic_light|frequency:inst3|Add0~518       ; cout             ;
+; |traffic_light|frequency:inst3|Add0~519       ; |traffic_light|frequency:inst3|Add0~519       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~519       ; |traffic_light|frequency:inst3|Add0~520       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~519       ; |traffic_light|frequency:inst3|Add0~520COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~521       ; |traffic_light|frequency:inst3|Add0~521       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~521       ; |traffic_light|frequency:inst3|Add0~522       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~521       ; |traffic_light|frequency:inst3|Add0~522COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~523       ; |traffic_light|frequency:inst3|Add0~523       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~523       ; |traffic_light|frequency:inst3|Add0~524       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~523       ; |traffic_light|frequency:inst3|Add0~524COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~525       ; |traffic_light|frequency:inst3|Add0~525       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~525       ; |traffic_light|frequency:inst3|Add0~526       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~525       ; |traffic_light|frequency:inst3|Add0~526COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~527       ; |traffic_light|frequency:inst3|Add0~527       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~527       ; |traffic_light|frequency:inst3|Add0~528       ; cout             ;
+; |traffic_light|frequency:inst3|Add0~529       ; |traffic_light|frequency:inst3|Add0~529       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~529       ; |traffic_light|frequency:inst3|Add0~530       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~529       ; |traffic_light|frequency:inst3|Add0~530COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~531       ; |traffic_light|frequency:inst3|Add0~531       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~531       ; |traffic_light|frequency:inst3|Add0~532       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~531       ; |traffic_light|frequency:inst3|Add0~532COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~533       ; |traffic_light|frequency:inst3|Add0~533       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~533       ; |traffic_light|frequency:inst3|Add0~534       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~533       ; |traffic_light|frequency:inst3|Add0~534COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~535       ; |traffic_light|frequency:inst3|Add0~535       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~535       ; |traffic_light|frequency:inst3|Add0~536       ; cout0            ;
+; |traffic_light|frequency:inst3|Add0~535       ; |traffic_light|frequency:inst3|Add0~536COUT1  ; cout1            ;
+; |traffic_light|frequency:inst3|Add0~537       ; |traffic_light|frequency:inst3|Add0~537       ; combout          ;
+; |traffic_light|frequency:inst3|Add0~537       ; |traffic_light|frequency:inst3|Add0~538       ; cout             ;
+; |traffic_light|frequency:inst3|Add0~539       ; |traffic_light|frequency:inst3|Add0~539       ; combout          ;
+; |traffic_light|FSM:inst1|state.s1             ; |traffic_light|FSM:inst1|state.s1             ; regout           ;
+; |traffic_light|FSM:inst1|Selector15~307       ; |traffic_light|FSM:inst1|Selector15~307       ; combout          ;
+; |traffic_light|FSM:inst1|T1[1]~1402           ; |traffic_light|FSM:inst1|T1[1]~1402           ; combout          ;
+; |traffic_light|FSM:inst1|Selector15~308       ; |traffic_light|FSM:inst1|Selector15~308       ; combout          ;
+; |traffic_light|frequency:inst3|division[10]   ; |traffic_light|frequency:inst3|division[10]   ; regout           ;
+; |traffic_light|frequency:inst3|division[11]   ; |traffic_light|frequency:inst3|division[11]   ; regout           ;
+; |traffic_light|frequency:inst3|division[13]   ; |traffic_light|frequency:inst3|division[13]   ; regout           ;
+; |traffic_light|frequency:inst3|division[14]   ; |traffic_light|frequency:inst3|division[14]   ; regout           ;
+; |traffic_light|frequency:inst3|division[15]   ; |traffic_light|frequency:inst3|division[15]   ; regout           ;
+; |traffic_light|frequency:inst3|division[12]   ; |traffic_light|frequency:inst3|Equal0~355     ; combout          ;
+; |traffic_light|frequency:inst3|division[12]   ; |traffic_light|frequency:inst3|division[12]   ; regout           ;
+; |traffic_light|frequency:inst3|division[17]   ; |traffic_light|frequency:inst3|division[17]   ; regout           ;
+; |traffic_light|frequency:inst3|division[18]   ; |traffic_light|frequency:inst3|division[18]   ; regout           ;
+; |traffic_light|frequency:inst3|division[19]   ; |traffic_light|frequency:inst3|division[19]   ; regout           ;
+; |traffic_light|frequency:inst3|division[16]   ; |traffic_light|frequency:inst3|Equal0~357     ; combout          ;
+; |traffic_light|frequency:inst3|division[16]   ; |traffic_light|frequency:inst3|division[16]   ; regout           ;
+; |traffic_light|frequency:inst3|division[21]   ; |traffic_light|frequency:inst3|division[21]   ; regout           ;
+; |traffic_light|frequency:inst3|division[22]   ; |traffic_light|frequency:inst3|division[22]   ; regout           ;
+; |traffic_light|frequency:inst3|division[23]   ; |traffic_light|frequency:inst3|division[23]   ; regout           ;
+; |traffic_light|frequency:inst3|division[20]   ; |traffic_light|frequency:inst3|Equal0~358     ; combout          ;
+; |traffic_light|frequency:inst3|division[20]   ; |traffic_light|frequency:inst3|division[20]   ; regout           ;
+; |traffic_light|frequency:inst3|division[25]   ; |traffic_light|frequency:inst3|division[25]   ; regout           ;
+; |traffic_light|frequency:inst3|division[26]   ; |traffic_light|frequency:inst3|division[26]   ; regout           ;
+; |traffic_light|frequency:inst3|division[27]   ; |traffic_light|frequency:inst3|division[27]   ; regout           ;
+; |traffic_light|frequency:inst3|division[24]   ; |traffic_light|frequency:inst3|Equal0~359     ; combout          ;
+; |traffic_light|frequency:inst3|division[24]   ; |traffic_light|frequency:inst3|division[24]   ; regout           ;
+; |traffic_light|frequency:inst3|division[29]   ; |traffic_light|frequency:inst3|division[29]   ; regout           ;
+; |traffic_light|frequency:inst3|division[30]   ; |traffic_light|frequency:inst3|division[30]   ; regout           ;
+; |traffic_light|frequency:inst3|division[31]   ; |traffic_light|frequency:inst3|division[31]   ; regout           ;
+; |traffic_light|frequency:inst3|division[28]   ; |traffic_light|frequency:inst3|Equal0~360     ; combout          ;
+; |traffic_light|frequency:inst3|division[28]   ; |traffic_light|frequency:inst3|division[28]   ; regout           ;
+; |traffic_light|frequency:inst3|Equal0~361     ; |traffic_light|frequency:inst3|Equal0~361     ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux8~552      ; |traffic_light|nixie_tube:inst5|Mux8~552      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector5~974 ; |traffic_light|nixie_tube:inst5|Selector5~974 ; combout          ;
+; |traffic_light|nixie_tube:inst5|Mux1~554      ; |traffic_light|nixie_tube:inst5|Mux1~554      ; combout          ;
+; |traffic_light|nixie_tube:inst5|Selector0~973 ; |traffic_light|nixie_tube:inst5|Selector0~973 ; combout          ;
+; |traffic_light|FSM:inst1|Selector7~261        ; |traffic_light|FSM:inst1|Selector7~261        ; combout          ;
+; |traffic_light|FSM:inst1|Selector9~308        ; |traffic_light|FSM:inst1|Selector9~308        ; combout          ;
+; |traffic_light|~GND                           ; |traffic_light|~GND                           ; combout          ;
+; |traffic_light|CL[7]                          ; |traffic_light|CL[7]                          ; padio            ;
+; |traffic_light|CL[1]                          ; |traffic_light|CL[1]                          ; padio            ;
+; |traffic_light|CR7                            ; |traffic_light|CR7                            ; padio            ;
+; |traffic_light|ML[7]                          ; |traffic_light|ML[7]                          ; padio            ;
+; |traffic_light|ML[1]                          ; |traffic_light|ML[1]                          ; padio            ;
+; |traffic_light|MR7                            ; |traffic_light|MR7                            ; padio            ;
+; |traffic_light|C                              ; |traffic_light|C~corein                       ; combout          ;
+; |traffic_light|RET                            ; |traffic_light|RET~corein                     ; combout          ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 7.1 Build 156 04/30/2007 SJ Full Version
+    Info: Processing started: Sun Sep 04 17:57:23 2016
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off traffic_light -c traffic_light
+Info: Using vector source file "E:/学习/数字系统课程设计/交通灯控制系统/traffic_light/traffic_light2.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of traffic_light2.vwf called traffic_light.sim_ori.vwf has been created in the db folder
+Info: Inverted registers were found during simulation
+    Info: Register: |traffic_light|FSM:inst1|G[9]
+    Info: Register: |traffic_light|FSM:inst1|G[0]
+    Info: Register: |traffic_light|FSM:inst1|G[2]
+    Info: Register: |traffic_light|FSM:inst1|G[3]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning: Found clock high time violation at 3.21 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 3.2 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 3.71 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 3.73 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 3.73 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 3.73 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 3.73 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 3.73 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 3.73 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 3.7 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 4.21 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 4.23 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 4.23 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 4.23 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 4.23 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 4.23 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 4.23 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 4.2 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 4.71 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 4.73 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 4.73 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 4.73 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 4.73 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 4.73 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 4.73 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 4.7 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 5.21 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 5.23 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 5.23 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 5.23 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 5.23 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 5.23 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 5.23 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 5.2 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 5.71 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 5.73 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 5.73 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 5.73 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 5.73 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 5.73 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 5.73 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 5.7 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 6.21 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 6.23 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 6.23 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 6.23 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 6.23 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 6.23 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 6.23 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 6.2 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 6.71 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 6.73 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 6.73 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 6.73 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 6.73 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 6.73 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 6.73 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 6.7 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 7.21 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 7.23 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 7.23 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 7.23 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 7.23 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 7.23 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 7.23 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 7.2 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 7.71 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 7.73 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 7.73 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 7.73 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 7.73 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 7.73 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 7.73 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 7.7 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 8.21 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 8.23 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 8.23 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 8.23 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 8.23 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 8.23 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 8.23 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 8.2 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 8.71 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 8.73 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 8.73 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 8.73 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 8.73 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 8.73 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 8.73 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 8.7 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 9.21 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 9.23 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 9.23 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 9.23 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 9.23 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 9.23 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 9.23 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 9.2 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 9.71 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 9.73 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 9.73 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 9.73 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 9.73 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 9.73 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 9.73 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 9.7 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 10.21 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 10.23 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 10.23 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 10.23 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 10.23 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 10.23 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 10.23 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 10.2 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 10.71 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 10.73 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 10.73 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 10.73 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 10.73 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 10.73 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 10.73 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 10.7 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 11.21 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 11.23 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 11.23 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 11.23 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 11.23 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 11.23 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 11.23 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 11.2 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 11.71 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 11.73 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 11.73 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 11.73 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 11.73 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 11.73 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 11.73 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 11.7 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 12.21 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 12.23 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 12.23 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 12.23 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 12.23 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 12.23 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 12.23 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 12.2 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 12.71 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 12.73 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 12.73 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 12.73 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 12.73 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 12.73 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 12.73 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 12.7 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 13.21 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 13.23 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 13.23 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 13.23 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 13.23 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 13.23 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 13.23 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 13.2 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 13.71 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 13.73 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 13.73 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 13.73 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 13.73 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 13.73 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 13.73 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 13.7 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 14.21 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 14.23 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 14.23 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 14.23 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 14.23 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 14.23 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 14.23 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 14.2 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 14.71 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 14.73 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 14.73 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 14.73 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 14.73 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 14.73 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 14.73 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 14.7 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 15.21 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 15.23 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 15.23 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 15.23 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 15.23 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 15.23 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 15.23 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 15.2 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 15.71 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 15.73 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 15.73 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 15.73 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 15.73 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 15.73 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 15.73 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 15.7 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 16.21 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 16.23 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 16.23 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 16.23 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 16.23 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 16.23 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 16.23 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 16.2 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 16.71 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 16.73 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 16.73 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 16.73 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 16.73 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 16.73 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 16.73 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 16.7 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 17.21 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 17.23 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 17.23 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 17.23 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 17.23 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 17.23 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 17.23 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 17.2 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 17.71 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 17.73 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 17.73 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 17.73 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 17.73 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 17.73 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 17.73 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[15]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[12]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[17]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[18]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[19]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[16]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[21]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[22]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[23]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[20]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[25]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[26]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[27]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[24]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[29]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[30]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[31]"
+Warning: Found clock high time violation at 17.7 ns on register "|traffic_light|frequency:inst3|division[28]"
+Warning: Found clock high time violation at 18.21 ns on register "|traffic_light|frequency:inst3|F2"
+Warning: Found clock high time violation at 18.23 ns on register "|traffic_light|frequency:inst3|division[2]"
+Warning: Found clock high time violation at 18.23 ns on register "|traffic_light|frequency:inst3|division[0]"
+Warning: Found clock high time violation at 18.23 ns on register "|traffic_light|frequency:inst3|division[3]"
+Warning: Found clock high time violation at 18.23 ns on register "|traffic_light|frequency:inst3|division[1]"
+Warning: Found clock high time violation at 18.23 ns on register "|traffic_light|frequency:inst3|division[5]"
+Warning: Found clock high time violation at 18.2 ns on register "|traffic_light|frequency:inst3|division[6]"
+Warning: Found clock high time violation at 18.23 ns on register "|traffic_light|frequency:inst3|division[7]"
+Warning: Found clock high time violation at 18.2 ns on register "|traffic_light|frequency:inst3|division[4]"
+Warning: Found clock high time violation at 18.2 ns on register "|traffic_light|frequency:inst3|division[9]"
+Warning: Found clock high time violation at 18.2 ns on register "|traffic_light|frequency:inst3|division[10]"
+Warning: Found clock high time violation at 18.2 ns on register "|traffic_light|frequency:inst3|division[11]"
+Warning: Found clock high time violation at 18.2 ns on register "|traffic_light|frequency:inst3|division[8]"
+Warning: Found clock high time violation at 18.2 ns on register "|traffic_light|frequency:inst3|division[13]"
+Warning: Found clock high time violation at 18.2 ns on register "|traffic_light|frequency:inst3|division[14]"
+Warning: Found clock high time violation at 18.2 ns on register "|traffic_light|frequency:inst3|division[15]"
+Info: Detected more than 1000 clock time violations -- stopped clock time violation reporting
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      69.47 %
+Info: Number of transitions in simulation is 76078
+Info: Vector file traffic_light2.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 1000 warnings
+    Info: Allocated 172 megabytes of memory during processing
+    Info: Processing ended: Sun Sep 04 17:57:45 2016
+    Info: Elapsed time: 00:00:22
+
+

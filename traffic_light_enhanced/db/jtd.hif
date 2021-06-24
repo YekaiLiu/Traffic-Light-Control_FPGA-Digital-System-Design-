@@ -1,0 +1,173 @@
+Version 7.1 Build 156 04/30/2007 SJ Full Version
+36
+2054
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+jtd
+# storage
+db|jtd.(0).cnf
+db|jtd.(0).cnf
+# case_insensitive
+# source_file
+jtd.bdf
+24cc73bd743aeeb62b3dd91be1f1d9
+25
+# hierarchies {
+|
+}
+# lmf
+c:|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+traffic_lights
+# storage
+db|jtd.(1).cnf
+db|jtd.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+traffic_lights.v
+8765fd865f5ecb7e3e88b61b08a981d
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# user_parameter {
+s1
+0001
+PARAMETER_UNSIGNED_BIN
+USR
+s2
+0010
+PARAMETER_UNSIGNED_BIN
+USR
+s3
+0100
+PARAMETER_UNSIGNED_BIN
+USR
+s4
+1000
+PARAMETER_UNSIGNED_BIN
+USR
+}
+# hierarchies {
+traffic_lights:inst2
+}
+# lmf
+c:|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+display
+# storage
+db|jtd.(3).cnf
+db|jtd.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+display.v
+2a7691ce1792ac34d9cf615faa6dfe82
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+display:inst3
+}
+# lmf
+c:|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+fdivision
+# storage
+db|jtd.(2).cnf
+db|jtd.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+fdivision.v
+fd49ec1d13907e3547d47ed53e3de7f8
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# user_parameter {
+N
+1000000
+PARAMETER_UNKNOWN
+USR
+}
+# hierarchies {
+fdivision:inst1
+}
+# lmf
+c:|altera|71|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# complete
+

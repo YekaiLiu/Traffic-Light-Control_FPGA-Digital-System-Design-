@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.029 ns
+From           : C
+To             : FSM:inst3|MG
+From Clock     : --
+To Clock       : clk_2MHz
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.244 ns
+From           : nixie_tube:inst5|CR[4]
+To             : CR4
+From Clock     : clk_2MHz
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.940 ns
+From           : C
+To             : nixie_tube:inst5|CL[6]
+From Clock     : --
+To Clock       : clk_2MHz
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk_2MHz'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 150.83 MHz ( period = 6.630 ns )
+From           : FSM:inst3|T2[2]
+To             : FSM:inst3|T1[2]
+From Clock     : clk_2MHz
+To Clock       : clk_2MHz
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

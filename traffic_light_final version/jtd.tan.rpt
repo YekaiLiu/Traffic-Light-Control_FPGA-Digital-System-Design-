@@ -1,0 +1,622 @@
+Classic Timing Analyzer report for jtd
+Mon May 02 18:58:09 2016
+Quartus II Version 7.1 Build 156 04/30/2007 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'CLK'
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                     ;
++------------------------------+-------+---------------+----------------------------------+----------------------------+-------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                       ; To                            ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+----------------------------+-------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 5.646 ns                         ; C                          ; traffic_lights:inst2|MR       ; --         ; CLK      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 13.865 ns                        ; traffic_lights:inst2|MR    ; MR                            ; CLK        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -1.018 ns                        ; RET                        ; traffic_lights:inst2|state.s1 ; --         ; CLK      ; 0            ;
+; Clock Setup: 'CLK'           ; N/A   ; None          ; 165.23 MHz ( period = 6.052 ns ) ; traffic_lights:inst2|T2[3] ; traffic_lights:inst2|MR       ; CLK        ; CLK      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                            ;                               ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+----------------------------+-------------------------------+------------+----------+--------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                ; Setting            ; From ; To ; Entity Name ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                           ; EP1C6Q240C8        ;      ;    ;             ;
+; Timing Models                                         ; Final              ;      ;    ;             ;
+; Default hold multicycle                               ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements               ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;             ;
+; Number of paths to report                             ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLK             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLK'                                                                                                                                                                                                                                                       ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                          ; To                           ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 165.23 MHz ( period = 6.052 ns )                    ; traffic_lights:inst2|T2[3]    ; traffic_lights:inst2|MR      ; CLK        ; CLK      ; None                        ; None                      ; 5.791 ns                ;
+; N/A                                     ; 167.31 MHz ( period = 5.977 ns )                    ; traffic_lights:inst2|T2[0]    ; traffic_lights:inst2|T1[2]   ; CLK        ; CLK      ; None                        ; None                      ; 5.716 ns                ;
+; N/A                                     ; 167.56 MHz ( period = 5.968 ns )                    ; traffic_lights:inst2|T2[1]    ; traffic_lights:inst2|MR      ; CLK        ; CLK      ; None                        ; None                      ; 5.707 ns                ;
+; N/A                                     ; 167.87 MHz ( period = 5.957 ns )                    ; traffic_lights:inst2|T2[0]    ; traffic_lights:inst2|T2[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.696 ns                ;
+; N/A                                     ; 168.32 MHz ( period = 5.941 ns )                    ; traffic_lights:inst2|T2[0]    ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 5.680 ns                ;
+; N/A                                     ; 168.49 MHz ( period = 5.935 ns )                    ; traffic_lights:inst2|T1[0]    ; traffic_lights:inst2|T2[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.674 ns                ;
+; N/A                                     ; 168.86 MHz ( period = 5.922 ns )                    ; traffic_lights:inst2|T2[2]    ; display:inst3|C0[3]          ; CLK        ; CLK      ; None                        ; None                      ; 5.691 ns                ;
+; N/A                                     ; 170.53 MHz ( period = 5.864 ns )                    ; traffic_lights:inst2|T2[4]    ; traffic_lights:inst2|MR      ; CLK        ; CLK      ; None                        ; None                      ; 5.603 ns                ;
+; N/A                                     ; 171.91 MHz ( period = 5.817 ns )                    ; traffic_lights:inst2|T2[0]    ; traffic_lights:inst2|MR      ; CLK        ; CLK      ; None                        ; None                      ; 5.556 ns                ;
+; N/A                                     ; 171.94 MHz ( period = 5.816 ns )                    ; traffic_lights:inst2|G[2]     ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 5.555 ns                ;
+; N/A                                     ; 172.35 MHz ( period = 5.802 ns )                    ; traffic_lights:inst2|state.s4 ; traffic_lights:inst2|T1[2]   ; CLK        ; CLK      ; None                        ; None                      ; 5.541 ns                ;
+; N/A                                     ; 172.44 MHz ( period = 5.799 ns )                    ; traffic_lights:inst2|state.s1 ; traffic_lights:inst2|MR      ; CLK        ; CLK      ; None                        ; None                      ; 5.538 ns                ;
+; N/A                                     ; 172.95 MHz ( period = 5.782 ns )                    ; traffic_lights:inst2|state.s4 ; traffic_lights:inst2|T2[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.521 ns                ;
+; N/A                                     ; 173.13 MHz ( period = 5.776 ns )                    ; traffic_lights:inst2|T2[0]    ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.515 ns                ;
+; N/A                                     ; 173.43 MHz ( period = 5.766 ns )                    ; traffic_lights:inst2|state.s4 ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 5.505 ns                ;
+; N/A                                     ; 173.52 MHz ( period = 5.763 ns )                    ; traffic_lights:inst2|T2[2]    ; traffic_lights:inst2|MR      ; CLK        ; CLK      ; None                        ; None                      ; 5.502 ns                ;
+; N/A                                     ; 174.19 MHz ( period = 5.741 ns )                    ; traffic_lights:inst2|T1[2]    ; traffic_lights:inst2|T2[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.480 ns                ;
+; N/A                                     ; 174.34 MHz ( period = 5.736 ns )                    ; traffic_lights:inst2|T2[3]    ; display:inst3|C0[3]          ; CLK        ; CLK      ; None                        ; None                      ; 5.505 ns                ;
+; N/A                                     ; 174.43 MHz ( period = 5.733 ns )                    ; traffic_lights:inst2|state.s3 ; traffic_lights:inst2|MR      ; CLK        ; CLK      ; None                        ; None                      ; 5.472 ns                ;
+; N/A                                     ; 174.46 MHz ( period = 5.732 ns )                    ; traffic_lights:inst2|T1[0]    ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 5.471 ns                ;
+; N/A                                     ; 174.73 MHz ( period = 5.723 ns )                    ; traffic_lights:inst2|T2[1]    ; display:inst3|C0[3]          ; CLK        ; CLK      ; None                        ; None                      ; 5.492 ns                ;
+; N/A                                     ; 175.72 MHz ( period = 5.691 ns )                    ; traffic_lights:inst2|T1[4]    ; traffic_lights:inst2|T2[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.430 ns                ;
+; N/A                                     ; 176.30 MHz ( period = 5.672 ns )                    ; traffic_lights:inst2|T2[1]    ; traffic_lights:inst2|T1[2]   ; CLK        ; CLK      ; None                        ; None                      ; 5.411 ns                ;
+; N/A                                     ; 176.93 MHz ( period = 5.652 ns )                    ; traffic_lights:inst2|T2[1]    ; traffic_lights:inst2|T2[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.391 ns                ;
+; N/A                                     ; 176.96 MHz ( period = 5.651 ns )                    ; traffic_lights:inst2|G[2]     ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.390 ns                ;
+; N/A                                     ; 177.43 MHz ( period = 5.636 ns )                    ; traffic_lights:inst2|T2[1]    ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 5.375 ns                ;
+; N/A                                     ; 177.65 MHz ( period = 5.629 ns )                    ; traffic_lights:inst2|G[2]     ; traffic_lights:inst2|MG      ; CLK        ; CLK      ; None                        ; None                      ; 5.368 ns                ;
+; N/A                                     ; 178.54 MHz ( period = 5.601 ns )                    ; traffic_lights:inst2|state.s4 ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.340 ns                ;
+; N/A                                     ; 178.57 MHz ( period = 5.600 ns )                    ; traffic_lights:inst2|T2[0]    ; traffic_lights:inst2|T1[3]   ; CLK        ; CLK      ; None                        ; None                      ; 5.339 ns                ;
+; N/A                                     ; 179.63 MHz ( period = 5.567 ns )                    ; traffic_lights:inst2|T1[0]    ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.306 ns                ;
+; N/A                                     ; 179.69 MHz ( period = 5.565 ns )                    ; traffic_lights:inst2|T1[0]    ; traffic_lights:inst2|T2[2]   ; CLK        ; CLK      ; None                        ; None                      ; 5.304 ns                ;
+; N/A                                     ; 180.57 MHz ( period = 5.538 ns )                    ; traffic_lights:inst2|T1[2]    ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 5.277 ns                ;
+; N/A                                     ; 181.46 MHz ( period = 5.511 ns )                    ; traffic_lights:inst2|G[0]     ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 5.250 ns                ;
+; N/A                                     ; 181.52 MHz ( period = 5.509 ns )                    ; traffic_lights:inst2|T2[3]    ; traffic_lights:inst2|CY      ; CLK        ; CLK      ; None                        ; None                      ; 5.248 ns                ;
+; N/A                                     ; 181.65 MHz ( period = 5.505 ns )                    ; traffic_lights:inst2|T1[0]    ; traffic_lights:inst2|MG      ; CLK        ; CLK      ; None                        ; None                      ; 5.244 ns                ;
+; N/A                                     ; 182.22 MHz ( period = 5.488 ns )                    ; traffic_lights:inst2|T1[4]    ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 5.227 ns                ;
+; N/A                                     ; 182.52 MHz ( period = 5.479 ns )                    ; traffic_lights:inst2|T1[0]    ; traffic_lights:inst2|MR      ; CLK        ; CLK      ; None                        ; None                      ; 5.218 ns                ;
+; N/A                                     ; 182.65 MHz ( period = 5.475 ns )                    ; traffic_lights:inst2|G[2]     ; traffic_lights:inst2|T1[3]   ; CLK        ; CLK      ; None                        ; None                      ; 5.214 ns                ;
+; N/A                                     ; 182.78 MHz ( period = 5.471 ns )                    ; traffic_lights:inst2|T2[1]    ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.210 ns                ;
+; N/A                                     ; 182.92 MHz ( period = 5.467 ns )                    ; traffic_lights:inst2|T2[2]    ; traffic_lights:inst2|T1[2]   ; CLK        ; CLK      ; None                        ; None                      ; 5.206 ns                ;
+; N/A                                     ; 183.59 MHz ( period = 5.447 ns )                    ; traffic_lights:inst2|T2[2]    ; traffic_lights:inst2|T2[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.186 ns                ;
+; N/A                                     ; 184.13 MHz ( period = 5.431 ns )                    ; traffic_lights:inst2|T2[2]    ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 5.170 ns                ;
+; N/A                                     ; 184.33 MHz ( period = 5.425 ns )                    ; traffic_lights:inst2|T2[1]    ; traffic_lights:inst2|CY      ; CLK        ; CLK      ; None                        ; None                      ; 5.164 ns                ;
+; N/A                                     ; 184.33 MHz ( period = 5.425 ns )                    ; traffic_lights:inst2|state.s4 ; traffic_lights:inst2|T1[3]   ; CLK        ; CLK      ; None                        ; None                      ; 5.164 ns                ;
+; N/A                                     ; 184.40 MHz ( period = 5.423 ns )                    ; traffic_lights:inst2|T1[3]    ; traffic_lights:inst2|T2[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.162 ns                ;
+; N/A                                     ; 185.01 MHz ( period = 5.405 ns )                    ; traffic_lights:inst2|G[3]     ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 5.144 ns                ;
+; N/A                                     ; 185.25 MHz ( period = 5.398 ns )                    ; traffic_lights:inst2|T2[2]    ; display:inst3|C0[0]          ; CLK        ; CLK      ; None                        ; None                      ; 5.167 ns                ;
+; N/A                                     ; 185.29 MHz ( period = 5.397 ns )                    ; traffic_lights:inst2|T2[3]    ; traffic_lights:inst2|T2[1]   ; CLK        ; CLK      ; None                        ; None                      ; 5.136 ns                ;
+; N/A                                     ; 185.36 MHz ( period = 5.395 ns )                    ; traffic_lights:inst2|T2[3]    ; traffic_lights:inst2|T2[3]   ; CLK        ; CLK      ; None                        ; None                      ; 5.134 ns                ;
+; N/A                                     ; 185.39 MHz ( period = 5.394 ns )                    ; traffic_lights:inst2|T2[3]    ; traffic_lights:inst2|MY      ; CLK        ; CLK      ; None                        ; None                      ; 5.133 ns                ;
+; N/A                                     ; 185.49 MHz ( period = 5.391 ns )                    ; traffic_lights:inst2|T1[0]    ; traffic_lights:inst2|T1[3]   ; CLK        ; CLK      ; None                        ; None                      ; 5.130 ns                ;
+; N/A                                     ; 185.77 MHz ( period = 5.383 ns )                    ; traffic_lights:inst2|T1[3]    ; display:inst3|M0[6]          ; CLK        ; CLK      ; None                        ; None                      ; 5.122 ns                ;
+; N/A                                     ; 186.12 MHz ( period = 5.373 ns )                    ; traffic_lights:inst2|T1[2]    ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.112 ns                ;
+; N/A                                     ; 186.15 MHz ( period = 5.372 ns )                    ; traffic_lights:inst2|G[9]     ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 5.111 ns                ;
+; N/A                                     ; 186.19 MHz ( period = 5.371 ns )                    ; traffic_lights:inst2|T1[2]    ; traffic_lights:inst2|T2[2]   ; CLK        ; CLK      ; None                        ; None                      ; 5.110 ns                ;
+; N/A                                     ; 187.06 MHz ( period = 5.346 ns )                    ; traffic_lights:inst2|G[0]     ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.085 ns                ;
+; N/A                                     ; 187.06 MHz ( period = 5.346 ns )                    ; traffic_lights:inst2|G[5]     ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 5.085 ns                ;
+; N/A                                     ; 187.06 MHz ( period = 5.346 ns )                    ; traffic_lights:inst2|T2[0]    ; traffic_lights:inst2|T2[3]   ; CLK        ; CLK      ; None                        ; None                      ; 5.085 ns                ;
+; N/A                                     ; 187.06 MHz ( period = 5.346 ns )                    ; traffic_lights:inst2|T1[4]    ; display:inst3|M0[3]          ; CLK        ; CLK      ; None                        ; None                      ; 5.085 ns                ;
+; N/A                                     ; 187.83 MHz ( period = 5.324 ns )                    ; traffic_lights:inst2|G[0]     ; traffic_lights:inst2|MG      ; CLK        ; CLK      ; None                        ; None                      ; 5.063 ns                ;
+; N/A                                     ; 187.86 MHz ( period = 5.323 ns )                    ; traffic_lights:inst2|T1[4]    ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.062 ns                ;
+; N/A                                     ; 187.93 MHz ( period = 5.321 ns )                    ; traffic_lights:inst2|T2[4]    ; traffic_lights:inst2|CY      ; CLK        ; CLK      ; None                        ; None                      ; 5.060 ns                ;
+; N/A                                     ; 187.93 MHz ( period = 5.321 ns )                    ; traffic_lights:inst2|T1[4]    ; traffic_lights:inst2|T2[2]   ; CLK        ; CLK      ; None                        ; None                      ; 5.060 ns                ;
+; N/A                                     ; 188.22 MHz ( period = 5.313 ns )                    ; traffic_lights:inst2|T2[1]    ; traffic_lights:inst2|T2[1]   ; CLK        ; CLK      ; None                        ; None                      ; 5.052 ns                ;
+; N/A                                     ; 188.29 MHz ( period = 5.311 ns )                    ; traffic_lights:inst2|T2[1]    ; traffic_lights:inst2|T2[3]   ; CLK        ; CLK      ; None                        ; None                      ; 5.050 ns                ;
+; N/A                                     ; 188.29 MHz ( period = 5.311 ns )                    ; traffic_lights:inst2|T1[2]    ; traffic_lights:inst2|MG      ; CLK        ; CLK      ; None                        ; None                      ; 5.050 ns                ;
+; N/A                                     ; 188.32 MHz ( period = 5.310 ns )                    ; traffic_lights:inst2|T2[1]    ; traffic_lights:inst2|MY      ; CLK        ; CLK      ; None                        ; None                      ; 5.049 ns                ;
+; N/A                                     ; 188.75 MHz ( period = 5.298 ns )                    ; traffic_lights:inst2|T1[1]    ; display:inst3|M0[3]          ; CLK        ; CLK      ; None                        ; None                      ; 5.037 ns                ;
+; N/A                                     ; 188.86 MHz ( period = 5.295 ns )                    ; traffic_lights:inst2|T2[1]    ; traffic_lights:inst2|T1[3]   ; CLK        ; CLK      ; None                        ; None                      ; 5.034 ns                ;
+; N/A                                     ; 189.21 MHz ( period = 5.285 ns )                    ; traffic_lights:inst2|T1[2]    ; traffic_lights:inst2|MR      ; CLK        ; CLK      ; None                        ; None                      ; 5.024 ns                ;
+; N/A                                     ; 189.61 MHz ( period = 5.274 ns )                    ; traffic_lights:inst2|T2[0]    ; traffic_lights:inst2|CY      ; CLK        ; CLK      ; None                        ; None                      ; 5.013 ns                ;
+; N/A                                     ; 189.90 MHz ( period = 5.266 ns )                    ; traffic_lights:inst2|T2[2]    ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 5.005 ns                ;
+; N/A                                     ; 189.93 MHz ( period = 5.265 ns )                    ; traffic_lights:inst2|T2[1]    ; traffic_lights:inst2|T2[0]   ; CLK        ; CLK      ; None                        ; None                      ; 5.004 ns                ;
+; N/A                                     ; 190.08 MHz ( period = 5.261 ns )                    ; traffic_lights:inst2|T1[4]    ; traffic_lights:inst2|MG      ; CLK        ; CLK      ; None                        ; None                      ; 5.000 ns                ;
+; N/A                                     ; 190.26 MHz ( period = 5.256 ns )                    ; traffic_lights:inst2|state.s1 ; traffic_lights:inst2|CY      ; CLK        ; CLK      ; None                        ; None                      ; 4.995 ns                ;
+; N/A                                     ; 190.51 MHz ( period = 5.249 ns )                    ; traffic_lights:inst2|T1[1]    ; traffic_lights:inst2|T2[4]   ; CLK        ; CLK      ; None                        ; None                      ; 4.988 ns                ;
+; N/A                                     ; 190.55 MHz ( period = 5.248 ns )                    ; traffic_lights:inst2|G[2]     ; traffic_lights:inst2|T1[1]   ; CLK        ; CLK      ; None                        ; None                      ; 4.987 ns                ;
+; N/A                                     ; 190.84 MHz ( period = 5.240 ns )                    ; traffic_lights:inst2|G[3]     ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 4.979 ns                ;
+; N/A                                     ; 191.02 MHz ( period = 5.235 ns )                    ; traffic_lights:inst2|T1[4]    ; traffic_lights:inst2|MR      ; CLK        ; CLK      ; None                        ; None                      ; 4.974 ns                ;
+; N/A                                     ; 191.06 MHz ( period = 5.234 ns )                    ; traffic_lights:inst2|G[1]     ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 4.973 ns                ;
+; N/A                                     ; 191.24 MHz ( period = 5.229 ns )                    ; traffic_lights:inst2|T2[3]    ; display:inst3|C1[2]          ; CLK        ; CLK      ; None                        ; None                      ; 4.968 ns                ;
+; N/A                                     ; 191.57 MHz ( period = 5.220 ns )                    ; traffic_lights:inst2|T2[2]    ; traffic_lights:inst2|CY      ; CLK        ; CLK      ; None                        ; None                      ; 4.959 ns                ;
+; N/A                                     ; 191.57 MHz ( period = 5.220 ns )                    ; traffic_lights:inst2|T1[3]    ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 4.959 ns                ;
+; N/A                                     ; 191.64 MHz ( period = 5.218 ns )                    ; traffic_lights:inst2|G[3]     ; traffic_lights:inst2|MG      ; CLK        ; CLK      ; None                        ; None                      ; 4.957 ns                ;
+; N/A                                     ; 191.86 MHz ( period = 5.212 ns )                    ; traffic_lights:inst2|T2[3]    ; display:inst3|C0[0]          ; CLK        ; CLK      ; None                        ; None                      ; 4.981 ns                ;
+; N/A                                     ; 191.98 MHz ( period = 5.209 ns )                    ; traffic_lights:inst2|T2[4]    ; traffic_lights:inst2|T2[1]   ; CLK        ; CLK      ; None                        ; None                      ; 4.948 ns                ;
+; N/A                                     ; 191.98 MHz ( period = 5.209 ns )                    ; traffic_lights:inst2|T2[3]    ; traffic_lights:inst2|T1[2]   ; CLK        ; CLK      ; None                        ; None                      ; 4.948 ns                ;
+; N/A                                     ; 192.05 MHz ( period = 5.207 ns )                    ; traffic_lights:inst2|G[9]     ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 4.946 ns                ;
+; N/A                                     ; 192.05 MHz ( period = 5.207 ns )                    ; traffic_lights:inst2|T2[4]    ; traffic_lights:inst2|T2[3]   ; CLK        ; CLK      ; None                        ; None                      ; 4.946 ns                ;
+; N/A                                     ; 192.09 MHz ( period = 5.206 ns )                    ; traffic_lights:inst2|T2[4]    ; traffic_lights:inst2|MY      ; CLK        ; CLK      ; None                        ; None                      ; 4.945 ns                ;
+; N/A                                     ; 192.34 MHz ( period = 5.199 ns )                    ; traffic_lights:inst2|T2[1]    ; display:inst3|C0[0]          ; CLK        ; CLK      ; None                        ; None                      ; 4.968 ns                ;
+; N/A                                     ; 192.34 MHz ( period = 5.199 ns )                    ; traffic_lights:inst2|T1[1]    ; display:inst3|M0[6]          ; CLK        ; CLK      ; None                        ; None                      ; 4.938 ns                ;
+; N/A                                     ; 192.42 MHz ( period = 5.197 ns )                    ; traffic_lights:inst2|T1[2]    ; traffic_lights:inst2|T1[3]   ; CLK        ; CLK      ; None                        ; None                      ; 4.936 ns                ;
+; N/A                                     ; 192.68 MHz ( period = 5.190 ns )                    ; traffic_lights:inst2|state.s3 ; traffic_lights:inst2|CY      ; CLK        ; CLK      ; None                        ; None                      ; 4.929 ns                ;
+; N/A                                     ; 192.72 MHz ( period = 5.189 ns )                    ; traffic_lights:inst2|T2[3]    ; traffic_lights:inst2|T2[4]   ; CLK        ; CLK      ; None                        ; None                      ; 4.928 ns                ;
+; N/A                                     ; 192.86 MHz ( period = 5.185 ns )                    ; traffic_lights:inst2|G[9]     ; traffic_lights:inst2|MG      ; CLK        ; CLK      ; None                        ; None                      ; 4.924 ns                ;
+; N/A                                     ; 193.01 MHz ( period = 5.181 ns )                    ; traffic_lights:inst2|G[5]     ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 4.920 ns                ;
+; N/A                                     ; 193.31 MHz ( period = 5.173 ns )                    ; traffic_lights:inst2|T2[3]    ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 4.912 ns                ;
+; N/A                                     ; 193.39 MHz ( period = 5.171 ns )                    ; traffic_lights:inst2|state.s4 ; traffic_lights:inst2|T2[3]   ; CLK        ; CLK      ; None                        ; None                      ; 4.910 ns                ;
+; N/A                                     ; 193.42 MHz ( period = 5.170 ns )                    ; traffic_lights:inst2|G[0]     ; traffic_lights:inst2|T1[3]   ; CLK        ; CLK      ; None                        ; None                      ; 4.909 ns                ;
+; N/A                                     ; 193.54 MHz ( period = 5.167 ns )                    ; traffic_lights:inst2|T1[3]    ; display:inst3|M1[0]          ; CLK        ; CLK      ; None                        ; None                      ; 4.906 ns                ;
+; N/A                                     ; 193.57 MHz ( period = 5.166 ns )                    ; traffic_lights:inst2|T1[0]    ; display:inst3|M0[3]          ; CLK        ; CLK      ; None                        ; None                      ; 4.905 ns                ;
+; N/A                                     ; 193.72 MHz ( period = 5.162 ns )                    ; traffic_lights:inst2|T2[0]    ; traffic_lights:inst2|T2[1]   ; CLK        ; CLK      ; None                        ; None                      ; 4.901 ns                ;
+; N/A                                     ; 193.84 MHz ( period = 5.159 ns )                    ; traffic_lights:inst2|G[5]     ; traffic_lights:inst2|MG      ; CLK        ; CLK      ; None                        ; None                      ; 4.898 ns                ;
+; N/A                                     ; 193.84 MHz ( period = 5.159 ns )                    ; traffic_lights:inst2|T2[0]    ; traffic_lights:inst2|MY      ; CLK        ; CLK      ; None                        ; None                      ; 4.898 ns                ;
+; N/A                                     ; 193.91 MHz ( period = 5.157 ns )                    ; traffic_lights:inst2|G[7]     ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 4.896 ns                ;
+; N/A                                     ; 194.29 MHz ( period = 5.147 ns )                    ; traffic_lights:inst2|T1[4]    ; traffic_lights:inst2|T1[3]   ; CLK        ; CLK      ; None                        ; None                      ; 4.886 ns                ;
+; N/A                                     ; 194.51 MHz ( period = 5.141 ns )                    ; traffic_lights:inst2|state.s1 ; traffic_lights:inst2|MY      ; CLK        ; CLK      ; None                        ; None                      ; 4.880 ns                ;
+; N/A                                     ; 194.78 MHz ( period = 5.134 ns )                    ; traffic_lights:inst2|T2[1]    ; display:inst3|C0[2]          ; CLK        ; CLK      ; None                        ; None                      ; 4.873 ns                ;
+; N/A                                     ; 195.16 MHz ( period = 5.124 ns )                    ; traffic_lights:inst2|T1[0]    ; traffic_lights:inst2|T1[1]   ; CLK        ; CLK      ; None                        ; None                      ; 4.863 ns                ;
+; N/A                                     ; 195.50 MHz ( period = 5.115 ns )                    ; traffic_lights:inst2|T2[0]    ; traffic_lights:inst2|T2[0]   ; CLK        ; CLK      ; None                        ; None                      ; 4.854 ns                ;
+; N/A                                     ; 195.77 MHz ( period = 5.108 ns )                    ; traffic_lights:inst2|T2[2]    ; traffic_lights:inst2|T2[1]   ; CLK        ; CLK      ; None                        ; None                      ; 4.847 ns                ;
+; N/A                                     ; 195.85 MHz ( period = 5.106 ns )                    ; traffic_lights:inst2|T2[2]    ; traffic_lights:inst2|T2[3]   ; CLK        ; CLK      ; None                        ; None                      ; 4.845 ns                ;
+; N/A                                     ; 195.89 MHz ( period = 5.105 ns )                    ; traffic_lights:inst2|T2[2]    ; traffic_lights:inst2|MY      ; CLK        ; CLK      ; None                        ; None                      ; 4.844 ns                ;
+; N/A                                     ; 196.46 MHz ( period = 5.090 ns )                    ; traffic_lights:inst2|T2[2]    ; traffic_lights:inst2|T1[3]   ; CLK        ; CLK      ; None                        ; None                      ; 4.829 ns                ;
+; N/A                                     ; 196.93 MHz ( period = 5.078 ns )                    ; traffic_lights:inst2|T1[4]    ; display:inst3|M0[0]          ; CLK        ; CLK      ; None                        ; None                      ; 4.817 ns                ;
+; N/A                                     ; 197.04 MHz ( period = 5.075 ns )                    ; traffic_lights:inst2|state.s3 ; traffic_lights:inst2|MY      ; CLK        ; CLK      ; None                        ; None                      ; 4.814 ns                ;
+; N/A                                     ; 197.28 MHz ( period = 5.069 ns )                    ; traffic_lights:inst2|G[1]     ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 4.808 ns                ;
+; N/A                                     ; 197.39 MHz ( period = 5.066 ns )                    ; traffic_lights:inst2|T1[0]    ; traffic_lights:inst2|CR      ; CLK        ; CLK      ; None                        ; None                      ; 4.805 ns                ;
+; N/A                                     ; 197.47 MHz ( period = 5.064 ns )                    ; traffic_lights:inst2|G[3]     ; traffic_lights:inst2|T1[3]   ; CLK        ; CLK      ; None                        ; None                      ; 4.803 ns                ;
+; N/A                                     ; 197.51 MHz ( period = 5.063 ns )                    ; traffic_lights:inst2|T1[0]    ; traffic_lights:inst2|T2[0]   ; CLK        ; CLK      ; None                        ; None                      ; 4.802 ns                ;
+; N/A                                     ; 197.59 MHz ( period = 5.061 ns )                    ; fdivision:inst1|division[22]  ; fdivision:inst1|division[14] ; CLK        ; CLK      ; None                        ; None                      ; 4.800 ns                ;
+; N/A                                     ; 197.63 MHz ( period = 5.060 ns )                    ; traffic_lights:inst2|T2[2]    ; traffic_lights:inst2|T2[0]   ; CLK        ; CLK      ; None                        ; None                      ; 4.799 ns                ;
+; N/A                                     ; 197.71 MHz ( period = 5.058 ns )                    ; fdivision:inst1|division[22]  ; fdivision:inst1|division[9]  ; CLK        ; CLK      ; None                        ; None                      ; 4.797 ns                ;
+; N/A                                     ; 197.82 MHz ( period = 5.055 ns )                    ; traffic_lights:inst2|T1[3]    ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 4.794 ns                ;
+; N/A                                     ; 197.90 MHz ( period = 5.053 ns )                    ; traffic_lights:inst2|T1[3]    ; traffic_lights:inst2|T2[2]   ; CLK        ; CLK      ; None                        ; None                      ; 4.792 ns                ;
+; N/A                                     ; 197.98 MHz ( period = 5.051 ns )                    ; traffic_lights:inst2|T1[3]    ; display:inst3|M0[0]          ; CLK        ; CLK      ; None                        ; None                      ; 4.790 ns                ;
+; N/A                                     ; 198.14 MHz ( period = 5.047 ns )                    ; traffic_lights:inst2|T1[0]    ; traffic_lights:inst2|T2[1]   ; CLK        ; CLK      ; None                        ; None                      ; 4.786 ns                ;
+; N/A                                     ; 198.14 MHz ( period = 5.047 ns )                    ; traffic_lights:inst2|G[1]     ; traffic_lights:inst2|MG      ; CLK        ; CLK      ; None                        ; None                      ; 4.786 ns                ;
+; N/A                                     ; 198.18 MHz ( period = 5.046 ns )                    ; traffic_lights:inst2|T1[1]    ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 4.785 ns                ;
+; N/A                                     ; 198.22 MHz ( period = 5.045 ns )                    ; traffic_lights:inst2|T1[0]    ; traffic_lights:inst2|T2[3]   ; CLK        ; CLK      ; None                        ; None                      ; 4.784 ns                ;
+; N/A                                     ; 198.65 MHz ( period = 5.034 ns )                    ; traffic_lights:inst2|T2[3]    ; traffic_lights:inst2|CR      ; CLK        ; CLK      ; None                        ; None                      ; 4.773 ns                ;
+; N/A                                     ; 198.77 MHz ( period = 5.031 ns )                    ; traffic_lights:inst2|G[9]     ; traffic_lights:inst2|T1[3]   ; CLK        ; CLK      ; None                        ; None                      ; 4.770 ns                ;
+; N/A                                     ; 198.81 MHz ( period = 5.030 ns )                    ; traffic_lights:inst2|T1[1]    ; display:inst3|M0[0]          ; CLK        ; CLK      ; None                        ; None                      ; 4.769 ns                ;
+; N/A                                     ; 199.16 MHz ( period = 5.021 ns )                    ; traffic_lights:inst2|T2[4]    ; traffic_lights:inst2|T1[2]   ; CLK        ; CLK      ; None                        ; None                      ; 4.760 ns                ;
+; N/A                                     ; 199.52 MHz ( period = 5.012 ns )                    ; traffic_lights:inst2|G[2]     ; traffic_lights:inst2|T1[2]   ; CLK        ; CLK      ; None                        ; None                      ; 4.751 ns                ;
+; N/A                                     ; 199.60 MHz ( period = 5.010 ns )                    ; traffic_lights:inst2|T2[3]    ; display:inst3|C0[6]          ; CLK        ; CLK      ; None                        ; None                      ; 4.749 ns                ;
+; N/A                                     ; 199.68 MHz ( period = 5.008 ns )                    ; traffic_lights:inst2|T2[3]    ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 4.747 ns                ;
+; N/A                                     ; 199.80 MHz ( period = 5.005 ns )                    ; traffic_lights:inst2|G[5]     ; traffic_lights:inst2|T1[3]   ; CLK        ; CLK      ; None                        ; None                      ; 4.744 ns                ;
+; N/A                                     ; 199.96 MHz ( period = 5.001 ns )                    ; traffic_lights:inst2|T2[4]    ; traffic_lights:inst2|T2[4]   ; CLK        ; CLK      ; None                        ; None                      ; 4.740 ns                ;
+; N/A                                     ; 200.28 MHz ( period = 4.993 ns )                    ; traffic_lights:inst2|T1[3]    ; traffic_lights:inst2|MG      ; CLK        ; CLK      ; None                        ; None                      ; 4.732 ns                ;
+; N/A                                     ; 200.32 MHz ( period = 4.992 ns )                    ; traffic_lights:inst2|G[7]     ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 4.731 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; traffic_lights:inst2|T2[4]    ; traffic_lights:inst2|T1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 4.724 ns                ;
+; N/A                                     ; 201.21 MHz ( period = 4.970 ns )                    ; traffic_lights:inst2|G[7]     ; traffic_lights:inst2|MG      ; CLK        ; CLK      ; None                        ; None                      ; 4.709 ns                ;
+; N/A                                     ; 201.29 MHz ( period = 4.968 ns )                    ; fdivision:inst1|division[25]  ; fdivision:inst1|division[14] ; CLK        ; CLK      ; None                        ; None                      ; 4.707 ns                ;
+; N/A                                     ; 201.33 MHz ( period = 4.967 ns )                    ; traffic_lights:inst2|T1[3]    ; traffic_lights:inst2|MR      ; CLK        ; CLK      ; None                        ; None                      ; 4.706 ns                ;
+; N/A                                     ; 201.41 MHz ( period = 4.965 ns )                    ; fdivision:inst1|division[25]  ; fdivision:inst1|division[9]  ; CLK        ; CLK      ; None                        ; None                      ; 4.704 ns                ;
+; N/A                                     ; 201.73 MHz ( period = 4.957 ns )                    ; fdivision:inst1|division[2]   ; fdivision:inst1|division[18] ; CLK        ; CLK      ; None                        ; None                      ; 4.696 ns                ;
+; N/A                                     ; 202.02 MHz ( period = 4.950 ns )                    ; traffic_lights:inst2|T2[1]    ; traffic_lights:inst2|CR      ; CLK        ; CLK      ; None                        ; None                      ; 4.689 ns                ;
+; N/A                                     ; 202.31 MHz ( period = 4.943 ns )                    ; traffic_lights:inst2|G[0]     ; traffic_lights:inst2|T1[1]   ; CLK        ; CLK      ; None                        ; None                      ; 4.682 ns                ;
+; N/A                                     ; 202.51 MHz ( period = 4.938 ns )                    ; traffic_lights:inst2|state.s4 ; traffic_lights:inst2|T2[1]   ; CLK        ; CLK      ; None                        ; None                      ; 4.677 ns                ;
+; N/A                                     ; 202.59 MHz ( period = 4.936 ns )                    ; traffic_lights:inst2|T1[0]    ; traffic_lights:inst2|CY      ; CLK        ; CLK      ; None                        ; None                      ; 4.675 ns                ;
+; N/A                                     ; 202.84 MHz ( period = 4.930 ns )                    ; traffic_lights:inst2|T1[2]    ; traffic_lights:inst2|T1[1]   ; CLK        ; CLK      ; None                        ; None                      ; 4.669 ns                ;
+; N/A                                     ; 202.88 MHz ( period = 4.929 ns )                    ; traffic_lights:inst2|T2[2]    ; display:inst3|C0[2]          ; CLK        ; CLK      ; None                        ; None                      ; 4.668 ns                ;
+; N/A                                     ; 202.88 MHz ( period = 4.929 ns )                    ; traffic_lights:inst2|T1[2]    ; display:inst3|M0[0]          ; CLK        ; CLK      ; None                        ; None                      ; 4.668 ns                ;
+; N/A                                     ; 202.88 MHz ( period = 4.929 ns )                    ; fdivision:inst1|division[6]   ; fdivision:inst1|division[27] ; CLK        ; CLK      ; None                        ; None                      ; 4.668 ns                ;
+; N/A                                     ; 203.79 MHz ( period = 4.907 ns )                    ; traffic_lights:inst2|T2[3]    ; display:inst3|C1[3]          ; CLK        ; CLK      ; None                        ; None                      ; 4.646 ns                ;
+; N/A                                     ; 203.96 MHz ( period = 4.903 ns )                    ; traffic_lights:inst2|T2[3]    ; display:inst3|C1[6]          ; CLK        ; CLK      ; None                        ; None                      ; 4.642 ns                ;
+; N/A                                     ; 203.96 MHz ( period = 4.903 ns )                    ; traffic_lights:inst2|T2[1]    ; display:inst3|C1[2]          ; CLK        ; CLK      ; None                        ; None                      ; 4.642 ns                ;
+; N/A                                     ; 204.00 MHz ( period = 4.902 ns )                    ; fdivision:inst1|division[4]   ; fdivision:inst1|division[27] ; CLK        ; CLK      ; None                        ; None                      ; 4.641 ns                ;
+; N/A                                     ; 204.16 MHz ( period = 4.898 ns )                    ; fdivision:inst1|division[5]   ; fdivision:inst1|division[27] ; CLK        ; CLK      ; None                        ; None                      ; 4.637 ns                ;
+; N/A                                     ; 204.21 MHz ( period = 4.897 ns )                    ; fdivision:inst1|division[10]  ; fdivision:inst1|division[18] ; CLK        ; CLK      ; None                        ; None                      ; 4.636 ns                ;
+; N/A                                     ; 204.37 MHz ( period = 4.893 ns )                    ; traffic_lights:inst2|G[1]     ; traffic_lights:inst2|T1[3]   ; CLK        ; CLK      ; None                        ; None                      ; 4.632 ns                ;
+; N/A                                     ; 204.46 MHz ( period = 4.891 ns )                    ; traffic_lights:inst2|T1[3]    ; display:inst3|M0[3]          ; CLK        ; CLK      ; None                        ; None                      ; 4.630 ns                ;
+; N/A                                     ; 204.58 MHz ( period = 4.888 ns )                    ; traffic_lights:inst2|T1[0]    ; traffic_lights:inst2|T1[2]   ; CLK        ; CLK      ; None                        ; None                      ; 4.627 ns                ;
+; N/A                                     ; 204.75 MHz ( period = 4.884 ns )                    ; traffic_lights:inst2|T2[2]    ; display:inst3|C0[4]          ; CLK        ; CLK      ; None                        ; None                      ; 4.653 ns                ;
+; N/A                                     ; 204.88 MHz ( period = 4.881 ns )                    ; traffic_lights:inst2|T1[1]    ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 4.620 ns                ;
+; N/A                                     ; 204.88 MHz ( period = 4.881 ns )                    ; traffic_lights:inst2|T2[0]    ; display:inst3|C1[2]          ; CLK        ; CLK      ; None                        ; None                      ; 4.620 ns                ;
+; N/A                                     ; 204.92 MHz ( period = 4.880 ns )                    ; traffic_lights:inst2|T1[4]    ; traffic_lights:inst2|T1[1]   ; CLK        ; CLK      ; None                        ; None                      ; 4.619 ns                ;
+; N/A                                     ; 204.96 MHz ( period = 4.879 ns )                    ; traffic_lights:inst2|T1[3]    ; traffic_lights:inst2|T1[3]   ; CLK        ; CLK      ; None                        ; None                      ; 4.618 ns                ;
+; N/A                                     ; 204.96 MHz ( period = 4.879 ns )                    ; traffic_lights:inst2|T1[1]    ; traffic_lights:inst2|T2[2]   ; CLK        ; CLK      ; None                        ; None                      ; 4.618 ns                ;
+; N/A                                     ; 205.09 MHz ( period = 4.876 ns )                    ; fdivision:inst1|division[2]   ; fdivision:inst1|division[16] ; CLK        ; CLK      ; None                        ; None                      ; 4.615 ns                ;
+; N/A                                     ; 205.13 MHz ( period = 4.875 ns )                    ; fdivision:inst1|division[2]   ; fdivision:inst1|division[6]  ; CLK        ; CLK      ; None                        ; None                      ; 4.614 ns                ;
+; N/A                                     ; 205.21 MHz ( period = 4.873 ns )                    ; fdivision:inst1|division[2]   ; fdivision:inst1|division[17] ; CLK        ; CLK      ; None                        ; None                      ; 4.612 ns                ;
+; N/A                                     ; 205.21 MHz ( period = 4.873 ns )                    ; fdivision:inst1|division[2]   ; fdivision:inst1|division[19] ; CLK        ; CLK      ; None                        ; None                      ; 4.612 ns                ;
+; N/A                                     ; 205.25 MHz ( period = 4.872 ns )                    ; traffic_lights:inst2|T1[2]    ; traffic_lights:inst2|CR      ; CLK        ; CLK      ; None                        ; None                      ; 4.611 ns                ;
+; N/A                                     ; 205.38 MHz ( period = 4.869 ns )                    ; traffic_lights:inst2|T1[2]    ; traffic_lights:inst2|T2[0]   ; CLK        ; CLK      ; None                        ; None                      ; 4.608 ns                ;
+; N/A                                     ; 205.47 MHz ( period = 4.867 ns )                    ; fdivision:inst1|division[2]   ; fdivision:inst1|Fout         ; CLK        ; CLK      ; None                        ; None                      ; 4.606 ns                ;
+; N/A                                     ; 205.97 MHz ( period = 4.855 ns )                    ; traffic_lights:inst2|T1[1]    ; display:inst3|M1[0]          ; CLK        ; CLK      ; None                        ; None                      ; 4.594 ns                ;
+; N/A                                     ; 206.06 MHz ( period = 4.853 ns )                    ; traffic_lights:inst2|T1[2]    ; traffic_lights:inst2|T2[1]   ; CLK        ; CLK      ; None                        ; None                      ; 4.592 ns                ;
+; N/A                                     ; 206.14 MHz ( period = 4.851 ns )                    ; traffic_lights:inst2|T1[2]    ; traffic_lights:inst2|T2[3]   ; CLK        ; CLK      ; None                        ; None                      ; 4.590 ns                ;
+; N/A                                     ; 206.36 MHz ( period = 4.846 ns )                    ; traffic_lights:inst2|T2[4]    ; traffic_lights:inst2|CR      ; CLK        ; CLK      ; None                        ; None                      ; 4.585 ns                ;
+; N/A                                     ; 206.74 MHz ( period = 4.837 ns )                    ; traffic_lights:inst2|G[3]     ; traffic_lights:inst2|T1[1]   ; CLK        ; CLK      ; None                        ; None                      ; 4.576 ns                ;
+; N/A                                     ; 206.95 MHz ( period = 4.832 ns )                    ; traffic_lights:inst2|T2[3]    ; traffic_lights:inst2|T1[3]   ; CLK        ; CLK      ; None                        ; None                      ; 4.571 ns                ;
+; N/A                                     ; 207.00 MHz ( period = 4.831 ns )                    ; traffic_lights:inst2|T1[2]    ; display:inst3|M0[3]          ; CLK        ; CLK      ; None                        ; None                      ; 4.570 ns                ;
+; N/A                                     ; 207.38 MHz ( period = 4.822 ns )                    ; traffic_lights:inst2|T1[4]    ; traffic_lights:inst2|CR      ; CLK        ; CLK      ; None                        ; None                      ; 4.561 ns                ;
+; N/A                                     ; 207.43 MHz ( period = 4.821 ns )                    ; traffic_lights:inst2|T1[0]    ; traffic_lights:inst2|MY      ; CLK        ; CLK      ; None                        ; None                      ; 4.560 ns                ;
+; N/A                                     ; 207.47 MHz ( period = 4.820 ns )                    ; traffic_lights:inst2|T2[4]    ; traffic_lights:inst2|T1[4]   ; CLK        ; CLK      ; None                        ; None                      ; 4.559 ns                ;
+; N/A                                     ; 207.51 MHz ( period = 4.819 ns )                    ; traffic_lights:inst2|T1[4]    ; traffic_lights:inst2|T2[0]   ; CLK        ; CLK      ; None                        ; None                      ; 4.558 ns                ;
+; N/A                                     ; 207.51 MHz ( period = 4.819 ns )                    ; traffic_lights:inst2|T1[1]    ; traffic_lights:inst2|MG      ; CLK        ; CLK      ; None                        ; None                      ; 4.558 ns                ;
+; N/A                                     ; 207.64 MHz ( period = 4.816 ns )                    ; traffic_lights:inst2|G[7]     ; traffic_lights:inst2|T1[3]   ; CLK        ; CLK      ; None                        ; None                      ; 4.555 ns                ;
+; N/A                                     ; 207.64 MHz ( period = 4.816 ns )                    ; fdivision:inst1|division[10]  ; fdivision:inst1|division[16] ; CLK        ; CLK      ; None                        ; None                      ; 4.555 ns                ;
+; N/A                                     ; 207.68 MHz ( period = 4.815 ns )                    ; fdivision:inst1|division[10]  ; fdivision:inst1|division[6]  ; CLK        ; CLK      ; None                        ; None                      ; 4.554 ns                ;
+; N/A                                     ; 207.77 MHz ( period = 4.813 ns )                    ; fdivision:inst1|division[10]  ; fdivision:inst1|division[17] ; CLK        ; CLK      ; None                        ; None                      ; 4.552 ns                ;
+; N/A                                     ; 207.77 MHz ( period = 4.813 ns )                    ; fdivision:inst1|division[10]  ; fdivision:inst1|division[19] ; CLK        ; CLK      ; None                        ; None                      ; 4.552 ns                ;
+; N/A                                     ; 207.86 MHz ( period = 4.811 ns )                    ; fdivision:inst1|division[6]   ; fdivision:inst1|division[25] ; CLK        ; CLK      ; None                        ; None                      ; 4.550 ns                ;
+; N/A                                     ; 208.03 MHz ( period = 4.807 ns )                    ; fdivision:inst1|division[10]  ; fdivision:inst1|Fout         ; CLK        ; CLK      ; None                        ; None                      ; 4.546 ns                ;
+; N/A                                     ; 208.16 MHz ( period = 4.804 ns )                    ; traffic_lights:inst2|G[9]     ; traffic_lights:inst2|T1[1]   ; CLK        ; CLK      ; None                        ; None                      ; 4.543 ns                ;
+; N/A                                     ; 208.20 MHz ( period = 4.803 ns )                    ; traffic_lights:inst2|T1[4]    ; traffic_lights:inst2|T2[1]   ; CLK        ; CLK      ; None                        ; None                      ; 4.542 ns                ;
+; N/A                                     ; 208.29 MHz ( period = 4.801 ns )                    ; traffic_lights:inst2|state.s2 ; traffic_lights:inst2|T2[4]   ; CLK        ; CLK      ; None                        ; None                      ; 4.540 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                               ;                              ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; tsu                                                                                 ;
++-------+--------------+------------+------+-------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To                            ; To Clock ;
++-------+--------------+------------+------+-------------------------------+----------+
+; N/A   ; None         ; 5.646 ns   ; C    ; traffic_lights:inst2|MR       ; CLK      ;
+; N/A   ; None         ; 5.519 ns   ; C    ; display:inst3|C0[3]           ; CLK      ;
+; N/A   ; None         ; 5.103 ns   ; C    ; traffic_lights:inst2|CY       ; CLK      ;
+; N/A   ; None         ; 5.056 ns   ; C    ; display:inst3|M0[3]           ; CLK      ;
+; N/A   ; None         ; 4.995 ns   ; C    ; display:inst3|C0[0]           ; CLK      ;
+; N/A   ; None         ; 4.991 ns   ; C    ; traffic_lights:inst2|T2[1]    ; CLK      ;
+; N/A   ; None         ; 4.989 ns   ; C    ; traffic_lights:inst2|T2[3]    ; CLK      ;
+; N/A   ; None         ; 4.988 ns   ; C    ; traffic_lights:inst2|MY       ; CLK      ;
+; N/A   ; None         ; 4.980 ns   ; C    ; traffic_lights:inst2|T1[0]    ; CLK      ;
+; N/A   ; None         ; 4.815 ns   ; C    ; traffic_lights:inst2|T1[4]    ; CLK      ;
+; N/A   ; None         ; 4.793 ns   ; C    ; traffic_lights:inst2|MG       ; CLK      ;
+; N/A   ; None         ; 4.788 ns   ; C    ; display:inst3|M0[0]           ; CLK      ;
+; N/A   ; None         ; 4.780 ns   ; C    ; display:inst3|M0[6]           ; CLK      ;
+; N/A   ; None         ; 4.639 ns   ; C    ; traffic_lights:inst2|T1[3]    ; CLK      ;
+; N/A   ; None         ; 4.628 ns   ; C    ; traffic_lights:inst2|CR       ; CLK      ;
+; N/A   ; None         ; 4.506 ns   ; C    ; traffic_lights:inst2|T2[0]    ; CLK      ;
+; N/A   ; None         ; 4.481 ns   ; C    ; display:inst3|C0[4]           ; CLK      ;
+; N/A   ; None         ; 4.448 ns   ; C    ; display:inst3|M1[0]           ; CLK      ;
+; N/A   ; None         ; 4.412 ns   ; C    ; traffic_lights:inst2|T1[1]    ; CLK      ;
+; N/A   ; None         ; 4.294 ns   ; C    ; display:inst3|C1[2]           ; CLK      ;
+; N/A   ; None         ; 4.249 ns   ; C    ; traffic_lights:inst2|T2[4]    ; CLK      ;
+; N/A   ; None         ; 4.176 ns   ; C    ; traffic_lights:inst2|T1[2]    ; CLK      ;
+; N/A   ; None         ; 3.997 ns   ; C    ; display:inst3|M0[4]           ; CLK      ;
+; N/A   ; None         ; 3.975 ns   ; C    ; display:inst3|C1[3]           ; CLK      ;
+; N/A   ; None         ; 3.971 ns   ; C    ; display:inst3|C1[6]           ; CLK      ;
+; N/A   ; None         ; 3.921 ns   ; C    ; traffic_lights:inst2|state.s1 ; CLK      ;
+; N/A   ; None         ; 3.913 ns   ; C    ; display:inst3|M1[6]           ; CLK      ;
+; N/A   ; None         ; 3.766 ns   ; C    ; traffic_lights:inst2|state.s2 ; CLK      ;
+; N/A   ; None         ; 3.754 ns   ; C    ; display:inst3|C0[5]           ; CLK      ;
+; N/A   ; None         ; 3.703 ns   ; C    ; display:inst3|C1[4]           ; CLK      ;
+; N/A   ; None         ; 3.701 ns   ; C    ; display:inst3|M0[5]           ; CLK      ;
+; N/A   ; None         ; 3.657 ns   ; C    ; traffic_lights:inst2|CG       ; CLK      ;
+; N/A   ; None         ; 3.562 ns   ; C    ; display:inst3|M0[1]           ; CLK      ;
+; N/A   ; None         ; 3.421 ns   ; C    ; traffic_lights:inst2|state.s3 ; CLK      ;
+; N/A   ; None         ; 3.282 ns   ; C    ; display:inst3|M1[4]           ; CLK      ;
+; N/A   ; None         ; 3.261 ns   ; C    ; display:inst3|C0[2]           ; CLK      ;
+; N/A   ; None         ; 3.201 ns   ; RET  ; traffic_lights:inst2|MR       ; CLK      ;
+; N/A   ; None         ; 3.143 ns   ; C    ; display:inst3|C0[6]           ; CLK      ;
+; N/A   ; None         ; 3.140 ns   ; C    ; display:inst3|M1[2]           ; CLK      ;
+; N/A   ; None         ; 3.129 ns   ; C    ; display:inst3|M0[2]           ; CLK      ;
+; N/A   ; None         ; 2.715 ns   ; RET  ; traffic_lights:inst2|T1[0]    ; CLK      ;
+; N/A   ; None         ; 2.658 ns   ; RET  ; traffic_lights:inst2|CY       ; CLK      ;
+; N/A   ; None         ; 2.567 ns   ; RET  ; traffic_lights:inst2|T1[2]    ; CLK      ;
+; N/A   ; None         ; 2.550 ns   ; RET  ; traffic_lights:inst2|T1[4]    ; CLK      ;
+; N/A   ; None         ; 2.406 ns   ; RET  ; display:inst3|C0[6]           ; CLK      ;
+; N/A   ; None         ; 2.401 ns   ; C    ; display:inst3|C0[1]           ; CLK      ;
+; N/A   ; None         ; 2.374 ns   ; RET  ; traffic_lights:inst2|T1[3]    ; CLK      ;
+; N/A   ; None         ; 2.328 ns   ; RET  ; display:inst3|C1[1]           ; CLK      ;
+; N/A   ; None         ; 2.328 ns   ; RET  ; display:inst3|M1[1]           ; CLK      ;
+; N/A   ; None         ; 2.328 ns   ; RET  ; traffic_lights:inst2|MG       ; CLK      ;
+; N/A   ; None         ; 2.328 ns   ; RET  ; traffic_lights:inst2|CR       ; CLK      ;
+; N/A   ; None         ; 2.320 ns   ; RET  ; display:inst3|C0[4]           ; CLK      ;
+; N/A   ; None         ; 2.320 ns   ; RET  ; display:inst3|C0[3]           ; CLK      ;
+; N/A   ; None         ; 2.320 ns   ; RET  ; display:inst3|C0[0]           ; CLK      ;
+; N/A   ; None         ; 2.248 ns   ; RET  ; display:inst3|M0[4]           ; CLK      ;
+; N/A   ; None         ; 2.248 ns   ; RET  ; display:inst3|M0[3]           ; CLK      ;
+; N/A   ; None         ; 2.248 ns   ; RET  ; display:inst3|M0[0]           ; CLK      ;
+; N/A   ; None         ; 2.237 ns   ; C    ; traffic_lights:inst2|T2[2]    ; CLK      ;
+; N/A   ; None         ; 2.233 ns   ; RET  ; display:inst3|M0[1]           ; CLK      ;
+; N/A   ; None         ; 2.192 ns   ; RET  ; traffic_lights:inst2|state.s2 ; CLK      ;
+; N/A   ; None         ; 2.192 ns   ; RET  ; traffic_lights:inst2|state.s3 ; CLK      ;
+; N/A   ; None         ; 2.192 ns   ; RET  ; traffic_lights:inst2|state.s4 ; CLK      ;
+; N/A   ; None         ; 2.192 ns   ; RET  ; traffic_lights:inst2|T2[0]    ; CLK      ;
+; N/A   ; None         ; 2.192 ns   ; RET  ; traffic_lights:inst2|CG       ; CLK      ;
+; N/A   ; None         ; 2.043 ns   ; C    ; traffic_lights:inst2|F        ; CLK      ;
+; N/A   ; None         ; 2.040 ns   ; RET  ; traffic_lights:inst2|T2[2]    ; CLK      ;
+; N/A   ; None         ; 1.870 ns   ; RET  ; display:inst3|M0[6]           ; CLK      ;
+; N/A   ; None         ; 1.870 ns   ; RET  ; display:inst3|M0[5]           ; CLK      ;
+; N/A   ; None         ; 1.870 ns   ; RET  ; display:inst3|M0[2]           ; CLK      ;
+; N/A   ; None         ; 1.839 ns   ; RET  ; display:inst3|M1[6]           ; CLK      ;
+; N/A   ; None         ; 1.839 ns   ; RET  ; display:inst3|M1[5]           ; CLK      ;
+; N/A   ; None         ; 1.839 ns   ; RET  ; display:inst3|M1[4]           ; CLK      ;
+; N/A   ; None         ; 1.839 ns   ; RET  ; display:inst3|M1[0]           ; CLK      ;
+; N/A   ; None         ; 1.836 ns   ; RET  ; traffic_lights:inst2|MY       ; CLK      ;
+; N/A   ; None         ; 1.821 ns   ; RET  ; display:inst3|C1[6]           ; CLK      ;
+; N/A   ; None         ; 1.821 ns   ; RET  ; display:inst3|C1[5]           ; CLK      ;
+; N/A   ; None         ; 1.821 ns   ; RET  ; display:inst3|C1[4]           ; CLK      ;
+; N/A   ; None         ; 1.821 ns   ; RET  ; display:inst3|C1[3]           ; CLK      ;
+; N/A   ; None         ; 1.811 ns   ; RET  ; display:inst3|C0[5]           ; CLK      ;
+; N/A   ; None         ; 1.811 ns   ; RET  ; display:inst3|C0[2]           ; CLK      ;
+; N/A   ; None         ; 1.811 ns   ; RET  ; display:inst3|C0[1]           ; CLK      ;
+; N/A   ; None         ; 1.811 ns   ; RET  ; display:inst3|C1[2]           ; CLK      ;
+; N/A   ; None         ; 1.710 ns   ; C    ; display:inst3|M1[1]           ; CLK      ;
+; N/A   ; None         ; 1.559 ns   ; C    ; traffic_lights:inst2|state.s4 ; CLK      ;
+; N/A   ; None         ; 1.504 ns   ; RET  ; traffic_lights:inst2|T2[1]    ; CLK      ;
+; N/A   ; None         ; 1.502 ns   ; RET  ; traffic_lights:inst2|T2[3]    ; CLK      ;
+; N/A   ; None         ; 1.422 ns   ; C    ; display:inst3|C1[1]           ; CLK      ;
+; N/A   ; None         ; 1.375 ns   ; RET  ; display:inst3|M1[2]           ; CLK      ;
+; N/A   ; None         ; 1.260 ns   ; RET  ; traffic_lights:inst2|T2[4]    ; CLK      ;
+; N/A   ; None         ; 1.233 ns   ; RET  ; traffic_lights:inst2|T1[1]    ; CLK      ;
+; N/A   ; None         ; 1.070 ns   ; RET  ; traffic_lights:inst2|state.s1 ; CLK      ;
++-------+--------------+------------+------+-------------------------------+----------+
+
+
++----------------------------------------------------------------------------------+
+; tco                                                                              ;
++-------+--------------+------------+-------------------------+-------+------------+
+; Slack ; Required tco ; Actual tco ; From                    ; To    ; From Clock ;
++-------+--------------+------------+-------------------------+-------+------------+
+; N/A   ; None         ; 13.865 ns  ; traffic_lights:inst2|MR ; MR    ; CLK        ;
+; N/A   ; None         ; 13.399 ns  ; traffic_lights:inst2|CR ; CR    ; CLK        ;
+; N/A   ; None         ; 13.154 ns  ; traffic_lights:inst2|CG ; CG    ; CLK        ;
+; N/A   ; None         ; 13.071 ns  ; traffic_lights:inst2|MG ; MG    ; CLK        ;
+; N/A   ; None         ; 12.859 ns  ; display:inst3|M0[1]     ; M0[1] ; CLK        ;
+; N/A   ; None         ; 12.855 ns  ; display:inst3|M0[0]     ; M0[0] ; CLK        ;
+; N/A   ; None         ; 12.630 ns  ; display:inst3|C1[3]     ; C1[3] ; CLK        ;
+; N/A   ; None         ; 12.622 ns  ; traffic_lights:inst2|CY ; CY    ; CLK        ;
+; N/A   ; None         ; 12.617 ns  ; display:inst3|M1[1]     ; M1[1] ; CLK        ;
+; N/A   ; None         ; 12.487 ns  ; display:inst3|M0[3]     ; M0[3] ; CLK        ;
+; N/A   ; None         ; 12.457 ns  ; display:inst3|M0[4]     ; M0[4] ; CLK        ;
+; N/A   ; None         ; 12.426 ns  ; display:inst3|M0[2]     ; M0[2] ; CLK        ;
+; N/A   ; None         ; 12.372 ns  ; display:inst3|C1[6]     ; C1[6] ; CLK        ;
+; N/A   ; None         ; 12.359 ns  ; display:inst3|C1[1]     ; C1[1] ; CLK        ;
+; N/A   ; None         ; 12.341 ns  ; display:inst3|C0[0]     ; C0[0] ; CLK        ;
+; N/A   ; None         ; 12.338 ns  ; display:inst3|M1[0]     ; M1[0] ; CLK        ;
+; N/A   ; None         ; 12.330 ns  ; display:inst3|M1[0]     ; M1[3] ; CLK        ;
+; N/A   ; None         ; 12.286 ns  ; display:inst3|C1[5]     ; C1[5] ; CLK        ;
+; N/A   ; None         ; 12.283 ns  ; traffic_lights:inst2|MY ; MY    ; CLK        ;
+; N/A   ; None         ; 12.270 ns  ; display:inst3|C1[4]     ; C1[4] ; CLK        ;
+; N/A   ; None         ; 12.161 ns  ; display:inst3|M0[6]     ; M0[6] ; CLK        ;
+; N/A   ; None         ; 12.104 ns  ; display:inst3|M0[5]     ; M0[5] ; CLK        ;
+; N/A   ; None         ; 12.008 ns  ; display:inst3|C0[4]     ; C0[4] ; CLK        ;
+; N/A   ; None         ; 11.999 ns  ; display:inst3|C1[2]     ; C1[2] ; CLK        ;
+; N/A   ; None         ; 11.984 ns  ; display:inst3|C1[3]     ; C1[0] ; CLK        ;
+; N/A   ; None         ; 11.958 ns  ; display:inst3|C0[3]     ; C0[3] ; CLK        ;
+; N/A   ; None         ; 11.932 ns  ; display:inst3|C0[6]     ; C0[6] ; CLK        ;
+; N/A   ; None         ; 11.888 ns  ; display:inst3|M1[5]     ; M1[5] ; CLK        ;
+; N/A   ; None         ; 11.886 ns  ; display:inst3|M1[4]     ; M1[4] ; CLK        ;
+; N/A   ; None         ; 11.844 ns  ; display:inst3|C0[2]     ; C0[2] ; CLK        ;
+; N/A   ; None         ; 11.840 ns  ; display:inst3|M1[6]     ; M1[6] ; CLK        ;
+; N/A   ; None         ; 11.840 ns  ; display:inst3|C0[1]     ; C0[1] ; CLK        ;
+; N/A   ; None         ; 11.632 ns  ; display:inst3|M1[2]     ; M1[2] ; CLK        ;
+; N/A   ; None         ; 11.518 ns  ; display:inst3|C0[5]     ; C0[5] ; CLK        ;
++-------+--------------+------------+-------------------------+-------+------------+
+
+
++-------------------------------------------------------------------------------------------+
+; th                                                                                        ;
++---------------+-------------+-----------+------+-------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To                            ; To Clock ;
++---------------+-------------+-----------+------+-------------------------------+----------+
+; N/A           ; None        ; -1.018 ns ; RET  ; traffic_lights:inst2|state.s1 ; CLK      ;
+; N/A           ; None        ; -1.181 ns ; RET  ; traffic_lights:inst2|T1[1]    ; CLK      ;
+; N/A           ; None        ; -1.208 ns ; RET  ; traffic_lights:inst2|T2[4]    ; CLK      ;
+; N/A           ; None        ; -1.265 ns ; RET  ; traffic_lights:inst2|T1[2]    ; CLK      ;
+; N/A           ; None        ; -1.295 ns ; RET  ; traffic_lights:inst2|MR       ; CLK      ;
+; N/A           ; None        ; -1.314 ns ; C    ; traffic_lights:inst2|T1[0]    ; CLK      ;
+; N/A           ; None        ; -1.323 ns ; RET  ; display:inst3|M1[2]           ; CLK      ;
+; N/A           ; None        ; -1.370 ns ; C    ; display:inst3|C1[1]           ; CLK      ;
+; N/A           ; None        ; -1.450 ns ; RET  ; traffic_lights:inst2|T2[3]    ; CLK      ;
+; N/A           ; None        ; -1.452 ns ; RET  ; traffic_lights:inst2|T2[1]    ; CLK      ;
+; N/A           ; None        ; -1.456 ns ; RET  ; traffic_lights:inst2|T1[4]    ; CLK      ;
+; N/A           ; None        ; -1.457 ns ; RET  ; traffic_lights:inst2|T1[3]    ; CLK      ;
+; N/A           ; None        ; -1.459 ns ; RET  ; traffic_lights:inst2|T1[0]    ; CLK      ;
+; N/A           ; None        ; -1.507 ns ; C    ; traffic_lights:inst2|state.s4 ; CLK      ;
+; N/A           ; None        ; -1.604 ns ; C    ; display:inst3|C1[6]           ; CLK      ;
+; N/A           ; None        ; -1.604 ns ; C    ; display:inst3|C1[3]           ; CLK      ;
+; N/A           ; None        ; -1.658 ns ; C    ; display:inst3|M1[1]           ; CLK      ;
+; N/A           ; None        ; -1.660 ns ; C    ; traffic_lights:inst2|MG       ; CLK      ;
+; N/A           ; None        ; -1.752 ns ; C    ; traffic_lights:inst2|T2[0]    ; CLK      ;
+; N/A           ; None        ; -1.759 ns ; RET  ; display:inst3|C0[5]           ; CLK      ;
+; N/A           ; None        ; -1.759 ns ; RET  ; display:inst3|C0[2]           ; CLK      ;
+; N/A           ; None        ; -1.759 ns ; RET  ; display:inst3|C0[1]           ; CLK      ;
+; N/A           ; None        ; -1.759 ns ; RET  ; display:inst3|C1[2]           ; CLK      ;
+; N/A           ; None        ; -1.769 ns ; RET  ; display:inst3|C1[6]           ; CLK      ;
+; N/A           ; None        ; -1.769 ns ; RET  ; display:inst3|C1[5]           ; CLK      ;
+; N/A           ; None        ; -1.769 ns ; RET  ; display:inst3|C1[4]           ; CLK      ;
+; N/A           ; None        ; -1.769 ns ; RET  ; display:inst3|C1[3]           ; CLK      ;
+; N/A           ; None        ; -1.784 ns ; RET  ; traffic_lights:inst2|MY       ; CLK      ;
+; N/A           ; None        ; -1.787 ns ; RET  ; display:inst3|M1[6]           ; CLK      ;
+; N/A           ; None        ; -1.787 ns ; RET  ; display:inst3|M1[5]           ; CLK      ;
+; N/A           ; None        ; -1.787 ns ; RET  ; display:inst3|M1[4]           ; CLK      ;
+; N/A           ; None        ; -1.787 ns ; RET  ; display:inst3|M1[0]           ; CLK      ;
+; N/A           ; None        ; -1.818 ns ; RET  ; display:inst3|M0[6]           ; CLK      ;
+; N/A           ; None        ; -1.818 ns ; RET  ; display:inst3|M0[5]           ; CLK      ;
+; N/A           ; None        ; -1.818 ns ; RET  ; display:inst3|M0[2]           ; CLK      ;
+; N/A           ; None        ; -1.854 ns ; C    ; traffic_lights:inst2|T1[2]    ; CLK      ;
+; N/A           ; None        ; -1.987 ns ; C    ; display:inst3|M1[6]           ; CLK      ;
+; N/A           ; None        ; -1.988 ns ; RET  ; traffic_lights:inst2|T2[2]    ; CLK      ;
+; N/A           ; None        ; -1.991 ns ; C    ; traffic_lights:inst2|F        ; CLK      ;
+; N/A           ; None        ; -2.090 ns ; C    ; traffic_lights:inst2|T1[1]    ; CLK      ;
+; N/A           ; None        ; -2.140 ns ; RET  ; traffic_lights:inst2|state.s2 ; CLK      ;
+; N/A           ; None        ; -2.140 ns ; RET  ; traffic_lights:inst2|state.s3 ; CLK      ;
+; N/A           ; None        ; -2.140 ns ; RET  ; traffic_lights:inst2|state.s4 ; CLK      ;
+; N/A           ; None        ; -2.140 ns ; RET  ; traffic_lights:inst2|CY       ; CLK      ;
+; N/A           ; None        ; -2.140 ns ; RET  ; traffic_lights:inst2|T2[0]    ; CLK      ;
+; N/A           ; None        ; -2.140 ns ; RET  ; traffic_lights:inst2|CG       ; CLK      ;
+; N/A           ; None        ; -2.181 ns ; RET  ; display:inst3|M0[1]           ; CLK      ;
+; N/A           ; None        ; -2.185 ns ; C    ; traffic_lights:inst2|T2[2]    ; CLK      ;
+; N/A           ; None        ; -2.196 ns ; RET  ; display:inst3|M0[4]           ; CLK      ;
+; N/A           ; None        ; -2.196 ns ; RET  ; display:inst3|M0[3]           ; CLK      ;
+; N/A           ; None        ; -2.196 ns ; RET  ; display:inst3|M0[0]           ; CLK      ;
+; N/A           ; None        ; -2.268 ns ; RET  ; display:inst3|C0[4]           ; CLK      ;
+; N/A           ; None        ; -2.268 ns ; RET  ; display:inst3|C0[3]           ; CLK      ;
+; N/A           ; None        ; -2.268 ns ; RET  ; display:inst3|C0[0]           ; CLK      ;
+; N/A           ; None        ; -2.276 ns ; RET  ; display:inst3|C1[1]           ; CLK      ;
+; N/A           ; None        ; -2.276 ns ; RET  ; display:inst3|M1[1]           ; CLK      ;
+; N/A           ; None        ; -2.276 ns ; RET  ; traffic_lights:inst2|MG       ; CLK      ;
+; N/A           ; None        ; -2.276 ns ; RET  ; traffic_lights:inst2|CR       ; CLK      ;
+; N/A           ; None        ; -2.349 ns ; C    ; display:inst3|C0[1]           ; CLK      ;
+; N/A           ; None        ; -2.354 ns ; RET  ; display:inst3|C0[6]           ; CLK      ;
+; N/A           ; None        ; -2.487 ns ; C    ; display:inst3|C0[0]           ; CLK      ;
+; N/A           ; None        ; -2.522 ns ; C    ; display:inst3|M1[0]           ; CLK      ;
+; N/A           ; None        ; -2.579 ns ; C    ; display:inst3|M0[2]           ; CLK      ;
+; N/A           ; None        ; -2.779 ns ; C    ; traffic_lights:inst2|T2[4]    ; CLK      ;
+; N/A           ; None        ; -2.911 ns ; C    ; traffic_lights:inst2|T1[3]    ; CLK      ;
+; N/A           ; None        ; -3.088 ns ; C    ; display:inst3|M1[2]           ; CLK      ;
+; N/A           ; None        ; -3.091 ns ; C    ; display:inst3|C0[6]           ; CLK      ;
+; N/A           ; None        ; -3.095 ns ; C    ; traffic_lights:inst2|T1[4]    ; CLK      ;
+; N/A           ; None        ; -3.196 ns ; C    ; display:inst3|C0[2]           ; CLK      ;
+; N/A           ; None        ; -3.208 ns ; C    ; display:inst3|C0[5]           ; CLK      ;
+; N/A           ; None        ; -3.230 ns ; C    ; display:inst3|M1[4]           ; CLK      ;
+; N/A           ; None        ; -3.308 ns ; C    ; traffic_lights:inst2|CG       ; CLK      ;
+; N/A           ; None        ; -3.314 ns ; C    ; display:inst3|M0[5]           ; CLK      ;
+; N/A           ; None        ; -3.353 ns ; C    ; traffic_lights:inst2|T2[1]    ; CLK      ;
+; N/A           ; None        ; -3.369 ns ; C    ; traffic_lights:inst2|state.s3 ; CLK      ;
+; N/A           ; None        ; -3.510 ns ; C    ; display:inst3|M0[1]           ; CLK      ;
+; N/A           ; None        ; -3.586 ns ; C    ; traffic_lights:inst2|T2[3]    ; CLK      ;
+; N/A           ; None        ; -3.651 ns ; C    ; display:inst3|C1[4]           ; CLK      ;
+; N/A           ; None        ; -3.714 ns ; C    ; traffic_lights:inst2|state.s2 ; CLK      ;
+; N/A           ; None        ; -3.769 ns ; C    ; traffic_lights:inst2|CR       ; CLK      ;
+; N/A           ; None        ; -3.772 ns ; C    ; traffic_lights:inst2|MY       ; CLK      ;
+; N/A           ; None        ; -3.798 ns ; C    ; display:inst3|M0[0]           ; CLK      ;
+; N/A           ; None        ; -3.869 ns ; C    ; traffic_lights:inst2|state.s1 ; CLK      ;
+; N/A           ; None        ; -3.945 ns ; C    ; display:inst3|M0[4]           ; CLK      ;
+; N/A           ; None        ; -3.993 ns ; C    ; display:inst3|C0[3]           ; CLK      ;
+; N/A           ; None        ; -4.236 ns ; C    ; display:inst3|M0[3]           ; CLK      ;
+; N/A           ; None        ; -4.242 ns ; C    ; display:inst3|C1[2]           ; CLK      ;
+; N/A           ; None        ; -4.429 ns ; C    ; display:inst3|C0[4]           ; CLK      ;
+; N/A           ; None        ; -4.728 ns ; C    ; display:inst3|M0[6]           ; CLK      ;
+; N/A           ; None        ; -4.754 ns ; C    ; traffic_lights:inst2|CY       ; CLK      ;
+; N/A           ; None        ; -5.297 ns ; C    ; traffic_lights:inst2|MR       ; CLK      ;
++---------------+-------------+-----------+------+-------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 7.1 Build 156 04/30/2007 SJ Web Edition
+    Info: Processing started: Mon May 02 18:58:08 2016
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off jtd -c jtd --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLK" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "fdivision:inst1|Fout" as buffer
+Info: Clock "CLK" has Internal fmax of 165.23 MHz between source register "traffic_lights:inst2|T2[3]" and destination register "traffic_lights:inst2|MR" (period= 6.052 ns)
+    Info: + Longest register to register delay is 5.791 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X21_Y9_N8; Fanout = 28; REG Node = 'traffic_lights:inst2|T2[3]'
+        Info: 2: + IC(0.552 ns) + CELL(0.292 ns) = 0.844 ns; Loc. = LC_X21_Y9_N3; Fanout = 2; COMB Node = 'traffic_lights:inst2|Equal1~104'
+        Info: 3: + IC(0.403 ns) + CELL(0.442 ns) = 1.689 ns; Loc. = LC_X21_Y9_N6; Fanout = 5; COMB Node = 'traffic_lights:inst2|MG~52'
+        Info: 4: + IC(0.182 ns) + CELL(0.114 ns) = 1.985 ns; Loc. = LC_X21_Y9_N7; Fanout = 3; COMB Node = 'traffic_lights:inst2|CY~230'
+        Info: 5: + IC(1.239 ns) + CELL(0.114 ns) = 3.338 ns; Loc. = LC_X21_Y8_N3; Fanout = 2; COMB Node = 'traffic_lights:inst2|CY~231'
+        Info: 6: + IC(0.182 ns) + CELL(0.114 ns) = 3.634 ns; Loc. = LC_X21_Y8_N4; Fanout = 2; COMB Node = 'traffic_lights:inst2|CY~232'
+        Info: 7: + IC(1.290 ns) + CELL(0.867 ns) = 5.791 ns; Loc. = LC_X21_Y7_N6; Fanout = 1; REG Node = 'traffic_lights:inst2|MR'
+        Info: Total cell delay = 1.943 ns ( 33.55 % )
+        Info: Total interconnect delay = 3.848 ns ( 66.45 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "CLK" to destination register is 7.357 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_28; Fanout = 33; CLK Node = 'CLK'
+            Info: 2: + IC(0.745 ns) + CELL(0.935 ns) = 3.149 ns; Loc. = LC_X8_Y10_N1; Fanout = 59; REG Node = 'fdivision:inst1|Fout'
+            Info: 3: + IC(3.497 ns) + CELL(0.711 ns) = 7.357 ns; Loc. = LC_X21_Y7_N6; Fanout = 1; REG Node = 'traffic_lights:inst2|MR'
+            Info: Total cell delay = 3.115 ns ( 42.34 % )
+            Info: Total interconnect delay = 4.242 ns ( 57.66 % )
+        Info: - Longest clock path from clock "CLK" to source register is 7.357 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_28; Fanout = 33; CLK Node = 'CLK'
+            Info: 2: + IC(0.745 ns) + CELL(0.935 ns) = 3.149 ns; Loc. = LC_X8_Y10_N1; Fanout = 59; REG Node = 'fdivision:inst1|Fout'
+            Info: 3: + IC(3.497 ns) + CELL(0.711 ns) = 7.357 ns; Loc. = LC_X21_Y9_N8; Fanout = 28; REG Node = 'traffic_lights:inst2|T2[3]'
+            Info: Total cell delay = 3.115 ns ( 42.34 % )
+            Info: Total interconnect delay = 4.242 ns ( 57.66 % )
+    Info: + Micro clock to output delay of source is 0.224 ns
+    Info: + Micro setup delay of destination is 0.037 ns
+Info: tsu for register "traffic_lights:inst2|MR" (data pin = "C", clock pin = "CLK") is 5.646 ns
+    Info: + Longest pin to register delay is 12.966 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_139; Fanout = 42; PIN Node = 'C'
+        Info: 2: + IC(6.805 ns) + CELL(0.590 ns) = 8.864 ns; Loc. = LC_X21_Y9_N6; Fanout = 5; COMB Node = 'traffic_lights:inst2|MG~52'
+        Info: 3: + IC(0.182 ns) + CELL(0.114 ns) = 9.160 ns; Loc. = LC_X21_Y9_N7; Fanout = 3; COMB Node = 'traffic_lights:inst2|CY~230'
+        Info: 4: + IC(1.239 ns) + CELL(0.114 ns) = 10.513 ns; Loc. = LC_X21_Y8_N3; Fanout = 2; COMB Node = 'traffic_lights:inst2|CY~231'
+        Info: 5: + IC(0.182 ns) + CELL(0.114 ns) = 10.809 ns; Loc. = LC_X21_Y8_N4; Fanout = 2; COMB Node = 'traffic_lights:inst2|CY~232'
+        Info: 6: + IC(1.290 ns) + CELL(0.867 ns) = 12.966 ns; Loc. = LC_X21_Y7_N6; Fanout = 1; REG Node = 'traffic_lights:inst2|MR'
+        Info: Total cell delay = 3.268 ns ( 25.20 % )
+        Info: Total interconnect delay = 9.698 ns ( 74.80 % )
+    Info: + Micro setup delay of destination is 0.037 ns
+    Info: - Shortest clock path from clock "CLK" to destination register is 7.357 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_28; Fanout = 33; CLK Node = 'CLK'
+        Info: 2: + IC(0.745 ns) + CELL(0.935 ns) = 3.149 ns; Loc. = LC_X8_Y10_N1; Fanout = 59; REG Node = 'fdivision:inst1|Fout'
+        Info: 3: + IC(3.497 ns) + CELL(0.711 ns) = 7.357 ns; Loc. = LC_X21_Y7_N6; Fanout = 1; REG Node = 'traffic_lights:inst2|MR'
+        Info: Total cell delay = 3.115 ns ( 42.34 % )
+        Info: Total interconnect delay = 4.242 ns ( 57.66 % )
+Info: tco from clock "CLK" to destination pin "MR" through register "traffic_lights:inst2|MR" is 13.865 ns
+    Info: + Longest clock path from clock "CLK" to source register is 7.357 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_28; Fanout = 33; CLK Node = 'CLK'
+        Info: 2: + IC(0.745 ns) + CELL(0.935 ns) = 3.149 ns; Loc. = LC_X8_Y10_N1; Fanout = 59; REG Node = 'fdivision:inst1|Fout'
+        Info: 3: + IC(3.497 ns) + CELL(0.711 ns) = 7.357 ns; Loc. = LC_X21_Y7_N6; Fanout = 1; REG Node = 'traffic_lights:inst2|MR'
+        Info: Total cell delay = 3.115 ns ( 42.34 % )
+        Info: Total interconnect delay = 4.242 ns ( 57.66 % )
+    Info: + Micro clock to output delay of source is 0.224 ns
+    Info: + Longest register to pin delay is 6.284 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X21_Y7_N6; Fanout = 1; REG Node = 'traffic_lights:inst2|MR'
+        Info: 2: + IC(4.176 ns) + CELL(2.108 ns) = 6.284 ns; Loc. = PIN_233; Fanout = 0; PIN Node = 'MR'
+        Info: Total cell delay = 2.108 ns ( 33.55 % )
+        Info: Total interconnect delay = 4.176 ns ( 66.45 % )
+Info: th for register "traffic_lights:inst2|state.s1" (data pin = "RET", clock pin = "CLK") is -1.018 ns
+    Info: + Longest clock path from clock "CLK" to destination register is 7.357 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_28; Fanout = 33; CLK Node = 'CLK'
+        Info: 2: + IC(0.745 ns) + CELL(0.935 ns) = 3.149 ns; Loc. = LC_X8_Y10_N1; Fanout = 59; REG Node = 'fdivision:inst1|Fout'
+        Info: 3: + IC(3.497 ns) + CELL(0.711 ns) = 7.357 ns; Loc. = LC_X21_Y7_N3; Fanout = 13; REG Node = 'traffic_lights:inst2|state.s1'
+        Info: Total cell delay = 3.115 ns ( 42.34 % )
+        Info: Total interconnect delay = 4.242 ns ( 57.66 % )
+    Info: + Micro hold delay of destination is 0.015 ns
+    Info: - Shortest pin to register delay is 8.390 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_138; Fanout = 49; PIN Node = 'RET'
+        Info: 2: + IC(6.443 ns) + CELL(0.478 ns) = 8.390 ns; Loc. = LC_X21_Y7_N3; Fanout = 13; REG Node = 'traffic_lights:inst2|state.s1'
+        Info: Total cell delay = 1.947 ns ( 23.21 % )
+        Info: Total interconnect delay = 6.443 ns ( 76.79 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Allocated 108 megabytes of memory during processing
+    Info: Processing ended: Mon May 02 18:58:09 2016
+    Info: Elapsed time: 00:00:01
+
+
